@@ -10,8 +10,8 @@ def get_runtime_info():
     return context, env, session
 
 def get_resource_paths(resource_id):
-    # core/logger.py -> resources/skills/repository-manager/core/logger.py
-    core_dir = pathlib.Path(__file__).parent
+    # logic/logger.py -> resources/skills/repository-manager/core/logic/logger.py
+    core_dir = pathlib.Path(__file__).parent.parent
     res_root = core_dir.parent
     repo_root = res_root.parent.parent.parent
     

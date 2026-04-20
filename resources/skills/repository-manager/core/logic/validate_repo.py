@@ -111,7 +111,7 @@ def check_hygiene():
         
     return True
 
-if __name__ == "__main__":
+def main():
     print("--- Validating Agentic Resources Repository ---")
     layout_ok = validate_layout()
     resources_ok = validate_resources()
@@ -125,3 +125,6 @@ if __name__ == "__main__":
     if not (layout_ok and resources_ok):
         sys.exit(1)
     print("\n--- Validation Complete ---")
+
+if __name__ == "__main__":
+    main()

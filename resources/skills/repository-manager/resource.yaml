@@ -4,11 +4,11 @@ status: active
 description: Meta-skill to manage, validate, build, and navigate the entire Agentic
   Resources repository.
 tags:
-- meta
-- management
-- devops
-- navigation
-- documentation
+- '#meta'
+- '#management'
+- '#devops'
+- '#navigation'
+- '#documentation'
 platforms:
 - hermes
 - generic
@@ -38,3 +38,10 @@ dependencies:
   packages: []
 dependents:
 - all-agents
+usage_guidelines:
+  preferred_scenarios:
+  - General purpose usage
+  constraints:
+  - No specific constraints
+  antipatterns:
+  - Do not use without understanding the core logic

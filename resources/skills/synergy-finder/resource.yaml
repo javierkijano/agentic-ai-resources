@@ -1,0 +1,43 @@
+id: synergy-finder
+kind: skill
+status: active
+description: Proactive agentic tool that identifies potential synergies and complementary
+  skills for existing resources.
+tags:
+- '#meta'
+- '#synergy'
+- '#search'
+- '#discovery'
+- '#evolution'
+platforms:
+- hermes
+- generic
+interfaces:
+  cli:
+    enabled: true
+    commands:
+      find: Search for complements for a specific resource.
+  webapp:
+    enabled: false
+    port: null
+    entrypoint: app.py
+storage:
+  standard_layout: true
+  description: Standardized runtime storage
+  contract: core/docs/STORAGE.md
+credentials: []
+dependencies:
+  resources: []
+  system:
+  - id: python
+    version: '>=3.10'
+  packages: []
+dependents:
+- improvement-manager
+usage_guidelines:
+  preferred_scenarios:
+  - General purpose usage
+  constraints:
+  - No specific constraints
+  antipatterns:
+  - Do not use without understanding the core logic

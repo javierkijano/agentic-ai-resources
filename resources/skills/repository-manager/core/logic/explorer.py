@@ -1,6 +1,7 @@
 import os
 import yaml
 import pathlib
+from collections import defaultdict
 
 class RepoExplorer:
     def __init__(self, repo_root):
@@ -12,11 +13,10 @@ class RepoExplorer:
             return agents_md.read_text()
         return "No AGENTS.md found. Please check docs/ for rules."
 
-    def list_all_resources(self):
+    def list_all_resources(self, group_by_tag=False):
         resources = []
         res_root = self.repo_root / "resources"
-        if not res_root.exists():
-            return []
+        if not res_root.exists(): return []
             
         for category in os.listdir(res_root):
             cat_path = res_root / category
@@ -31,11 +31,33 @@ class RepoExplorer:
                             "id": data.get("id"),
                             "kind": data.get("kind"),
                             "description": data.get("description", "No description"),
-                            "tags": data.get("tags", []),
+                            "tags": [t if t.startswith('#') else f'#{t}' for t in data.get("tags", [])],
+                            "guidelines": data.get("usage_guidelines", {}),
                             "dependents": data.get("dependents", [])
                         })
-        return resources
+        
+        if not group_by_tag:
+            return resources
 
-    def find_skill_by_tag(self, tag):
+        # Agrupar por hashtag
+        themed_resources = defaultdict(list)
+        for res in resources:
+            for tag in res["tags"]:
+                themed_resources[tag].append(res)
+        return dict(themed_resources)
+
+    def get_selection_advice(self, resource_id):
+        """Devuelve consejos específicos para que el agente decida si usar esta skill."""
+        res = self.find_resource_by_id(resource_id)
+        if not res: return "Resource not found."
+        
+        g = res.get("guidelines", {})
+        advice = [f"--- Selection Advice for {resource_id} ---"]
+        advice.append(f"RECOMMENDED FOR: {', '.join(g.get('preferred_scenarios', []))}")
+        advice.append(f"CONSTRAINTS: {', '.join(g.get('constraints', []))}")
+        advice.append(f"ANTIPATTERNS: {', '.join(g.get('antipatterns', []))}")
+        return "\n".join(advice)
+
+    def find_resource_by_id(self, resource_id):
         all_res = self.list_all_resources()
-        return [r for r in all_res if tag in r["tags"]]
+        return next((r for r in all_res if r["id"] == resource_id), None)

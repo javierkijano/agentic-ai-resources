@@ -55,6 +55,12 @@ def validate_resources():
                         if not os.path.exists(contract_path):
                             print(f"ERROR: Storage contract '{data['storage']['contract']}' not found for '{resource_id}'")
                             valid = False
+                    
+                    # Check for TODOs.md
+                    todos_path = os.path.join(res_path, "core/docs/TODOs.md")
+                    if not os.path.exists(todos_path):
+                        print(f"ERROR: TODOs.md not found for '{resource_id}'")
+                        valid = False
             except Exception as e:
                 log_operation("validate_repo", "ERROR", f"Failed to parse yaml for {resource_id}")
                 print(f"ERROR: Failed to parse resource.yaml for '{resource_id}': {e}")

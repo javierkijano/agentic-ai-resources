@@ -4,10 +4,10 @@ status: active
 description: Control Google Chrome via CDP (Chrome DevTools Protocol) for automation
   and browsing.
 tags:
-- chrome
-- browser
-- automation
-- cdp
+- '#chrome'
+- '#browser'
+- '#automation'
+- '#cdp'
 platforms:
 - hermes
 interfaces:
@@ -38,3 +38,13 @@ dependents:
 - x-remote-control
 - linkedin
 - google-workspace-assistant
+usage_guidelines:
+  preferred_scenarios:
+  - Browser automation
+  - Web scraping with JS execution
+  - DOM manipulation
+  constraints:
+  - Requires a running Chrome instance with CDP enabled
+  antipatterns:
+  - Simple HTTP requests (use requests/curl instead)
+  - Headless scraping of highly bot-protected sites

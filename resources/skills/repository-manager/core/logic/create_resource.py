@@ -33,7 +33,12 @@ def create_resource(res_type, res_id):
         "kind": res_type.rstrip('s'),
         "status": "draft",
         "description": f"Capability for {res_id}",
-        "tags": [],
+        "tags": [f"#{res_type.rstrip('s')}", "#draft"],
+        "usage_guidelines": {
+            "preferred_scenarios": ["Use when you need to..."],
+            "constraints": ["No specific constraints defined"],
+            "antipatterns": ["Do not use for..."]
+        },
         "platforms": ["hermes", "generic"],
         "interfaces": {
             "cli": {"enabled": True, "commands": {"status": "Check status"}},
@@ -86,6 +91,18 @@ This skill requires the following credentials to function correctly.
     storage_md = f"# Storage Contract: {res_id}\n\nStandard runtime layout required.\n"
     with open(os.path.join(base_path, "core/docs/STORAGE.md"), "w") as f:
         f.write(storage_md)
+
+    # Create TODOs.md
+    todos_md = f"""# Improvement Proposals: {res_id}
+
+This file contains suggestions for future improvements identified by agents or humans.
+The `improvement-manager` skill will periodically curate this list.
+
+## 💡 Proposed Enhancements
+- [ ] Initial capability baseline established.
+"""
+    with open(os.path.join(base_path, "core/docs/TODOs.md"), "w") as f:
+        f.write(todos_md)
     
     # Create README.md
     with open(os.path.join(base_path, "README.md"), "w") as f:

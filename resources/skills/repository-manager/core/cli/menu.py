@@ -33,15 +33,32 @@ def main_menu():
         print("[3] INTEGRIDAD: Validar estructura y limpieza")
         print("[4] GESTIÓN: Crear recurso o Generar Infra")
         print("[5] GIT: Preparar mensaje de commit")
+        print("[6] CURACIÓN: Analizar y consolidar TODOs")
         print("\n[0] SALIR")
         
         choice = input("\nSeleccione una opción: ")
 
         if choice == '1':
             clear_screen()
-            print("--- INVENTARIO DE RECURSOS ---")
-            for res in explorer.list_all_resources():
-                print(f"[{res['kind'].upper()}] {res['id']}: {res['description'][:50]}...")
+            print("--- EXPLORACIÓN DE RECURSOS ---")
+            print("[1] Listar todos")
+            print("[2] Agrupar por #Hashtag")
+            print("[3] Ver Guía de Selección (Consejos de uso)")
+            sub_choice = input("\nOpción: ")
+            
+            if sub_choice == '1':
+                for res in explorer.list_all_resources():
+                    print(f"[{res['kind'].upper()}] {res['id']}: {res['description'][:50]}...")
+            elif sub_choice == '2':
+                themed = explorer.list_all_resources(group_by_tag=True)
+                for tag, resources in themed.items():
+                    print(f"\n{tag}:")
+                    for r in resources:
+                        print(f"  - {r['id']}")
+            elif sub_choice == '3':
+                rid = input("\nIntroduce el ID del recurso: ")
+                print("\n" + explorer.get_selection_advice(rid))
+            
             input("\nPresione Enter para volver...")
 
         elif choice == '2':
@@ -88,6 +105,24 @@ def main_menu():
             import describe_changes
             # Aquí necesitaríamos adaptar describe_changes para ser llamado como función
             os.system('python3 ' + str(core_dir / "logic/describe_changes.py"))
+            input("\nPresione Enter para volver...")
+
+        elif choice == '6':
+            clear_screen()
+            print("--- CURACIÓN DE MEJORAS ---")
+            sys.path.append(str(repo_root / "resources/skills/improvement-manager/core/logic"))
+            try:
+                from curator import ImprovementCurator
+                curator = ImprovementCurator(repo_root)
+                print("Analizando todos los TODOs.md del repositorio...")
+                report = curator.generate_curation_report()
+                report_path = curator.save_report(report)
+                print(f"\nÉxito. Informe generado en:\n{report_path}")
+                print("\nResumen del informe:")
+                print("-" * 20)
+                print("\n".join(report.splitlines()[:20])) # Primeras 20 líneas
+            except ImportError:
+                print("Error: No se pudo cargar la lógica del curador.")
             input("\nPresione Enter para volver...")
 
         elif choice == '0':

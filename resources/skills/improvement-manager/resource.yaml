@@ -1,0 +1,45 @@
+id: improvement-manager
+kind: skill
+status: active
+description: Curator of organic improvements. Scans TODOs.md across the repository
+  to generate consolidated evolution reports.
+tags:
+- '#meta'
+- '#evolution'
+- '#curation'
+- '#feedback'
+- '#backlog'
+platforms:
+- hermes
+- generic
+interfaces:
+  cli:
+    enabled: true
+    commands:
+      curate: Generate a global report of proposed improvements.
+  webapp:
+    enabled: false
+    port: null
+    entrypoint: app.py
+storage:
+  standard_layout: true
+  description: Standardized runtime storage
+  contract: core/docs/STORAGE.md
+credentials: []
+dependencies:
+  resources:
+  - repository-manager
+  - synergy-finder
+  system:
+  - id: python
+    version: '>=3.10'
+  packages: []
+dependents:
+- repository-manager
+usage_guidelines:
+  preferred_scenarios:
+  - General purpose usage
+  constraints:
+  - No specific constraints
+  antipatterns:
+  - Do not use without understanding the core logic

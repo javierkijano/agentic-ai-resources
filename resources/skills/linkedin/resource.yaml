@@ -3,10 +3,10 @@ kind: skill
 status: active
 description: Manage LinkedIn interactions, post updates, and research profiles.
 tags:
-- linkedin
-- social-media
-- networking
-- automation
+- '#linkedin'
+- '#social-media'
+- '#networking'
+- '#automation'
 platforms:
 - hermes
 interfaces:
@@ -40,3 +40,10 @@ dependencies:
     version: '>=3.10'
   packages: []
 dependents: []
+usage_guidelines:
+  preferred_scenarios:
+  - General purpose usage
+  constraints:
+  - No specific constraints
+  antipatterns:
+  - Do not use without understanding the core logic

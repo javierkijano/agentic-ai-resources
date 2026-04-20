@@ -15,7 +15,7 @@ Each resource in `resources/<type>/<id>/` should follow this general layout:
     cli/           # CLI entrypoints and command definitions
     webapp/        # Web-based management interface
     infra/         # Infrastructure files (Dockerfile, requirements.txt, etc.)
-    docs/          # Internal documentation (STORAGE.md, CREDENTIALS.md)
+    docs/          # Internal documentation (STORAGE.md, CREDENTIALS.md, TODOs.md)
   platforms/       # Platform-specific overlays (e.g., platforms/hermes/SKILL.md)
 ```
 
@@ -29,8 +29,11 @@ Every resource must include a `resource.yaml` with at least the following fields
 - `interfaces`: 
     - `cli`: Command mapping and status (enabled/disabled)
     - `webapp`: Web configuration (port, entrypoint, enabled)
-- `tags`: List of descriptive tags
-- `platforms`: List of supported platforms (e.g., `[hermes, albert]`)
+- `tags`: List of descriptive hashtags (e.g., `[#automation, #browser, #social-media]`)
+- `usage_guidelines`:
+    - `preferred_scenarios`: List of situations where this resource excels.
+    - `constraints`: Technical or operational limitations (e.g., "Requires GUI", "Rate-limited").
+    - `antipatterns`: When NOT to use this resource.
 - `dependencies`:
     - `resources`: List of internal resource IDs (e.g., `[chrome-remote-browser-control]`)
     - `system`: List of OS-level requirements (e.g., `[python >= 3.10, google-chrome]`)

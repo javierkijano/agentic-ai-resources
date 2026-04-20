@@ -4,10 +4,10 @@ status: active
 description: Assistant to manage Google Workspace (Gmail, Calendar, Drive) via Google
   API.
 tags:
-- google
-- workspace
-- productivity
-- automation
+- '#google'
+- '#workspace'
+- '#productivity'
+- '#automation'
 platforms:
 - hermes
 interfaces:
@@ -44,3 +44,14 @@ dependencies:
   - manager: pip
     name: google-auth-oauthlib
 dependents: []
+usage_guidelines:
+  preferred_scenarios:
+  - Gmail management
+  - Calendar scheduling
+  - Google Drive automation
+  constraints:
+  - Requires OAuth token.json
+  - Rate-limited by Google API
+  antipatterns:
+  - Large scale bulk emailing
+  - Real-time synchronization of thousands of files

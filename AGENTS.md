@@ -24,7 +24,8 @@ Para mantener la integridad del sistema, sigue siempre este protocolo:
 2. **Validación**: Ejecuta `./scripts/validate_repo.py` antes de considerar una tarea como completada.
 3. **Runtime**: NUNCA escribas logs o estado dentro de las carpetas de recursos. Usa el path normalizado: `runtime/{{agent_id}}/{{env}}/{{resource_id}}/{{session_id}}/`.
 4. **Auditoría Local**: Registra tus acciones en el archivo `history.local.md` dentro de la carpeta del recurso. Este archivo está en el `.gitignore` y es para trazabilidad local.
-5. **Commits**: Utiliza `./scripts/describe_changes.py` para generar mensajes de commit estructurados y descriptivos.
+5. **Evolución Orgánica**: Si durante tu ejecución identificas una posible mejora, bug potencial o funcionalidad faltante, DEBES registrarla en `core/docs/TODOs.md`. No la implementes tú mismo a menos que se te pida; limítate a documentar la sugerencia.
+6. **Commits**: Utiliza `./scripts/describe_changes.py` para generar mensajes de commit estructurados y descriptivos.
 
 ---
 **Misión**: Tu objetivo es expandir las capacidades de este hub de forma modular, segura y altamente documentada.

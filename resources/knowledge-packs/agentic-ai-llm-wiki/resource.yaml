@@ -3,10 +3,10 @@ kind: knowledge-pack
 status: active
 description: Comprehensive wiki about Agentic AI concepts, architectures, and entities.
 tags:
-- ai
-- agents
-- wiki
-- knowledge
+- '#ai'
+- '#agents'
+- '#wiki'
+- '#knowledge'
 platforms:
 - generic
 interfaces:
@@ -31,3 +31,10 @@ dependencies:
     version: '>=3.10'
   packages: []
 dependents: []
+usage_guidelines:
+  preferred_scenarios:
+  - General purpose usage
+  constraints:
+  - No specific constraints
+  antipatterns:
+  - Do not use without understanding the core logic

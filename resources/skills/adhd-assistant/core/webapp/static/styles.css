@@ -1,0 +1,510 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f172a;
+  --panel: #111827;
+  --panel-border: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22d3ee;
+  --danger: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1.2rem;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+code {
+  color: #93c5fd;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+button {
+  background: var(--accent);
+  color: #0b1325;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auto-refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--muted);
+}
+
+.top-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  padding: 0.42rem 0.75rem;
+  font-size: 0.88rem;
+}
+
+.nav-link.is-active {
+  color: #0b1325;
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 700;
+}
+
+.meta-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card,
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+.big {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0.35rem 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.42rem 0.35rem;
+  border-bottom: 1px solid #1f2937;
+  vertical-align: top;
+}
+
+th {
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+#warningsPanel {
+  border-color: #7f1d1d;
+  background: #2b1416;
+}
+
+#warningsPanel li {
+  color: #fecaca;
+}
+
+.footer {
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.calendar-day {
+  min-height: 220px;
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 0.75rem;
+}
+
+.calendar-day.is-today {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(34, 211, 238, 0.35);
+}
+
+.calendar-day__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.calendar-day__items,
+.unscheduled-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.calendar-item,
+.unscheduled-item {
+  border: 1px solid #223046;
+  border-left: 4px solid #64748b;
+  border-radius: 10px;
+  padding: 0.6rem;
+  background: rgba(17, 24, 39, 0.82);
+}
+
+.calendar-item--task,
+.unscheduled-item {
+  border-left-color: #f59e0b;
+}
+
+.calendar-item--appointment {
+  border-left-color: #22d3ee;
+}
+
+.calendar-item--reminder {
+  border-left-color: #a78bfa;
+}
+
+.calendar-item__meta,
+.unscheduled-item__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: #1f2937;
+  color: var(--text);
+  padding: 0.16rem 0.45rem;
+  font-size: 0.72rem;
+  line-height: 1.2;
+}
+
+.chip--priority {
+  background: #3f2a09;
+  color: #fde68a;
+}
+
+.chip--kind {
+  background: #142338;
+  color: #93c5fd;
+}
+
+.chip--danger {
+  background: #3a1418;
+  color: #fecaca;
+}
+
+.item-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.9fr);
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-panel {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hero-panel__eyebrow {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.cards--compact {
+  margin-bottom: 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.task-section {
+  margin-bottom: 0.75rem;
+}
+
+.task-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.task-card {
+  position: relative;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  padding: 0.85rem;
+}
+
+.task-card--focus {
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(34, 211, 238, 0.18);
+}
+
+.task-card__summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.task-card__title-row {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.task-card__checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.18rem;
+}
+
+.task-card__checkbox input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--accent);
+}
+
+.task-card__title-group {
+  min-width: 0;
+}
+
+.task-card__title {
+  font-size: 1rem;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.task-card__meta,
+.task-card__hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.task-card__hashtags {
+  margin-top: 0.65rem;
+}
+
+.task-card__hashtag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: #1a2234;
+  color: #c4b5fd;
+  padding: 0.16rem 0.5rem;
+  font-size: 0.76rem;
+}
+
+.task-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.45rem;
+}
+
+.task-card__bucket-button,
+.task-card__expand-button,
+.task-card__bucket-option {
+  border-radius: 999px;
+  padding: 0.4rem 0.72rem;
+  font-size: 0.82rem;
+}
+
+.task-card__bucket-button,
+.task-card__bucket-option {
+  background: #172033;
+  color: var(--text);
+  border: 1px solid #273248;
+}
+
+.task-card__expand-button {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--panel-border);
+}
+
+.task-card__bucket-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(148, 163, 184, 0.18);
+}
+
+.task-card__bucket-menu[hidden],
+.task-card__details[hidden] {
+  display: none !important;
+}
+
+.task-card__details {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.task-card__description {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.task-card__details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem 1rem;
+  margin: 0;
+}
+
+.task-card__details-grid dt {
+  color: var(--muted);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.16rem;
+}
+
+.task-card__details-grid dd {
+  margin: 0;
+}
+
+.item-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1100px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column;
+  }
+
+  .meta-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .top-actions {
+    flex-wrap: wrap;
+  }
+
+  .task-card__summary {
+    flex-direction: column;
+  }
+
+  .task-card__actions {
+    justify-content: flex-start;
+  }
+
+  .task-card__details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-grid {
+    grid-template-columns: 1fr;
+  }
+}

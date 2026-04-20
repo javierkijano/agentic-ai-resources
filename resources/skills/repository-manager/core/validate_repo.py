@@ -2,6 +2,7 @@
 import os
 import yaml
 import sys
+import subprocess
 from logger import log_operation
 
 def validate_layout():
@@ -19,6 +20,8 @@ def validate_layout():
 def validate_resources():
     valid = True
     resources_root = 'resources'
+    if not os.path.exists(resources_root):
+        return False
     for category in os.listdir(resources_root):
         cat_path = os.path.join(resources_root, category)
         if not os.path.isdir(cat_path):
@@ -54,10 +57,54 @@ def validate_resources():
         print("SUCCESS: All resources validated.")
     return valid
 
+def check_hygiene():
+    suggestions = []
+    
+    # Check for .gitignore
+    if not os.path.exists('.gitignore'):
+        suggestions.append("Missing .gitignore file in root.")
+    
+    # Check for untracked rubbish (simple check for __pycache__ or .pyc)
+    rubbish_found = False
+    for root, dirs, files in os.walk('.'):
+        if 'dist' in dirs: dirs.remove('dist') # skip dist
+        if '.git' in dirs: dirs.remove('.git') # skip .git
+        
+        if '__pycache__' in dirs:
+            rubbish_found = True
+            break
+        for f in files:
+            if f.endswith('.pyc') or f.endswith('.pyo'):
+                rubbish_found = True
+                break
+        if rubbish_found: break
+        
+    if rubbish_found:
+        suggestions.append("Python cache files (__pycache__ or .pyc) found in the repository.")
+        
+    # Check for empty directories in resources (might be leftovers)
+    resources_root = 'resources'
+    if os.path.exists(resources_root):
+        for category in os.listdir(resources_root):
+            cat_path = os.path.join(resources_root, category)
+            if os.path.isdir(cat_path) and not os.listdir(cat_path):
+                suggestions.append(f"Empty resource category found: {category}")
+
+    if suggestions:
+        print("\n--- Hygiene Suggestions ---")
+        for s in suggestions:
+            print(f"SUGGESTION: {s}")
+        log_operation("validate_repo", "INFO", f"Hygiene suggestions: {len(suggestions)}")
+    else:
+        print("\nSUCCESS: Repository hygiene is good.")
+        
+    return True
+
 if __name__ == "__main__":
     print("--- Validating Agentic Resources Repository ---")
     layout_ok = validate_layout()
     resources_ok = validate_resources()
+    check_hygiene()
     
     if layout_ok and resources_ok:
         log_operation("validate_repo", "SUCCESS", "Full validation passed")
@@ -66,4 +113,4 @@ if __name__ == "__main__":
     
     if not (layout_ok and resources_ok):
         sys.exit(1)
-    print("--- Validation Complete ---")
+    print("\n--- Validation Complete ---")

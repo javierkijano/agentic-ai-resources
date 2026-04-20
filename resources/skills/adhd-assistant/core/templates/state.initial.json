@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "profile": {
+    "name": "Javier",
+    "language": "es-ES",
+    "timezone": "Europe/Madrid",
+    "communication_style": {
+      "tone": "directo, conciso, calmado",
+      "default_channel": "text",
+      "avoid": ["muros de opciones", "alarmismo", "rigidez artificial"]
+    },
+    "working_patterns": [
+      "TDAH con riesgo de fragmentacion y novelty capture",
+      "mejor con estructura flexible y recomendaciones concretas",
+      "responde mejor a mensajes cortos y accionables",
+      "los recordatorios importantes deben insistir"
+    ],
+    "delivery_channels": {
+      "telegram": {
+        "enabled": true,
+        "chat_id": "REPLACE_ME"
+      }
+    }
+  },
+  "preferences": {
+    "mode": "operator",
+    "coaching_intensity": "contextual",
+    "reminder_intensity": "intense",
+    "tone": "direct",
+    "rigidity": "low",
+    "quiet_hours": {
+      "start": "00:30",
+      "end": "08:30"
+    },
+    "quotes_enabled": true
+  },
+  "commitments": {
+    "tasks": [],
+    "appointments": [],
+    "events": [],
+    "routines": [],
+    "checklists": []
+  },
+  "support": {
+    "reminders": [],
+    "notes": [],
+    "ideas": [],
+    "open_loops": [],
+    "recommendations": []
+  },
+  "self_observation": {
+    "mood_log": [],
+    "energy_log": [],
+    "focus_log": [],
+    "sleep_log": []
+  },
+  "execution": {
+    "current_front": null,
+    "secondary_front": null,
+    "active_intervention": null,
+    "next_actions": [],
+    "active_focus_block": null,
+    "progress_log": []
+  },
+  "automation": {
+    "tick_minutes": 10,
+    "daily_review_time": "09:30",
+    "min_gap_nonurgent_minutes": 60,
+    "min_gap_urgent_minutes": 15,
+    "important_offsets_minutes": [1440, 360, 120, 60, 30, 10, 0],
+    "postpone_escalation_threshold": 3,
+    "delivery": {
+      "telegram": {
+        "enabled": true,
+        "chat_id": "REPLACE_ME"
+      }
+    }
+  },
+  "coaching": {
+    "enabled": true,
+    "style": "pragmatic-stoic",
+    "themes": ["pragmatic", "stoic"],
+    "max_quotes_per_day": 1,
+    "last_used": []
+  },
+  "history": {
+    "recent_events": [],
+    "recent_nudges": [],
+    "recent_completions": [],
+    "recent_postponements": [],
+    "last_tick_at": null
+  },
+  "meta": {
+    "created_at": "REPLACE_ME",
+    "last_modified": "REPLACE_ME",
+    "schema_version": 1,
+    "migrated_from": []
+  }
+}

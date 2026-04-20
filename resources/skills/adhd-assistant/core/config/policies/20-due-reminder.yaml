@@ -1,0 +1,37 @@
+id: due_reminder
+description: Fires when a scheduled reminder has reached its due time.
+priority: 20
+enabled: true
+urgency: critical
+ignore_quiet_hours: true
+
+trigger:
+  predicate: has_due_reminder
+
+message:
+  coaching_context: reminder
+  template: |
+    ADHD Assistant: {{ bindings.reminder.message | default("Tienes un recordatorio pendiente.") }}
+    {%- if bindings.linked_task %}
+    Tarea: {{ bindings.linked_task.title }}
+    {%- endif %}
+    {%- if coaching_quote %}
+
+    {{ coaching_quote }}
+    {%- endif %}
+
+channels:
+  - "{{ config.delivery.default_channel }}"
+
+side_effects:
+  - action: mark_reminder_sent
+    args:
+      reminder_id: "{{ bindings.reminder.id }}"
+  - action: append_history
+    args:
+      kind: reminder
+      summary: "{{ bindings.reminder.id }}"
+  - action: hindsight_log
+    args:
+      context: "adhd-assistant:event:reminder"
+      content: "reminder_due: {{ bindings.reminder.message | default('(sin mensaje)') }}"

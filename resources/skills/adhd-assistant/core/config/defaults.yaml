@@ -1,0 +1,62 @@
+# Default configuration for adhd-assistant.
+# Users override this with ~/.hermes/adhd_assistant/config.yaml.
+# The effective config is: defaults <- user_overrides <- mode_overrides.
+
+profile:
+  name: "Javier"
+  language: "es-ES"
+  timezone: "Europe/Madrid"
+  communication_style: "concise, direct, calm"
+
+preferences:
+  primary_mode: "operator"        # operator | companion | mosca-cojonera | recovery
+  coaching_level: "contextual"    # off | minimal | contextual | high
+  reminder_intensity: "normal"    # low | normal | high
+  use_quotes_reflections: true
+  prefer_direct_command: true
+  quiet_hours:
+    start: "03:00"
+    end: "07:00"
+
+automation:
+  tick_cadence_minutes: 10
+  min_gap_urgent_minutes: 15
+  min_gap_nonurgent_minutes: 60
+  postpone_escalation_threshold: 3
+  daily_review_time: "09:30"
+  onboarding_nudge_gap_hours: 24
+  upcoming_window_minutes: 60
+
+coaching:
+  enabled: true
+  themes:                         # which theme banks are active
+    - pragmatic
+    - stoic
+  max_quotes_per_day: 1
+  allow_christian_reflections: false
+
+delivery:
+  default_channel: "telegram"
+  telegram:
+    chat_id: null                 # must be set in user config.yaml
+    token_env: "TELEGRAM_BOT_TOKEN"
+
+hindsight:
+  enabled: true
+  flush_timeout_seconds: 90
+  snapshot_on: ["daily_review"]   # events that trigger full-state snapshot
+  event_kinds_to_log:
+    - reminder
+    - appointment
+    - overdue_task
+    - postpone_escalation
+    - daily_review
+
+sync:
+  enabled: true
+  cadence_hours: 6
+  discrepancy_summary: "default"  # off | default | verbose-modern
+  sources:
+    local_tasks_json: true
+    local_tasks_path: "~/.hermes/tasks/tasks.json"
+    hindsight_reflection: true

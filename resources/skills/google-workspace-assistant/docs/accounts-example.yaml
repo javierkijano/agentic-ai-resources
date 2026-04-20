@@ -1,0 +1,34 @@
+accounts:
+  personal:
+    role: source
+    description: Cuenta personal principal de Javier
+    services:
+      gmail: readonly
+      drive: readonly
+      docs: readonly
+      sheets: readonly
+      calendar: readonly
+
+  metabestec:
+    role: source
+    description: Cuenta o inbox operativo de Metabestec
+    services:
+      gmail: readonly
+      drive: readonly
+      docs: readonly
+      sheets: readonly
+      calendar: readonly
+
+  assistant:
+    role: workspace
+    description: Cuenta Google propia del asistente
+    services:
+      gmail: disabled
+      drive: readwrite
+      docs: readwrite
+      sheets: readwrite
+      calendar: disabled
+
+defaults:
+  workspace_alias: assistant
+  default_source_alias: personal

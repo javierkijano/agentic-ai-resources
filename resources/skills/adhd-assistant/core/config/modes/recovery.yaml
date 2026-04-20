@@ -1,0 +1,12 @@
+name: recovery
+description: Day is already broken — preserve continuity, no fantasy planning.
+overrides:
+  coaching.max_quotes_per_day: 0
+  automation.min_gap_nonurgent_minutes: 240
+  preferences.reminder_intensity: low
+policy_filters:
+  disable:
+    - daily_review
+    - onboarding_followup
+    - postpone_escalation
+  enable_only_critical: true

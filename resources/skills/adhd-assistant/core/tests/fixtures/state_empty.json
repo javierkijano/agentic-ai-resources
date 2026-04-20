@@ -1,0 +1,8 @@
+{
+  "commitments": {"tasks": [], "appointments": [], "events": [], "routines": [], "checklists": []},
+  "support": {"reminders": [], "notes": [], "ideas": [], "open_loops": [], "recommendations": []},
+  "self_observation": {"mood_log": [], "energy_log": [], "focus_log": [], "sleep_log": [], "stress_flags": [], "perceived_overload": 0},
+  "execution": {"current_front": null, "secondary_front": null, "active_intervention": null, "next_actions": [], "active_focus_block": null, "progress_checkpoints": [], "rescue_plan": null},
+  "history": {"recent_events": [], "recent_nudges": []},
+  "meta": {"version": "2.0.0", "active_schema_version": "2.0.0"}
+}

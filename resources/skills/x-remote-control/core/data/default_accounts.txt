@@ -1,0 +1,19 @@
+# Una cuenta por línea. Acepta @handle, handle o URL de perfil.
+@POTUS
+@realDonaldTrump
+@narendramodi
+@EmmanuelMacron
+@GiorgiaMeloni
+@Bundeskanzler
+@Keir_Starmer
+@vonderleyen
+@ZelenskyyUa
+@JMilei
+@nayibbukele
+@MariaCorinaYA
+@EdmundoGU
+@GabrielBoric
+@sanchezcastejon
+@NunezFeijoo
+@Santi_ABASCAL
+@IdiazAyuso

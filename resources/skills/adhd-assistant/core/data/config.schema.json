@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ADHD Assistant Config (v2)",
+  "type": "object",
+  "properties": {
+    "profile": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "language": {"type": "string"},
+        "timezone": {"type": "string"},
+        "communication_style": {"type": ["string", "object"]}
+      }
+    },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "primary_mode": {"type": "string", "enum": ["operator", "companion", "mosca-cojonera", "recovery"]},
+        "coaching_level": {"type": "string", "enum": ["off", "minimal", "contextual", "high"]},
+        "reminder_intensity": {"type": "string"},
+        "use_quotes_reflections": {"type": "boolean"},
+        "prefer_direct_command": {"type": "boolean"},
+        "quiet_hours": {
+          "type": "object",
+          "properties": {
+            "start": {"type": "string"},
+            "end": {"type": "string"}
+          }
+        }
+      }
+    },
+    "automation": {"type": "object"},
+    "coaching": {
+      "type": "object",
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "themes": {"type": "array", "items": {"type": "string"}},
+        "max_quotes_per_day": {"type": "integer"},
+        "allow_christian_reflections": {"type": "boolean"}
+      }
+    },
+    "delivery": {
+      "type": "object",
+      "properties": {
+        "default_channel": {"type": "string"},
+        "telegram": {
+          "type": "object",
+          "properties": {
+            "chat_id": {"type": ["string", "integer", "null"]},
+            "token_env": {"type": "string"}
+          }
+        }
+      }
+    },
+    "hindsight": {
+      "type": "object",
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "flush_timeout_seconds": {"type": "integer", "minimum": 1}
+      }
+    },
+    "sync": {
+      "type": "object",
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "cadence_hours": {"type": "integer", "minimum": 1},
+        "discrepancy_summary": {"type": "string", "enum": ["off", "default", "verbose-modern"]},
+        "sources": {
+          "type": "object",
+          "properties": {
+            "local_tasks_json": {"type": "boolean"},
+            "local_tasks_path": {"type": "string"},
+            "hindsight_reflection": {"type": "boolean"}
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

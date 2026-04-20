@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ADHD Assistant State",
+  "type": "object",
+  "required": [
+    "version",
+    "profile",
+    "preferences",
+    "commitments",
+    "support",
+    "self_observation",
+    "execution",
+    "automation",
+    "coaching",
+    "history",
+    "meta"
+  ],
+  "properties": {
+    "version": {"type": "integer"},
+    "profile": {
+      "type": "object",
+      "required": ["name", "language", "timezone"],
+      "properties": {
+        "name": {"type": "string"},
+        "language": {"type": "string"},
+        "timezone": {"type": "string"},
+        "communication_style": {"type": "object"},
+        "working_patterns": {"type": "array", "items": {"type": "string"}},
+        "delivery_channels": {"type": "object"}
+      }
+    },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "mode": {"type": "string", "enum": ["operator", "companion", "mosca-cojonera", "recovery"]},
+        "coaching_intensity": {"type": "string", "enum": ["off", "minimal", "contextual", "high"]},
+        "reminder_intensity": {"type": "string", "enum": ["light", "balanced", "intense"]},
+        "tone": {"type": "string"},
+        "rigidity": {"type": "string", "enum": ["low", "medium", "high"]},
+        "quiet_hours": {
+          "type": "object",
+          "properties": {
+            "start": {"type": "string"},
+            "end": {"type": "string"}
+          }
+        }
+      }
+    },
+    "commitments": {
+      "type": "object",
+      "properties": {
+        "tasks": {"type": "array", "items": {"$ref": "#/$defs/task"}},
+        "appointments": {"type": "array", "items": {"$ref": "#/$defs/appointment"}},
+        "events": {"type": "array", "items": {"$ref": "#/$defs/event"}},
+        "routines": {"type": "array", "items": {"$ref": "#/$defs/routine"}},
+        "checklists": {"type": "array", "items": {"$ref": "#/$defs/checklist"}}
+      }
+    },
+    "support": {
+      "type": "object",
+      "properties": {
+        "reminders": {"type": "array", "items": {"$ref": "#/$defs/reminder"}},
+        "notes": {"type": "array", "items": {"$ref": "#/$defs/note"}},
+        "ideas": {"type": "array", "items": {"$ref": "#/$defs/idea"}},
+        "open_loops": {"type": "array", "items": {"$ref": "#/$defs/open_loop"}},
+        "recommendations": {"type": "array", "items": {"$ref": "#/$defs/recommendation"}}
+      }
+    },
+    "self_observation": {
+      "type": "object",
+      "properties": {
+        "mood_log": {"type": "array", "items": {"$ref": "#/$defs/mood_entry"}},
+        "energy_log": {"type": "array", "items": {"$ref": "#/$defs/energy_entry"}},
+        "focus_log": {"type": "array", "items": {"$ref": "#/$defs/focus_entry"}},
+        "sleep_log": {"type": "array", "items": {"$ref": "#/$defs/sleep_entry"}}
+      }
+    },
+    "execution": {
+      "type": "object",
+      "properties": {
+        "current_front": {"type": ["string", "null"]},
+        "secondary_front": {"type": ["string", "null"]},
+        "active_intervention": {"type": ["string", "null"]},
+        "next_actions": {"type": "array", "items": {"type": "string"}},
+        "active_focus_block": {"type": ["object", "null"]},
+        "progress_log": {"type": "array", "items": {"$ref": "#/$defs/progress_entry"}}
+      }
+    },
+    "automation": {
+      "type": "object",
+      "properties": {
+        "tick_minutes": {"type": "integer"},
+        "daily_review_time": {"type": "string"},
+        "min_gap_nonurgent_minutes": {"type": "integer"},
+        "min_gap_urgent_minutes": {"type": "integer"},
+        "important_offsets_minutes": {"type": "array", "items": {"type": "integer"}},
+        "postpone_escalation_threshold": {"type": "integer"},
+        "delivery": {"type": "object"}
+      }
+    },
+    "coaching": {
+      "type": "object",
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "style": {"type": "string"},
+        "themes": {"type": "array", "items": {"type": "string"}},
+        "max_quotes_per_day": {"type": "integer"},
+        "last_used": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "history": {
+      "type": "object",
+      "properties": {
+        "recent_events": {"type": "array", "items": {"type": "object"}},
+        "recent_nudges": {"type": "array", "items": {"type": "object"}},
+        "recent_completions": {"type": "array", "items": {"type": "object"}},
+        "recent_postponements": {"type": "array", "items": {"type": "object"}},
+        "last_tick_at": {"type": ["string", "null"]}
+      }
+    },
+    "meta": {
+      "type": "object",
+      "required": ["created_at", "last_modified"],
+      "properties": {
+        "created_at": {"type": "string"},
+        "last_modified": {"type": "string"},
+        "schema_version": {"type": "integer"},
+        "migrated_from": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "$defs": {
+    "task": {
+      "type": "object",
+      "required": ["id", "title", "status", "priority"],
+      "properties": {
+        "id": {"type": ["integer", "string"]},
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "status": {"type": "string", "enum": ["pending", "in_progress", "done", "postponed", "cancelled"]},
+        "priority": {"type": "integer", "minimum": 1, "maximum": 4},
+        "importance": {"type": "string", "enum": ["low", "medium", "high", "critical"]},
+        "energy": {"type": "string", "enum": ["low", "medium", "high"]},
+        "created_at": {"type": "string"},
+        "deadline": {"type": ["string", "null"]},
+        "postponed_count": {"type": "integer"},
+        "postpone_history": {"type": "array", "items": {"type": "object"}},
+        "tags": {"type": "array", "items": {"type": "string"}},
+        "notes": {"type": "string"},
+        "last_nudged_at": {"type": ["string", "null"]},
+        "nudge_count": {"type": "integer"}
+      }
+    },
+    "appointment": {
+      "type": "object",
+      "properties": {
+        "id": {"type": ["integer", "string"]},
+        "title": {"type": "string"},
+        "starts_at": {"type": "string"},
+        "ends_at": {"type": ["string", "null"]},
+        "location": {"type": "string"},
+        "status": {"type": "string"}
+      }
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "id": {"type": ["integer", "string"]},
+        "title": {"type": "string"},
+        "starts_at": {"type": "string"},
+        "status": {"type": "string"}
+      }
+    },
+    "routine": {
+      "type": "object",
+      "properties": {
+        "id": {"type": ["integer", "string"]},
+        "title": {"type": "string"},
+        "cadence": {"type": "string"},
+        "status": {"type": "string"}
+      }
+    },
+    "checklist": {
+      "type": "object",
+      "properties": {
+        "id": {"type": ["integer", "string"]},
+        "title": {"type": "string"},
+        "items": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "reminder": {
+      "type": "object",
+      "required": ["id", "kind", "due_at", "status"],
+      "properties": {
+        "id": {"type": ["integer", "string"]},
+        "kind": {"type": "string"},
+        "linked_type": {"type": "string"},
+        "linked_id": {"type": ["integer", "string", "null"]},
+        "due_at": {"type": "string"},
+        "status": {"type": "string", "enum": ["scheduled", "sent", "cancelled"]},
+        "importance": {"type": "string"},
+        "message": {"type": "string"}
+      }
+    },
+    "note": {"type": "object", "properties": {"id": {"type": ["integer", "string"]}, "text": {"type": "string"}}},
+    "idea": {"type": "object", "properties": {"id": {"type": ["integer", "string"]}, "title": {"type": "string"}, "next_step": {"type": "string"}}},
+    "open_loop": {"type": "object", "properties": {"id": {"type": ["integer", "string"]}, "title": {"type": "string"}, "status": {"type": "string"}}},
+    "recommendation": {"type": "object", "properties": {"id": {"type": ["integer", "string"]}, "text": {"type": "string"}, "reason": {"type": "string"}, "created_at": {"type": "string"}}},
+    "mood_entry": {"type": "object", "properties": {"at": {"type": "string"}, "mood": {"type": "string"}, "notes": {"type": "string"}}},
+    "energy_entry": {"type": "object", "properties": {"at": {"type": "string"}, "energy": {"type": "string"}, "notes": {"type": "string"}}},
+    "focus_entry": {"type": "object", "properties": {"at": {"type": "string"}, "focus": {"type": "string"}, "notes": {"type": "string"}}},
+    "sleep_entry": {"type": "object", "properties": {"date": {"type": "string"}, "hours": {"type": "number"}, "quality": {"type": "string"}}},
+    "progress_entry": {"type": "object", "properties": {"at": {"type": "string"}, "type": {"type": "string"}, "summary": {"type": "string"}}}
+  }
+}

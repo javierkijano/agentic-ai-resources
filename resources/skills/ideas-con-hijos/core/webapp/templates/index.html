@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chispas · ideas con hijos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="hero card">
+      <div>
+        <p class="eyebrow">Skill + app gráfica</p>
+        <h1>Ideas prácticas para hacer con hijos.</h1>
+        <p class="lead">
+          Catálogo híbrido con contenido original, adaptado y externo. Menos inspiración vacía y más actividades que puedas arrancar hoy.
+        </p>
+        <div class="quick-chips" id="quickChips"></div>
+      </div>
+      <div class="hero-side">
+        <div class="metric-block">
+          <span class="metric-label">Catálogo</span>
+          <strong id="statTotal">0</strong>
+          <span class="metric-note">actividades listas para explorar</span>
+        </div>
+        <div class="mini-metrics">
+          <div><span>Originales</span><strong id="statOriginal">0</strong></div>
+          <div><span>Adaptadas</span><strong id="statAdapted">0</strong></div>
+          <div><span>Externas</span><strong id="statExternal">0</strong></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="toolbar card">
+      <label class="search-box">
+        <span>🔎</span>
+        <input id="searchInput" type="text" placeholder="Busca por cartón, linterna, lluvia, 10 min…" />
+      </label>
+      <div class="controls">
+        <select id="typeSelect"><option value="">Tipo</option></select>
+        <select id="contextSelect"><option value="">Contexto</option></select>
+        <select id="originSelect"><option value="">Procedencia</option></select>
+        <select id="ageSelect"><option value="">Edad</option></select>
+        <select id="durationSelect"><option value="">Duración máx.</option></select>
+        <button id="resetButton" class="ghost-button" type="button">Limpiar</button>
+      </div>
+    </section>
+
+    <main class="layout">
+      <section class="results-panel card">
+        <div class="section-head">
+          <div>
+            <h2>Resultados</h2>
+            <p id="resultsMeta">Cargando…</p>
+          </div>
+        </div>
+        <div id="cardsGrid" class="cards-grid"></div>
+      </section>
+
+      <aside class="detail-panel card">
+        <div id="detailEmpty" class="detail-empty">
+          <h3>Selecciona una actividad</h3>
+          <p>Aquí verás pasos, variantes, materiales y procedencia.</p>
+        </div>
+        <div id="detailContent" class="detail-content hidden"></div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    window.__BOOTSTRAP__ = {{ bootstrap|tojson }};
+    window.__APP_BASE_PATH__ = {{ app_base_path|tojson }};
+  </script>
+  <script src="static/app.js"></script>
+</body>
+</html>

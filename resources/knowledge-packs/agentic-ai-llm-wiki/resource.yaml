@@ -1,0 +1,7 @@
+id: agentic-ai-llm-wiki
+kind: knowledge-pack
+status: active
+description: Comprehensive wiki about Agentic AI concepts, architectures, and entities.
+tags: [ai, agents, wiki, knowledge]
+platforms: [generic]
+depends_on: []

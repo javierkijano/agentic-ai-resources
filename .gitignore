@@ -1,0 +1,34 @@
+# Agentic Resources - Git Ignore
+
+# Distribution
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+ENV/
+
+# Logs
+shared/logs/*.log
+*.log
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# IDEs & System
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Project Specific
+shared/assets/temp/
+resources/**/__pycache__/
+resources/**/*.py[cod]

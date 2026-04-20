@@ -1,0 +1,7 @@
+id: ideas-con-hijos
+kind: skill
+status: active
+description: Catalog and webapp to manage creative ideas and activities for children.
+tags: [parenting, creativity, kids, catalog]
+platforms: [hermes]
+depends_on: []

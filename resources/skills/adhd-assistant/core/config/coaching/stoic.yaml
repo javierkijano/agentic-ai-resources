@@ -1,0 +1,9 @@
+theme: stoic
+enabled_in_contexts:
+  - overdue_task
+  - postpone_escalation
+  - daily_review
+quotes:
+  - "Lo que bloquea el camino puede convertirse en el camino."
+  - "Primero gobierna el siguiente acto; luego el día mejora solo."
+  - "No es la carga, es cómo la sostienes."

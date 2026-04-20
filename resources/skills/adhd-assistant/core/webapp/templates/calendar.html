@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADHD Assistant Calendar Mockup</title>
+    <link rel="stylesheet" href="{{ app_base_path }}/static/styles.css?v=20260419-redesign1" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>ADHD Assistant · Calendario</h1>
+        <p class="muted">Mockup local: tareas, citas y recordatorios de <code>state.json</code>. Sin Google Calendar todavía.</p>
+      </div>
+      <div class="top-actions">
+        <nav class="top-nav">
+          <a class="nav-link" href="{{ app_base_path }}/">Hoy</a>
+          <a class="nav-link {{ 'is-active' if active_page == 'monitor' else '' }}" href="{{ app_base_path }}/monitor">Monitor</a>
+          <a class="nav-link {{ 'is-active' if active_page == 'calendar' else '' }}" href="{{ app_base_path }}/monitor/calendar">Calendario</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="meta-row">
+      <div><strong>Runtime:</strong> <code>{{ runtime_dir }}</code></div>
+      <div><strong>Skill:</strong> <code>{{ skill_dir }}</code></div>
+      <div><strong>Horizonte:</strong> {{ calendar.days_count }} días</div>
+      <div><strong>Timezone:</strong> {{ calendar.timezone }}</div>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h3>Bloques en calendario</h3>
+        <p class="big">{{ calendar.scheduled_items }}</p>
+        <p class="muted">tareas/citas/recordatorios dentro del rango</p>
+      </article>
+      <article class="card">
+        <h3>Sin fecha</h3>
+        <p class="big">{{ calendar.unscheduled_count }}</p>
+        <p class="muted">backlog pendiente para triage</p>
+      </article>
+      <article class="card">
+        <h3>Fuente local</h3>
+        <p class="big">{{ calendar.source_counts.tasks }}</p>
+        <p class="muted">tareas totales en state.json</p>
+      </article>
+      <article class="card">
+        <h3>Nota</h3>
+        <p class="muted">{{ calendar.note }}</p>
+      </article>
+    </section>
+
+    <section class="panel" style="margin-bottom: 0.75rem;">
+      <h2>Calendario mockup</h2>
+      <div class="calendar-grid">
+        {% for day in calendar.days %}
+        <article class="calendar-day {{ 'is-today' if day['is_today'] else '' }}">
+          <div class="calendar-day__header">
+            <span>{{ day['weekday_label'] }}</span>
+            <strong>{{ day['day_label'] }}</strong>
+          </div>
+
+          {% if day['items'] %}
+          <ul class="calendar-day__items">
+            {% for item in day['items'] %}
+            <li class="calendar-item calendar-item--{{ item.kind }}">
+              <div class="calendar-item__meta">
+                {% if item.time %}<span class="chip">{{ item.time }}</span>{% endif %}
+                <span class="chip chip--kind">{{ item.kind_label }}</span>
+                {% if item.priority %}<span class="chip chip--priority">P{{ item.priority }}</span>{% endif %}
+              </div>
+              <div class="item-title">{{ item.title }}</div>
+              <div class="muted small">
+                {% if item.project %}{{ item.project }}{% else %}{{ item.status }}{% endif %}
+              </div>
+              {% if item.subtitle %}
+              <div class="muted small">{{ item.subtitle }}</div>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p class="muted small">Sin bloques.</p>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Backlog sin fecha</h2>
+      {% if calendar.unscheduled %}
+      <ul class="unscheduled-list">
+        {% for item in calendar.unscheduled %}
+        <li class="unscheduled-item">
+          <div class="unscheduled-item__meta">
+            <span class="chip chip--kind">{{ item.kind_label }}</span>
+            {% if item.priority %}<span class="chip chip--priority">P{{ item.priority }}</span>{% endif %}
+          </div>
+          <div class="item-title">{{ item.title }}</div>
+          <div class="muted small">
+            {% if item.project %}{{ item.project }}{% else %}{{ item.status }}{% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="muted">No hay tareas abiertas sin fecha.</p>
+      {% endif %}
+    </section>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+id: postpone_escalation
+description: Task postponed 3+ times — stop treating as normal reminder.
+priority: 40
+enabled: true
+urgency: normal
+
+trigger:
+  predicate: has_postpone_escalation
+
+message:
+  coaching_context: postpone_escalation
+  template: |
+    ADHD Assistant: llevas {{ bindings.count }} aplazamientos con '{{ bindings.task.title }}'. Ya no parece un problema de recordatorio. Hagamos un breach de 2 minutos o redefinimos el siguiente paso.
+    {%- if coaching_quote %}
+
+    {{ coaching_quote }}
+    {%- endif %}
+
+channels:
+  - "{{ config.delivery.default_channel }}"
+
+side_effects:
+  - action: bump_nudge_count
+    args:
+      task_id: "{{ bindings.task.id }}"
+  - action: append_history
+    args:
+      kind: postpone_escalation
+      summary: "{{ bindings.task.title }} x{{ bindings.count }}"
+  - action: hindsight_log
+    args:
+      context: "adhd-assistant:event:postpone_escalation"
+      content: "postpone_escalation: {{ bindings.task.title }} count={{ bindings.count }}"

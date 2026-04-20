@@ -1,0 +1,7 @@
+id: linkedin
+kind: skill
+status: active
+description: Manage LinkedIn interactions, post updates, and research profiles.
+tags: [linkedin, social-media, networking, automation]
+platforms: [hermes]
+depends_on: []

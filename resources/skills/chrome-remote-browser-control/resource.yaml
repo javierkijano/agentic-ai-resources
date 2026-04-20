@@ -1,0 +1,7 @@
+id: chrome-remote-browser-control
+kind: skill
+status: active
+description: Control Google Chrome via CDP (Chrome DevTools Protocol) for automation and browsing.
+tags: [chrome, browser, automation, cdp]
+platforms: [hermes]
+depends_on: []

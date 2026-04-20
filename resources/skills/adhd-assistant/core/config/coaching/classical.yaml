@@ -1,0 +1,8 @@
+theme: classical
+enabled_in_contexts:
+  - overdue_task
+  - postpone_escalation
+  - daily_review
+quotes:
+  - "Lo perfecto no arranca nada; lo suficiente sí."
+  - "La disciplina útil empieza por un gesto pequeño."

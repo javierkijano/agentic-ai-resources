@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADHD Assistant Monitor</title>
+    <link rel="stylesheet" href="{{ app_base_path }}/static/styles.css?v=20260419-redesign1" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>ADHD Assistant · Monitor</h1>
+        <p class="muted">Observabilidad runtime y catálogo de la skill (modo solo lectura).</p>
+      </div>
+      <div class="top-actions">
+        <nav class="top-nav">
+          <a class="nav-link" href="{{ app_base_path }}/">Hoy</a>
+          <a class="nav-link {{ 'is-active' if active_page == 'monitor' else '' }}" href="{{ app_base_path }}/monitor">Monitor</a>
+          <a class="nav-link {{ 'is-active' if active_page == 'calendar' else '' }}" href="{{ app_base_path }}/monitor/calendar">Calendario</a>
+        </nav>
+        <button id="refreshBtn" type="button">Actualizar</button>
+        <label class="auto-refresh">
+          <input id="autoRefresh" type="checkbox" checked />
+          auto (15s)
+        </label>
+      </div>
+    </header>
+
+    <section class="meta-row">
+      <div><strong>Runtime:</strong> <code>{{ runtime_dir }}</code></div>
+      <div><strong>Skill:</strong> <code>{{ skill_dir }}</code></div>
+      <div><strong>Ahora:</strong> <span id="nowValue">{{ summary.now }}</span></div>
+      <div><strong>Modo:</strong> <span id="modeValue">{{ summary.mode.primary_mode }}</span></div>
+    </section>
+
+    <section class="cards" id="cardsContainer">
+      <article class="card">
+        <h3>Tareas</h3>
+        <p class="big" id="tasksTotal">-</p>
+        <p class="muted" id="tasksDetails"></p>
+      </article>
+
+      <article class="card">
+        <h3>Citas</h3>
+        <p class="big" id="appointmentsTotal">-</p>
+        <p class="muted" id="appointmentsDetails"></p>
+      </article>
+
+      <article class="card">
+        <h3>Recordatorios</h3>
+        <p class="big" id="remindersTotal">-</p>
+        <p class="muted" id="remindersDetails"></p>
+      </article>
+
+      <article class="card">
+        <h3>Cola Hindsight</h3>
+        <p class="big" id="queueTotal">-</p>
+        <p class="muted">entradas pendientes</p>
+      </article>
+    </section>
+
+    <section class="panel" id="warningsPanel" hidden>
+      <h2>Warnings</h2>
+      <ul id="warningsList"></ul>
+    </section>
+
+    <section class="grid-2">
+      <section class="panel">
+        <h2>Archivos runtime</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Recurso</th>
+              <th>Existe</th>
+              <th>Tamaño</th>
+              <th>Última modificación</th>
+            </tr>
+          </thead>
+          <tbody id="filesTableBody"></tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>Políticas activas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Prioridad</th>
+              <th>Urgencia</th>
+              <th>Trigger</th>
+            </tr>
+          </thead>
+          <tbody id="policiesTableBody"></tbody>
+        </table>
+      </section>
+    </section>
+
+    <section class="grid-2">
+      <section class="panel">
+        <h2>Últimos ticks</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>at</th>
+              <th>status</th>
+              <th>reason</th>
+              <th>sent</th>
+            </tr>
+          </thead>
+          <tbody id="logsTableBody"></tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>Cola hindsight (últimas entradas)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>line</th>
+              <th>context</th>
+              <th>preview</th>
+            </tr>
+          </thead>
+          <tbody id="queueTableBody"></tbody>
+        </table>
+      </section>
+    </section>
+
+    <footer class="footer muted">
+      <span>Tip: endpoints API en <code>/api/*</code> para integrar otras vistas.</span>
+    </footer>
+
+    <script>
+      window.__APP_BASE_PATH__ = {{ app_base_path|tojson }};
+    </script>
+    <script src="{{ app_base_path }}/static/dashboard.js?v=20260419-redesign1"></script>
+  </body>
+</html>

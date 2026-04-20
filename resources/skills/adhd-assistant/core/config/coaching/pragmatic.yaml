@@ -1,0 +1,11 @@
+theme: pragmatic
+enabled_in_contexts:
+  - reminder
+  - overdue_task
+  - postpone_escalation
+  - daily_review
+  - appointment
+quotes:
+  - "No necesitas ganas; necesitas el siguiente paso."
+  - "La claridad llega antes haciendo que pensando más."
+  - "Lo suficientemente bueno hecho hoy gana a lo perfecto pospuesto."

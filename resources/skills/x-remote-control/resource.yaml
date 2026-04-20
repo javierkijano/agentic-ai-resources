@@ -1,0 +1,7 @@
+id: x-remote-control
+kind: skill
+status: active
+description: Control X (formerly Twitter) account, post tweets, and monitor interactions.
+tags: [x, twitter, social-media, automation]
+platforms: [hermes]
+depends_on: []

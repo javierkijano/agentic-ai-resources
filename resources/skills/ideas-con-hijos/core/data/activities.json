@@ -1,0 +1,2544 @@
+[
+  {
+    "slug": "laboratorio-arcoiris-con-vasos",
+    "title": "Laboratorio arcoíris con vasos",
+    "summary": "Experimento visual para ver cómo el agua ‘camina’ entre vasos y mezcla colores delante de los niños.",
+    "featured": true,
+    "curation_rank": 96,
+    "ages": {
+      "min": 4,
+      "max": 7,
+      "label": "4–7 años"
+    },
+    "duration": {
+      "min": 15,
+      "max": 20,
+      "label": "15–20 min"
+    },
+    "activity_types": [
+      "experimento",
+      "stem"
+    ],
+    "materials": [
+      "7 vasos transparentes",
+      "agua",
+      "papel de cocina",
+      "colorante alimentario"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "algo-tranquilo",
+      "con-lo-que-ya-tienes"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "baja",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Tiene efecto wow inmediato, requiere muy poca preparación y permite hablar de colores y ciencia sin ponerse demasiado académico.",
+    "what_develops": [
+      "observación",
+      "causa y efecto",
+      "mezcla de colores"
+    ],
+    "steps": [
+      "Llena 4 vasos con agua y deja 3 vacíos entre medias.",
+      "Añade colorante rojo, amarillo, azul y rojo siguiendo la secuencia del arcoíris.",
+      "Dobla 6 tiras de papel de cocina y colócalas conectando cada vaso con el siguiente.",
+      "Observa durante unos minutos cómo el agua sube por el papel y, si podéis, dejadlo reposar 1–2 horas para ver los nuevos colores.",
+      "Cierra la actividad preguntando qué color apareció en cada vaso vacío y por qué creen que pasó."
+    ],
+    "variations": [
+      "Haz versión corta con 3 vasos para explicar solo un color secundario.",
+      "Añade una hoja de hipótesis antes de empezar para niños más mayores.",
+      "Si no tienes colorante, usa rotulador lavable en el agua tibia."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://www.thebestideasforkids.com/wp-content/uploads/2020/05/Walking-Water-Experiment-Cover.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Artículo original",
+        "url": "https://www.thebestideasforkids.com/walking-water-experiment/"
+      }
+    ],
+    "source": {
+      "publisher": "The Best Ideas for Kids",
+      "title": "Walking Water Experiment",
+      "url": "https://www.thebestideasforkids.com/walking-water-experiment/"
+    },
+    "search_tags": [
+      "walking water",
+      "rainbow",
+      "capillary action",
+      "vasos",
+      "colores",
+      "agua"
+    ]
+  },
+  {
+    "slug": "mini-volcan-de-colores",
+    "title": "Mini volcán de colores",
+    "summary": "El clásico volcán con bicarbonato y vinagre, adaptado para montarlo rápido y con poca suciedad.",
+    "featured": true,
+    "curation_rank": 94,
+    "ages": {
+      "min": 3,
+      "max": 6,
+      "label": "3–6 años"
+    },
+    "duration": {
+      "min": 10,
+      "max": 15,
+      "label": "10–15 min"
+    },
+    "activity_types": [
+      "experimento",
+      "sensorial"
+    ],
+    "materials": [
+      "vaso o taza de plástico",
+      "agua",
+      "bicarbonato",
+      "vinagre",
+      "jabón",
+      "pintura lavable"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "algo-rapido",
+      "sorpresa-visual"
+    ],
+    "prep_level": "baja",
+    "mess_level": "media",
+    "energy_level": "media",
+    "supervision_level": "alta",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "La reacción química es inmediata, la preparación es mínima y admite repetir varias erupciones con el mismo montaje.",
+    "what_develops": [
+      "causa y efecto",
+      "lenguaje científico",
+      "atención compartida"
+    ],
+    "steps": [
+      "Llena un vaso de plástico hasta dos tercios con agua.",
+      "Añade 3–4 cucharadas de bicarbonato, una cucharadita de jabón y un poco de pintura lavable.",
+      "Coloca el vaso sobre una bandeja o en exterior y, si quieres, construye una montaña alrededor con arena o grava.",
+      "Remueve una vez más y vierte vinagre poco a poco hasta que empiece la erupción.",
+      "Repite una o dos veces más añadiendo más vinagre antes de recargar bicarbonato."
+    ],
+    "variations": [
+      "Hazlo al aire libre para convertirlo en actividad de patio.",
+      "Usa dos colores distintos y compara cómo cambia el ‘lava’.",
+      "Si quieres menos espuma, reduce el jabón a media cucharadita."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://preschoolinspirations.com/wp-content/uploads/2014/05/Easy-Volcano-Eruption-for-Kids-Preschool-Inspirations-10.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Guía original",
+        "url": "https://preschoolinspirations.com/easy-baking-soda-and-vinegar-volcano-eruption-for-kids/"
+      }
+    ],
+    "source": {
+      "publisher": "Preschool Inspirations",
+      "title": "Easy Baking Soda and Vinegar Volcano Eruption for Kids",
+      "url": "https://preschoolinspirations.com/easy-baking-soda-and-vinegar-volcano-eruption-for-kids/"
+    },
+    "search_tags": [
+      "volcan",
+      "bicarbonato",
+      "vinagre",
+      "quimica",
+      "eruption",
+      "lava"
+    ]
+  },
+  {
+    "slug": "mision-laser-en-el-pasillo",
+    "title": "Misión láser en el pasillo",
+    "summary": "Convierte un pasillo en una misión de espías usando lana, cuerda o cinta para crear ‘rayos láser’.",
+    "featured": true,
+    "curation_rank": 92,
+    "ages": {
+      "min": 4,
+      "max": 9,
+      "label": "4–9 años"
+    },
+    "duration": {
+      "min": 10,
+      "max": 12,
+      "label": "10–12 min"
+    },
+    "activity_types": [
+      "movimiento",
+      "imaginacion"
+    ],
+    "materials": [
+      "lana, cuerda o cinta",
+      "pasillo o marco de puerta",
+      "cronómetro opcional"
+    ],
+    "contexts": [
+      "antes-de-cenar",
+      "subir-energia",
+      "sin-pantallas"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "alta",
+    "supervision_level": "media",
+    "origin_type": "internal_original",
+    "delivery_mode": "full_guide",
+    "why_it_works": "Arranca en dos minutos, quema energía y hace que un espacio doméstico corriente parezca un reto especial.",
+    "what_develops": [
+      "coordinación",
+      "control corporal",
+      "juego simbólico"
+    ],
+    "steps": [
+      "Cruza varias tiras de lana o cinta entre dos paredes o en un marco de puerta para hacer un recorrido con huecos distintos.",
+      "Explica la misión: entrar sin tocar los ‘láseres’ y recuperar un tesoro al otro lado.",
+      "Haz una primera ronda lenta para que aprendan el circuito.",
+      "Añade una segunda ronda con cronómetro, un objeto en la mano o una regla extra, como pasar marcha atrás.",
+      "Terminad dejando que ellos diseñen el siguiente recorrido para ti."
+    ],
+    "variations": [
+      "Modo tranquilo: en vez de correr, hacerlo en silencio total como espías.",
+      "Modo hermanos: uno diseña y otro resuelve.",
+      "Modo mini: usa solo 3 cuerdas si el niño es pequeño."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e6fa/nIRLeGrgukCG7XsndOcZu_AbXYEXwJ.png"
+      }
+    ],
+    "source": null,
+    "search_tags": [
+      "laser maze",
+      "pasillo",
+      "espias",
+      "lana",
+      "moverse",
+      "juego activo"
+    ]
+  },
+  {
+    "slug": "puente-para-animales-de-juguete",
+    "title": "Puente para animales de juguete",
+    "summary": "Reto de construcción con cartón y cinta para diseñar un puente que aguante varios animales o coches.",
+    "featured": true,
+    "curation_rank": 90,
+    "ages": {
+      "min": 5,
+      "max": 8,
+      "label": "5–8 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 25,
+      "label": "20–25 min"
+    },
+    "activity_types": [
+      "construccion",
+      "stem"
+    ],
+    "materials": [
+      "cartón",
+      "cinta adhesiva",
+      "animales o coches pequeños",
+      "libros o cajas para apoyar"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "con-lo-que-ya-tienes",
+      "construir-juntos"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "internal_original",
+    "delivery_mode": "full_guide",
+    "why_it_works": "Tiene objetivo claro, admite ensayo-error y convierte un material simple en un reto compartido muy concreto.",
+    "what_develops": [
+      "resolución de problemas",
+      "diseño",
+      "persistencia"
+    ],
+    "steps": [
+      "Coloca dos apoyos separados unos centímetros y plantea el reto: hacer un puente para cruzar animales o coches.",
+      "Deja que prueben una primera versión rápida con una sola pieza de cartón.",
+      "Cuando falle o se hunda, preguntad qué le falta: más ancho, más grosor o más apoyo por debajo.",
+      "Construid una segunda versión doblando el cartón o añadiendo pilares con cinta.",
+      "Haced una prueba final poniendo varios animales y celebrad el diseño que aguante más."
+    ],
+    "variations": [
+      "Modo competición: dos puentes y comparáis cuál soporta más peso.",
+      "Modo historia: el puente lleva a un zoo, castillo o isla pirata.",
+      "Modo simple: objetivo solo con un peluche pequeño."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e6fe/jzZ1octXl2aeYVUCs5RsH_oBbUF0PS.png"
+      }
+    ],
+    "source": null,
+    "search_tags": [
+      "bridge",
+      "carton",
+      "reto",
+      "coches",
+      "animales",
+      "engineering"
+    ]
+  },
+  {
+    "slug": "robot-reciclado-con-poderes",
+    "title": "Robot reciclado con poderes",
+    "summary": "Manualidad abierta con cajas y tapones para crear un robot y decidir qué misión tiene.",
+    "featured": false,
+    "curation_rank": 86,
+    "ages": {
+      "min": 5,
+      "max": 8,
+      "label": "5–8 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 30,
+      "label": "20–30 min"
+    },
+    "activity_types": [
+      "manualidad",
+      "imaginacion"
+    ],
+    "materials": [
+      "cajas pequeñas",
+      "tapones",
+      "pegamento o cinta",
+      "rotuladores",
+      "papel"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "manualidades",
+      "con-lo-que-ya-tienes"
+    ],
+    "prep_level": "media",
+    "mess_level": "media",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "internal_original",
+    "delivery_mode": "full_guide",
+    "why_it_works": "La estructura la pone el adulto, pero el resultado lo decide el niño; eso reduce bloqueo y dispara la imaginación.",
+    "what_develops": [
+      "creatividad",
+      "narrativa",
+      "motricidad fina"
+    ],
+    "steps": [
+      "Reúne varias piezas recicladas y elegid cuál será el cuerpo, la cabeza y los accesorios del robot.",
+      "Montad la base con cinta o pegamento sin buscar perfección.",
+      "Añadid ojos, botones, antenas o brazos usando tapones, papel o cartón pequeño.",
+      "Cuando esté construido, decidid juntos qué poder tiene y qué problema resuelve.",
+      "Si apetece, grabad un mensaje de presentación del robot o dibujad su ficha."
+    ],
+    "variations": [
+      "Haz una versión ‘robot doméstico’ que ayude en casa.",
+      "Usa colores limitados para que parezca de una saga concreta.",
+      "Construid dos robots y hacedlos hablar."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e703/-s5r6yqE3dAqs-hAioM0x_GQ1GSA8O.png"
+      }
+    ],
+    "source": null,
+    "search_tags": [
+      "robot",
+      "reciclaje",
+      "cajas",
+      "tapones",
+      "manualidad",
+      "inventar"
+    ]
+  },
+  {
+    "slug": "prismaticos-de-tubos",
+    "title": "Prismáticos de tubos",
+    "summary": "Manualidad reciclada para convertir dos tubos de cartón en prismáticos y usarla luego en juego simbólico o exploración.",
+    "featured": false,
+    "curation_rank": 84,
+    "ages": {
+      "min": 4,
+      "max": 8,
+      "label": "4–8 años"
+    },
+    "duration": {
+      "min": 15,
+      "max": 25,
+      "label": "15–25 min"
+    },
+    "activity_types": [
+      "manualidad",
+      "juego-simbolico"
+    ],
+    "materials": [
+      "2 tubos de cartón",
+      "cuerda o lana",
+      "papel o fieltro",
+      "pegamento",
+      "goma elástica"
+    ],
+    "contexts": [
+      "manualidades",
+      "dia-de-lluvia",
+      "naturaleza"
+    ],
+    "prep_level": "media",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "La actividad no se acaba al construir: luego sirve para juegos de exploradores, safari o búsqueda de objetos.",
+    "what_develops": [
+      "motricidad fina",
+      "planificación",
+      "juego imaginativo"
+    ],
+    "steps": [
+      "Forra dos tubos de cartón con papel, fieltro o pintura sencilla.",
+      "Únelos con pegamento y mantenlos sujetos con goma elástica mientras secan.",
+      "Haz un agujero a cada lado y ata una cuerda para colgarlos del cuello.",
+      "Añade detalles: camuflaje, pegatinas, colores o incluso celofán para un efecto especial.",
+      "Terminad con una mini misión: buscar pájaros, coches rojos o tesoros escondidos en casa."
+    ],
+    "variations": [
+      "Modo exterior: paseo corto con lista de cosas que encontrar.",
+      "Modo habitación: safari de peluches.",
+      "Modo rápido: sin forrar, solo unir, decorar y jugar."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://craftsbyamanda.com/wp-content/uploads/2011/02/cardboard-tube-binocular-H.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Tutorial original",
+        "url": "https://craftsbyamanda.com/cardboard-tube-binoculars/"
+      }
+    ],
+    "source": {
+      "publisher": "Crafts by Amanda",
+      "title": "Cardboard Tube Binoculars",
+      "url": "https://craftsbyamanda.com/cardboard-tube-binoculars/"
+    },
+    "search_tags": [
+      "binoculars",
+      "tubos",
+      "bird watching",
+      "explorador",
+      "nature",
+      "manualidad reciclada"
+    ]
+  },
+  {
+    "slug": "arte-con-cinta-resist",
+    "title": "Arte con cinta resist",
+    "summary": "Pinta sobre cartón o cartulina con cinta de carrocero para revelar líneas limpias al retirarla.",
+    "featured": false,
+    "curation_rank": 82,
+    "ages": {
+      "min": 3,
+      "max": 9,
+      "label": "3–9 años"
+    },
+    "duration": {
+      "min": 15,
+      "max": 30,
+      "label": "15–30 min"
+    },
+    "activity_types": [
+      "arte",
+      "manualidad"
+    ],
+    "materials": [
+      "cartón grande o cartulina",
+      "cinta de pintor",
+      "pintura lavable",
+      "brochas"
+    ],
+    "contexts": [
+      "algo-tranquilo",
+      "manualidades",
+      "con-lo-que-ya-tienes"
+    ],
+    "prep_level": "baja",
+    "mess_level": "media",
+    "energy_level": "baja",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Es una actividad muy agradecida: incluso un niño pequeño consigue un resultado bonito y claro cuando se retira la cinta.",
+    "what_develops": [
+      "coordinación mano-ojo",
+      "creatividad",
+      "persistencia"
+    ],
+    "steps": [
+      "Extiende el cartón en el suelo o la mesa y pega la cinta formando líneas, cuadrados o letras.",
+      "Invita a llenar todos los huecos con pintura, usando muchos colores si quieren.",
+      "Deja secar lo suficiente para que no se emborrone al retirar la cinta.",
+      "Quita la cinta despacio y observad cómo aparece el dibujo en negativo.",
+      "Decidid juntos si queréis enmarcarlo, regalarlo o usarlo como cartel para la habitación."
+    ],
+    "variations": [
+      "Haz una versión gigante para hermanos sobre una caja grande abierta.",
+      "Escribe el nombre del niño con cinta antes de pintar.",
+      "Usa solo dos colores para un resultado más limpio."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://busytoddler.com/wp-content/uploads/2024/07/taperesist5-square.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Artículo original",
+        "url": "https://busytoddler.com/tape-resist-art-activity-for-kids/"
+      }
+    ],
+    "source": {
+      "publisher": "Busy Toddler",
+      "title": "Tape Resist Art Activity for Kids",
+      "url": "https://busytoddler.com/tape-resist-art-activity-for-kids/"
+    },
+    "search_tags": [
+      "tape resist",
+      "pintura",
+      "cinta",
+      "carton",
+      "arte facil",
+      "manualidad rapida"
+    ]
+  },
+  {
+    "slug": "ciudad-de-cajas",
+    "title": "Ciudad de cajas",
+    "summary": "Actividad de construcción abierta para transformar cajas pequeñas en una calle o ciudad entera.",
+    "featured": false,
+    "curation_rank": 80,
+    "ages": {
+      "min": 6,
+      "max": 9,
+      "label": "6–9 años"
+    },
+    "duration": {
+      "min": 25,
+      "max": 40,
+      "label": "25–40 min"
+    },
+    "activity_types": [
+      "construccion",
+      "manualidad"
+    ],
+    "materials": [
+      "cajas recicladas",
+      "papel de colores",
+      "rotuladores",
+      "pegamento",
+      "cartón base"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "construir-juntos",
+      "manualidades"
+    ],
+    "prep_level": "media",
+    "mess_level": "media",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "external_reference",
+    "delivery_mode": "external_link",
+    "why_it_works": "Tiene una parte de diseño y otra de juego posterior; la ciudad creada se puede reutilizar varios días.",
+    "what_develops": [
+      "planificación espacial",
+      "creatividad",
+      "narrativa"
+    ],
+    "steps": [
+      "Reúne varias cajas pequeñas y decidid qué edificios queréis construir.",
+      "Forrad o pintad cada caja y añadid ventanas, puertas y detalles.",
+      "Pegad los edificios sobre una base de cartón y dibujad calles, cruces y plazas.",
+      "Añadid coches, muñecos o animales para convertirlo en juego abierto.",
+      "Si queréis más detalle o un acabado más guiado, abrid la referencia externa."
+    ],
+    "variations": [
+      "Haz una ciudad temática: zoo, granja, castillo o barrio pirata.",
+      "Divide el trabajo: uno diseña calles y otro edificios.",
+      "Amplíala durante varios días en vez de hacer todo de una vez."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://www.crayola.com/images/default-source/craft-images/rainy-days/build-a-city-with-boxes.jpg?sfvrsn=1d78b0c7_8"
+      },
+      {
+        "kind": "reference",
+        "label": "Ficha original",
+        "url": "https://www.crayola.com/crafts/build-a-city-with-boxes-craft"
+      }
+    ],
+    "source": {
+      "publisher": "Crayola",
+      "title": "Build a City With Boxes",
+      "url": "https://www.crayola.com/crafts/build-a-city-with-boxes-craft"
+    },
+    "search_tags": [
+      "city",
+      "boxes",
+      "cardboard city",
+      "arquitectura",
+      "calles",
+      "upcycled"
+    ]
+  },
+  {
+    "slug": "cuento-por-turnos-con-linterna",
+    "title": "Cuento por turnos con linterna",
+    "summary": "Actividad tranquila para cerrar el día inventando una historia por turnos con luz tenue y sombras.",
+    "featured": false,
+    "curation_rank": 78,
+    "ages": {
+      "min": 3,
+      "max": 8,
+      "label": "3–8 años"
+    },
+    "duration": {
+      "min": 10,
+      "max": 15,
+      "label": "10–15 min"
+    },
+    "activity_types": [
+      "cuento",
+      "algo-tranquilo"
+    ],
+    "materials": [
+      "linterna o lámpara",
+      "pared o sábana",
+      "uno o dos objetos pequeños opcionales"
+    ],
+    "contexts": [
+      "bajar-revoluciones",
+      "antes-de-dormir",
+      "sin-pantallas"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "baja",
+    "supervision_level": "baja",
+    "origin_type": "internal_original",
+    "delivery_mode": "full_guide",
+    "why_it_works": "Reduce revoluciones y da una estructura muy simple para jugar juntos sin preparar nada.",
+    "what_develops": [
+      "lenguaje",
+      "escucha",
+      "imaginación narrativa"
+    ],
+    "steps": [
+      "Apagad la luz principal y dejad una linterna apuntando a una pared o sábana.",
+      "El adulto empieza con una frase corta: ‘Había una vez…’ y el niño añade la siguiente.",
+      "Cada turno debe sumar solo una idea: personaje, problema, lugar o solución.",
+      "Si queréis, usad las manos o un objeto para hacer sombras relacionadas con la historia.",
+      "Cerrad cuando aparezca el final, sin alargarlo demasiado para que quede con ganas de repetir mañana."
+    ],
+    "variations": [
+      "Modo mini: solo 5 frases en total.",
+      "Modo risas: cada turno debe meter un animal absurdo.",
+      "Modo calma: voz baja y final feliz obligatorio."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e709/rPtoATi_4GSG2CqX_fWVM_FNNGoUhK.png"
+      }
+    ],
+    "source": null,
+    "search_tags": [
+      "linterna",
+      "cuento",
+      "sombras",
+      "calmar",
+      "antes de dormir",
+      "storytelling"
+    ]
+  },
+  {
+    "slug": "titeres-de-sombras",
+    "title": "Títeres de sombras",
+    "summary": "Versión guiada para crear siluetas con papel y palitos y montar una escena de sombras sencilla.",
+    "featured": false,
+    "curation_rank": 76,
+    "ages": {
+      "min": 5,
+      "max": 9,
+      "label": "5–9 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 30,
+      "label": "20–30 min"
+    },
+    "activity_types": [
+      "manualidad",
+      "cuento"
+    ],
+    "materials": [
+      "papel grueso",
+      "tijeras",
+      "pegamento",
+      "palitos",
+      "linterna"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "bajar-revoluciones",
+      "manualidades"
+    ],
+    "prep_level": "media",
+    "mess_level": "baja",
+    "energy_level": "baja",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Une recorte, juego dramático y experimento con sombras; además deja un resultado reutilizable.",
+    "what_develops": [
+      "motricidad fina",
+      "expresión oral",
+      "creatividad"
+    ],
+    "steps": [
+      "Probad primero algunas sombras con las manos para entrar en ambiente.",
+      "Dibujad o trazad una silueta sencilla en papel grueso y recortadla.",
+      "Pegad la silueta a un palito para convertirla en títere.",
+      "Apuntad con la linterna a una pared o sábana y moved el personaje delante de la luz.",
+      "Inventad una escena corta y representadla entre dos personas."
+    ],
+    "variations": [
+      "Usad dos personajes para hacer diálogo.",
+      "Comparad cómo cambia la sombra acercando y alejando la linterna.",
+      "Si no queréis recortar, haced sombras con juguetes pequeños."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://www.crayola.com/images/default-source/learning/lesson-plan-images/406.jpg?sfvrsn=153060ca_5"
+      },
+      {
+        "kind": "reference",
+        "label": "Ficha original",
+        "url": "https://www.crayola.com/lesson-plans/shadow-puppets-lesson-plan"
+      }
+    ],
+    "source": {
+      "publisher": "Crayola",
+      "title": "Shadow Puppets Lesson Plan",
+      "url": "https://www.crayola.com/lesson-plans/shadow-puppets-lesson-plan"
+    },
+    "search_tags": [
+      "shadow puppets",
+      "linterna",
+      "teatro",
+      "sombras",
+      "palitos",
+      "story"
+    ]
+  },
+  {
+    "slug": "restaurante-imaginario",
+    "title": "Restaurante imaginario",
+    "summary": "Juego simbólico muy flexible para montar un restaurante en casa con cartas, pedidos y clientes imposibles.",
+    "featured": false,
+    "curation_rank": 74,
+    "ages": {
+      "min": 4,
+      "max": 8,
+      "label": "4–8 años"
+    },
+    "duration": {
+      "min": 15,
+      "max": 30,
+      "label": "15–30 min"
+    },
+    "activity_types": [
+      "juego-simbolico",
+      "cuento"
+    ],
+    "materials": [
+      "papel",
+      "lápices",
+      "platos o juguetes de cocina",
+      "mantel o mesa"
+    ],
+    "contexts": [
+      "algo-tranquilo",
+      "sin-pantallas",
+      "hermanos"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "baja",
+    "origin_type": "internal_original",
+    "delivery_mode": "full_guide",
+    "why_it_works": "Permite mucha conversación, se adapta a distintas edades y no depende de material especial.",
+    "what_develops": [
+      "lenguaje",
+      "turnos",
+      "planificación social"
+    ],
+    "steps": [
+      "Preparad una mesa como si fuera un restaurante y elegid roles: cocinero, camarero, cliente.",
+      "Dibujad una carta con platos absurdos o realistas según el humor del día.",
+      "Haced pedidos, tomad nota y servid usando objetos reales o imaginarios.",
+      "Introducid un giro: un cliente muy exigente, una inspección sorpresa o un plato secreto del chef.",
+      "Cerrad con una mini reseña: qué plato triunfó y qué menú habría mañana."
+    ],
+    "variations": [
+      "Modo letras: los platos deben empezar por una letra concreta.",
+      "Modo números: sumar precios sencillos.",
+      "Modo calma: restaurante silencioso con música tranquila."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e70e/kMbmBMemzzcWFiRgFBbfq_wgGnRah2.png"
+      }
+    ],
+    "source": null,
+    "search_tags": [
+      "restaurante",
+      "cocina",
+      "roles",
+      "juego de imitacion",
+      "mesa",
+      "inventar"
+    ]
+  },
+  {
+    "slug": "marionetas-de-bolsa",
+    "title": "Marionetas de bolsa",
+    "summary": "Crear personajes con bolsas de papel y luego usarlos en una escena corta o mini obra.",
+    "featured": false,
+    "curation_rank": 72,
+    "ages": {
+      "min": 5,
+      "max": 9,
+      "label": "5–9 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 30,
+      "label": "20–30 min"
+    },
+    "activity_types": [
+      "manualidad",
+      "cuento"
+    ],
+    "materials": [
+      "bolsas de papel",
+      "papel",
+      "cinta o pegamento",
+      "rotuladores",
+      "tijeras"
+    ],
+    "contexts": [
+      "manualidades",
+      "dia-de-lluvia",
+      "sin-pantallas"
+    ],
+    "prep_level": "media",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "external_reference",
+    "delivery_mode": "external_link",
+    "why_it_works": "La creación desemboca rápido en juego dramático, así que no se queda en simple manualidad.",
+    "what_develops": [
+      "expresión oral",
+      "motricidad fina",
+      "juego narrativo"
+    ],
+    "steps": [
+      "Usad la parte doblada de la bolsa como boca del personaje.",
+      "Añadid ojos, pelo, orejas o accesorios con papel y rotuladores.",
+      "Dejad que cada niño cree un personaje con una personalidad clara.",
+      "Juntad 2 o 3 marionetas y preparad una escena breve.",
+      "Si queréis una guía más escolar o estructurada, abrid la referencia externa."
+    ],
+    "variations": [
+      "Equipo de monstruos, animales o personajes del barrio.",
+      "Haced un mini teatro detrás del sofá.",
+      "Cada marioneta debe resolver un problema concreto."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://www.crayola.com/images/default-source/learning/lesson-plan-images/746.jpg?sfvrsn=679aff27_3"
+      },
+      {
+        "kind": "reference",
+        "label": "Ficha original",
+        "url": "https://www.crayola.com/lesson-plans/paper-bag-puppets-lesson-plan"
+      }
+    ],
+    "source": {
+      "publisher": "Crayola",
+      "title": "Paper Bag Puppets Lesson Plan",
+      "url": "https://www.crayola.com/lesson-plans/paper-bag-puppets-lesson-plan"
+    },
+    "search_tags": [
+      "paper bag puppets",
+      "bolsa",
+      "marionetas",
+      "obra",
+      "teatro",
+      "cuentos"
+    ]
+  },
+  {
+    "slug": "cohete-de-pajita",
+    "title": "Cohete de pajita",
+    "summary": "Mini cohete de papel que se lanza soplando por una pajita y permite probar qué diseño vuela mejor.",
+    "featured": true,
+    "curation_rank": 89,
+    "ages": {
+      "min": 8,
+      "max": 13,
+      "label": "8–13 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 30,
+      "label": "20–30 min"
+    },
+    "activity_types": [
+      "experimento",
+      "stem"
+    ],
+    "materials": [
+      "papel o plantilla",
+      "pajita",
+      "tijeras",
+      "cinta adhesiva",
+      "lápiz",
+      "cinta métrica opcional"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "construir-juntos",
+      "sin-pantallas"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Arranca rápido, da feedback inmediato y convierte un experimento de física en un reto de iteración muy claro.",
+    "what_develops": [
+      "diseño",
+      "observación",
+      "método de prueba"
+    ],
+    "steps": [
+      "Recorta la plantilla o una tira de papel y enróllala sobre un lápiz para formar el cuerpo del cohete.",
+      "Haz unas aletas pequeñas y pégalas lo más simétricas posible.",
+      "Cierra la punta con cinta para que no se escape el aire.",
+      "Mete el cohete en la pajita y lánzalo desde una línea de salida.",
+      "Repite cambiando solo una variable cada vez: aletas, longitud o peso de la punta."
+    ],
+    "variations": [
+      "Probad varios ángulos de lanzamiento.",
+      "Competid por distancia o precisión.",
+      "Diseñad una versión espacial con decoración propia."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/72032c99a83edc45d4fecf9b5d9b1f5b_strawrocket_step7.gif_0v4d34M.png"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://www.jpl.nasa.gov/edu/resources/project/make-a-straw-rocket/"
+      }
+    ],
+    "source": {
+      "publisher": "NASA JPL Education",
+      "title": "Make a Straw Rocket – Engineering Project",
+      "url": "https://www.jpl.nasa.gov/edu/resources/project/make-a-straw-rocket/"
+    },
+    "search_tags": [
+      "cohete",
+      "pajita",
+      "rocket",
+      "espacio",
+      "aire",
+      "nasa"
+    ]
+  },
+  {
+    "slug": "desviar-agua-con-estatica",
+    "title": "Desviar agua con estática",
+    "summary": "Experimento exprés para ver cómo un globo cargado puede curvar un hilo fino de agua.",
+    "featured": false,
+    "curation_rank": 84,
+    "ages": {
+      "min": 6,
+      "max": 12,
+      "label": "6–12 años"
+    },
+    "duration": {
+      "min": 10,
+      "max": 15,
+      "label": "10–15 min"
+    },
+    "activity_types": [
+      "experimento",
+      "stem"
+    ],
+    "materials": [
+      "globo",
+      "grifo o vaso con agujero",
+      "agua",
+      "toalla"
+    ],
+    "contexts": [
+      "algo-rapido",
+      "sorpresa-visual",
+      "con-lo-que-ya-tienes"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Tiene efecto wow casi instantáneo y sirve para introducir electricidad estática sin material raro.",
+    "what_develops": [
+      "curiosidad científica",
+      "causa y efecto",
+      "observación"
+    ],
+    "steps": [
+      "Deja salir un hilo fino de agua desde un grifo o desde un vaso con un pequeño agujero.",
+      "Comprueba primero que el agua cae recta.",
+      "Frota un globo en el pelo seco o en una prenda de lana durante varios segundos.",
+      "Acércalo al agua sin tocarla.",
+      "Observad cómo el hilo se curva y repetid cargando de nuevo el globo."
+    ],
+    "variations": [
+      "Comparad globo recién cargado frente a globo descargado.",
+      "Probad con un hilo más fino o más grueso.",
+      "Haced una pequeña hipótesis antes de empezar."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e712/43mbaY54PkioTe28LSdCD_sH2dmAZZ.png"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://www.scientificamerican.com/article/static-electricity-bring-science-home/"
+      }
+    ],
+    "source": {
+      "publisher": "Scientific American",
+      "title": "Bend Water with Static Electricity",
+      "url": "https://www.scientificamerican.com/article/static-electricity-bring-science-home/"
+    },
+    "search_tags": [
+      "estática",
+      "globo",
+      "agua",
+      "electricidad",
+      "science at home"
+    ]
+  },
+  {
+    "slug": "cromatografia-de-caramelos",
+    "title": "Cromatografía de caramelos",
+    "summary": "Separad los tintes de caramelos de colores para descubrir que algunos esconden más de un pigmento.",
+    "featured": false,
+    "curation_rank": 82,
+    "ages": {
+      "min": 7,
+      "max": 12,
+      "label": "7–12 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 30,
+      "label": "20–30 min"
+    },
+    "activity_types": [
+      "experimento",
+      "stem"
+    ],
+    "materials": [
+      "caramelos de colores",
+      "papel de cocina o filtro",
+      "agua",
+      "sal",
+      "tarro alto",
+      "cuentagotas"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "algo-tranquilo",
+      "con-lo-que-ya-tienes"
+    ],
+    "prep_level": "media",
+    "mess_level": "baja",
+    "energy_level": "baja",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Une comida, color y laboratorio casero; además la separación de bandas se ve claramente.",
+    "what_develops": [
+      "observación",
+      "separación de mezclas",
+      "paciencia"
+    ],
+    "steps": [
+      "Haz una pequeña mancha de color disolviendo la cobertura de un caramelo con una gota de agua sobre el papel.",
+      "Prepara un poco de agua con sal en un tarro, dejando el nivel por debajo de la mancha.",
+      "Suspende el papel para que toque el líquido por abajo.",
+      "Espera a que el agua suba y arrastre los pigmentos.",
+      "Comparad qué colores se separan en varias bandas y cuáles no."
+    ],
+    "variations": [
+      "Comparad dos marcas distintas de caramelos.",
+      "Medid qué tan lejos sube cada color.",
+      "Haced una tabla con vuestras conclusiones."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e717/4_Na5L8wLHk72pSzenvy__CXslrxT8.png"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://www.scientificamerican.com/article/bring-science-home-candy-chromatography/"
+      }
+    ],
+    "source": {
+      "publisher": "Scientific American",
+      "title": "Solution Science: Colorful Candy Chromatography",
+      "url": "https://www.scientificamerican.com/article/bring-science-home-candy-chromatography/"
+    },
+    "search_tags": [
+      "cromatografía",
+      "caramelos",
+      "colorantes",
+      "química",
+      "papel filtro"
+    ]
+  },
+  {
+    "slug": "nube-en-un-tarro",
+    "title": "Nube en un tarro",
+    "summary": "Montad una pequeña nube casera dentro de un bote para hablar de vapor, condensación y tiempo atmosférico.",
+    "featured": true,
+    "curation_rank": 87,
+    "ages": {
+      "min": 7,
+      "max": 12,
+      "label": "7–12 años"
+    },
+    "duration": {
+      "min": 15,
+      "max": 20,
+      "label": "15–20 min"
+    },
+    "activity_types": [
+      "experimento",
+      "stem"
+    ],
+    "materials": [
+      "tarro con tapa",
+      "agua caliente",
+      "cubitos de hielo",
+      "laca o aerosol transparente",
+      "trapo"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "sorpresa-visual",
+      "construir-juntos"
+    ],
+    "prep_level": "media",
+    "mess_level": "baja",
+    "energy_level": "baja",
+    "supervision_level": "alta",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Es muy visual y conecta enseguida con la idea de cómo se forman nubes reales.",
+    "what_develops": [
+      "meteorología básica",
+      "observación",
+      "lenguaje científico"
+    ],
+    "steps": [
+      "Pon un poco de agua caliente en el tarro con ayuda adulta.",
+      "Pulveriza una mínima cantidad de aerosol en el interior.",
+      "Cierra o tapa el tarro y coloca hielo encima.",
+      "Observa cómo empieza a formarse una nube dentro.",
+      "Abre el tarro para ver cómo el vapor cambia al salir."
+    ],
+    "variations": [
+      "Comparad con más o menos hielo.",
+      "Intentad describir qué parte es vapor y qué parte ya está condensada.",
+      "Dibujad luego el ciclo del agua."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e71a/okpqfOC4hSjYTworPC784_lRqUkDNg.png"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://www.sciencebuddies.org/stem-activities/cumulus-maximus-test-weather-you-can-make-your-own-cloud"
+      }
+    ],
+    "source": {
+      "publisher": "Science Buddies",
+      "title": "Cumulus Maximus: Test WEATHER you can make your own cloud!",
+      "url": "https://www.sciencebuddies.org/stem-activities/cumulus-maximus-test-weather-you-can-make-your-own-cloud"
+    },
+    "search_tags": [
+      "nube",
+      "tarro",
+      "meteorología",
+      "condensación",
+      "hielo"
+    ]
+  },
+  {
+    "slug": "barco-de-papel-aluminio",
+    "title": "Barco de papel aluminio",
+    "summary": "Diseñad un barco de aluminio y ved cuántas monedas aguanta antes de hundirse.",
+    "featured": false,
+    "curation_rank": 81,
+    "ages": {
+      "min": 7,
+      "max": 12,
+      "label": "7–12 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 30,
+      "label": "20–30 min"
+    },
+    "activity_types": [
+      "experimento",
+      "stem"
+    ],
+    "materials": [
+      "papel de aluminio",
+      "recipiente con agua",
+      "monedas",
+      "toalla"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "construir-juntos",
+      "con-lo-que-ya-tienes"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Convierte la flotación en un reto muy tangible y fácil de comparar entre diseños.",
+    "what_develops": [
+      "diseño",
+      "prueba y error",
+      "concepto de flotación"
+    ],
+    "steps": [
+      "Recorta una lámina de aluminio para cada participante.",
+      "Dale forma de barquito con bordes algo levantados.",
+      "Ponlo a flotar en una bandeja o fuente con agua.",
+      "Añade monedas poco a poco, repartiéndolas con cuidado.",
+      "Anotad qué forma soporta más antes de hundirse."
+    ],
+    "variations": [
+      "Probad barcos anchos frente a barcos altos.",
+      "Competid por peso total o por estabilidad.",
+      "Haced una segunda ronda mejorando vuestro primer diseño."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e71f/q2zgG8s2WI2IkIP63ko6h_hcf7fS9e.png"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://www.sciencebuddies.org/stem-activities/aluminum-foil-boats-float"
+      }
+    ],
+    "source": {
+      "publisher": "Science Buddies",
+      "title": "How Much Weight Can Aluminum Foil Boats Float?",
+      "url": "https://www.sciencebuddies.org/stem-activities/aluminum-foil-boats-float"
+    },
+    "search_tags": [
+      "barco",
+      "papel aluminio",
+      "flotación",
+      "monedas",
+      "agua"
+    ]
+  },
+  {
+    "slug": "masa-oobleck",
+    "title": "Masa oobleck",
+    "summary": "Mezcla sensorial que parece líquida y sólida según cómo la toques.",
+    "featured": false,
+    "curation_rank": 80,
+    "ages": {
+      "min": 5,
+      "max": 12,
+      "label": "5–12 años"
+    },
+    "duration": {
+      "min": 10,
+      "max": 15,
+      "label": "10–15 min"
+    },
+    "activity_types": [
+      "experimento",
+      "sensorial"
+    ],
+    "materials": [
+      "maicena",
+      "agua",
+      "cuenco",
+      "colorante opcional"
+    ],
+    "contexts": [
+      "algo-tranquilo",
+      "dia-de-lluvia",
+      "sorpresa-visual"
+    ],
+    "prep_level": "baja",
+    "mess_level": "media",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Se prepara en minutos y la sensación en las manos es muy distinta a cualquier otra mezcla casera.",
+    "what_develops": [
+      "curiosidad",
+      "lenguaje descriptivo",
+      "observación sensorial"
+    ],
+    "steps": [
+      "Pon maicena en un cuenco grande.",
+      "Añade agua poco a poco y mezcla con las manos.",
+      "Ajusta hasta que al apretarla se note dura y al soltarla se deshaga.",
+      "Jugad a golpearla rápido y a moverla despacio.",
+      "Comentad juntos en qué momentos parece líquido y en cuáles parece sólido."
+    ],
+    "variations": [
+      "Añadid colorante para hacerla más vistosa.",
+      "Probádla con cucharas o juguetes pequeños.",
+      "Haced dos versiones con distinta proporción de agua."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e723/N7x6B_c6tLVXTic_IZUgO_nLyIBOYe.png"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://www.exploratorium.edu/explore/science/activity/ooze"
+      }
+    ],
+    "source": {
+      "publisher": "Exploratorium",
+      "title": "Is This Stuff a Liquid Or a Solid?",
+      "url": "https://www.exploratorium.edu/explore/science/activity/ooze"
+    },
+    "search_tags": [
+      "oobleck",
+      "maicena",
+      "sensorial",
+      "no newtoniano",
+      "mezcla"
+    ]
+  },
+  {
+    "slug": "laberinto-canicas-reciclado",
+    "title": "Laberinto de canicas reciclado",
+    "summary": "Construid un laberinto dentro de una tapa de caja y luego usadlo como juego reutilizable.",
+    "featured": true,
+    "curation_rank": 88,
+    "ages": {
+      "min": 6,
+      "max": 10,
+      "label": "6–10 años"
+    },
+    "duration": {
+      "min": 30,
+      "max": 45,
+      "label": "30–45 min"
+    },
+    "activity_types": [
+      "construccion",
+      "manualidad"
+    ],
+    "materials": [
+      "tapa de caja",
+      "pajitas o palitos",
+      "tapones",
+      "pegamento",
+      "canica"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "construir-juntos",
+      "sin-pantallas"
+    ],
+    "prep_level": "media",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "El premio llega enseguida: una vez construido, el juguete ya está listo para usar y mejorar.",
+    "what_develops": [
+      "planificación",
+      "motricidad fina",
+      "resolución de problemas"
+    ],
+    "steps": [
+      "Usad una tapa de caja como base y pensad por dónde debería pasar la canica.",
+      "Pegad paredes y obstáculos con pajitas, palitos o tapones.",
+      "Dejad un punto claro de salida y uno de llegada.",
+      "Cuando se seque, moved la caja para hacer recorrer la canica.",
+      "Si se atasca demasiado, rediseñad juntos una parte del circuito."
+    ],
+    "variations": [
+      "Haced un nivel fácil y otro difícil.",
+      "Añadid una tapa transparente.",
+      "Cronometrad cada intento."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://media.craftulate.com/wp-content/uploads/2014/05/DIYMarbleRunE.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://craftulate.com/diy-marble-run/"
+      }
+    ],
+    "source": {
+      "publisher": "Craftulate",
+      "title": "DIY Marble Run",
+      "url": "https://craftulate.com/diy-marble-run/"
+    },
+    "search_tags": [
+      "laberinto",
+      "canicas",
+      "marble run",
+      "reciclaje",
+      "caja"
+    ]
+  },
+  {
+    "slug": "guitarra-de-caja-de-zapatos",
+    "title": "Guitarra de caja de zapatos",
+    "summary": "Una guitarra casera con caja, tubo y gomas para jugar a conciertos o inventar canciones.",
+    "featured": false,
+    "curation_rank": 78,
+    "ages": {
+      "min": 6,
+      "max": 10,
+      "label": "6–10 años"
+    },
+    "duration": {
+      "min": 35,
+      "max": 50,
+      "label": "35–50 min"
+    },
+    "activity_types": [
+      "manualidad",
+      "musica"
+    ],
+    "materials": [
+      "caja de zapatos",
+      "gomas elásticas",
+      "tubo de cartón",
+      "papel de colores",
+      "pegamento"
+    ],
+    "contexts": [
+      "manualidades",
+      "dia-de-lluvia",
+      "sin-pantallas"
+    ],
+    "prep_level": "media",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "alta",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "La manualidad acaba convertida en juguete y da pie a mucho juego simbólico posterior.",
+    "what_develops": [
+      "motricidad fina",
+      "creatividad",
+      "escucha"
+    ],
+    "steps": [
+      "Recorta con ayuda adulta un hueco central en la caja.",
+      "Forra o pinta la caja y el tubo como quieras.",
+      "Haz una ranura para encajar el tubo como mástil.",
+      "Coloca varias gomas elásticas a modo de cuerdas.",
+      "Probád la guitarra y montad un mini concierto en casa."
+    ],
+    "variations": [
+      "Usad gomas de distintos grosores.",
+      "Decoradla con estrellas o rayas como un instrumento real.",
+      "Haced varios instrumentos para una banda."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e734/QVrSA2m9Wo9Nxl5JUJBSt_UPysiFNK.png"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://www.crayola.com/crafts/shoebox-guitar-craft"
+      }
+    ],
+    "source": {
+      "publisher": "Crayola",
+      "title": "Shoebox Guitar",
+      "url": "https://www.crayola.com/crafts/shoebox-guitar-craft"
+    },
+    "search_tags": [
+      "guitarra",
+      "caja de zapatos",
+      "música",
+      "gomas",
+      "instrumento"
+    ]
+  },
+  {
+    "slug": "mini-invernadero-con-botella",
+    "title": "Mini invernadero con botella",
+    "summary": "Usad una botella transparente para hacer un pequeño invernadero y seguir cómo germinan semillas.",
+    "featured": true,
+    "curation_rank": 87,
+    "ages": {
+      "min": 5,
+      "max": 10,
+      "label": "5–10 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 30,
+      "label": "20–30 min"
+    },
+    "activity_types": [
+      "manualidad",
+      "naturaleza"
+    ],
+    "materials": [
+      "botella transparente",
+      "tierra",
+      "semillas",
+      "huevera o vasitos",
+      "agua"
+    ],
+    "contexts": [
+      "naturaleza",
+      "dia-de-lluvia",
+      "construir-juntos"
+    ],
+    "prep_level": "media",
+    "mess_level": "media",
+    "energy_level": "baja",
+    "supervision_level": "alta",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "No se queda en el rato de manualidad: luego la actividad sigue viva durante días con la observación.",
+    "what_develops": [
+      "observación",
+      "cuidado",
+      "paciencia"
+    ],
+    "steps": [
+      "Cortad la botella por la mitad con ayuda adulta.",
+      "Preparad pequeños recipientes con tierra y semillas.",
+      "Regad ligeramente y colocad la parte superior de la botella como cubierta.",
+      "Poned el mini invernadero en una ventana con luz.",
+      "Mirad cada pocos días cómo cambia y anotad lo que observáis."
+    ],
+    "variations": [
+      "Comparad dos tipos de semillas.",
+      "Haced un invernadero con más o menos ventilación.",
+      "Trasplantad luego lo que haya brotado."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://supersimple.com/wp-content/uploads/P1110065-scaled.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://supersimple.com/article/water-bottle-greenhouse/"
+      }
+    ],
+    "source": {
+      "publisher": "Super Simple",
+      "title": "Water Bottle Greenhouse",
+      "url": "https://supersimple.com/article/water-bottle-greenhouse/"
+    },
+    "search_tags": [
+      "invernadero",
+      "botella",
+      "semillas",
+      "germinar",
+      "plantas"
+    ]
+  },
+  {
+    "slug": "flores-con-carton-de-huevos",
+    "title": "Flores con cartón de huevos",
+    "summary": "Convertid hueveras en flores pintadas para montar un ramo casero y vistoso.",
+    "featured": false,
+    "curation_rank": 77,
+    "ages": {
+      "min": 3,
+      "max": 7,
+      "label": "3–7 años"
+    },
+    "duration": {
+      "min": 30,
+      "max": 40,
+      "label": "30–40 min"
+    },
+    "activity_types": [
+      "manualidad",
+      "arte"
+    ],
+    "materials": [
+      "cartón de huevos",
+      "pintura",
+      "palitos o varillas",
+      "pegamento"
+    ],
+    "contexts": [
+      "manualidades",
+      "algo-tranquilo",
+      "con-lo-que-ya-tienes"
+    ],
+    "prep_level": "media",
+    "mess_level": "media",
+    "energy_level": "baja",
+    "supervision_level": "alta",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Es barata, fácil de adaptar por edad y el resultado luce mucho aunque la ejecución sea imperfecta.",
+    "what_develops": [
+      "motricidad fina",
+      "color",
+      "creatividad"
+    ],
+    "steps": [
+      "Recortad las piezas del cartón de huevos para formar pétalos y centros.",
+      "Pintadlas y dejadlas secar.",
+      "Montad cada flor pegando el centro y el tallo.",
+      "Añadid hojas o detalles si os apetece.",
+      "Agrupad varias flores para hacer un ramo o decorar una habitación."
+    ],
+    "variations": [
+      "Haced un ramo para regalar.",
+      "Usad colores por estaciones.",
+      "Combinad flores grandes y pequeñas."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://i2.wp.com/www.momsandcrafters.com/wp-content/uploads/2016/05/egg-carton-flowers-w.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://www.momsandcrafters.com/egg-carton-flowers/"
+      }
+    ],
+    "source": {
+      "publisher": "Moms & Crafters",
+      "title": "Egg Carton Flowers",
+      "url": "https://www.momsandcrafters.com/egg-carton-flowers/"
+    },
+    "search_tags": [
+      "flores",
+      "huevera",
+      "egg carton",
+      "ramo",
+      "manualidad"
+    ]
+  },
+  {
+    "slug": "comedero-para-pajaros-con-brik",
+    "title": "Comedero para pájaros con brik",
+    "summary": "Transformad un cartón de leche o zumo en comedero colgante y observad quién viene a visitarlo.",
+    "featured": false,
+    "curation_rank": 76,
+    "ages": {
+      "min": 4,
+      "max": 10,
+      "label": "4–10 años"
+    },
+    "duration": {
+      "min": 25,
+      "max": 40,
+      "label": "25–40 min"
+    },
+    "activity_types": [
+      "manualidad",
+      "naturaleza"
+    ],
+    "materials": [
+      "brik limpio",
+      "pintura o papel",
+      "cuerda",
+      "tijeras",
+      "semillas"
+    ],
+    "contexts": [
+      "naturaleza",
+      "manualidades",
+      "construir-juntos"
+    ],
+    "prep_level": "media",
+    "mess_level": "media",
+    "energy_level": "baja",
+    "supervision_level": "alta",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "A la fase de construcción se suma luego la espera activa de ver si llegan pájaros, así que dura más de un día.",
+    "what_develops": [
+      "cuidado",
+      "observación",
+      "reciclaje"
+    ],
+    "steps": [
+      "Lavad el cartón y dejadlo seco.",
+      "Decoradlo con pintura, collage o papel.",
+      "Recortad una ventana con ayuda adulta y haced un agujero para colgarlo.",
+      "Rellenad con semillas y colgadlo en un lugar visible.",
+      "Observad durante varios días qué pájaros se acercan."
+    ],
+    "variations": [
+      "Haced varios comederos con diseños distintos.",
+      "Añadid una pequeña percha.",
+      "Registrad vuestras visitas en una hoja."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://www.happinessishomemade.net/wp-content/uploads/2010/07/Collage-Milk-Carton-Bird-House.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://www.happinessishomemade.net/collage-birdhouses/"
+      }
+    ],
+    "source": {
+      "publisher": "Happiness is Homemade",
+      "title": "Milk Carton Birdhouse + Bird Feeder Kids Craft",
+      "url": "https://www.happinessishomemade.net/collage-birdhouses/"
+    },
+    "search_tags": [
+      "comedero",
+      "pájaros",
+      "brik",
+      "bird feeder",
+      "naturaleza"
+    ]
+  },
+  {
+    "slug": "catapulta-con-palitos",
+    "title": "Catapulta con palitos",
+    "summary": "Pequeña catapulta casera para lanzar bolas de algodón y probar alcance o puntería.",
+    "featured": false,
+    "curation_rank": 79,
+    "ages": {
+      "min": 6,
+      "max": 12,
+      "label": "6–12 años"
+    },
+    "duration": {
+      "min": 10,
+      "max": 20,
+      "label": "10–20 min"
+    },
+    "activity_types": [
+      "construccion",
+      "stem"
+    ],
+    "materials": [
+      "palitos de helado",
+      "gomas elásticas",
+      "tapón pequeño",
+      "pegamento",
+      "bolas de algodón"
+    ],
+    "contexts": [
+      "algo-rapido",
+      "construir-juntos",
+      "sin-pantallas"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Se monta muy rápido y enseguida permite pasar a la fase divertida de lanzar y ajustar.",
+    "what_develops": [
+      "ingeniería básica",
+      "puntería",
+      "prueba y error"
+    ],
+    "steps": [
+      "Haz un bloque con varios palitos unidos por gomas en los extremos.",
+      "Añade un brazo lanzador y una base para crear la palanca.",
+      "Pega un tapón o cucharita pequeña en la punta del brazo.",
+      "Cargad una bola ligera y empujad hacia abajo para lanzar.",
+      "Ajustad la fuerza y la distancia al objetivo."
+    ],
+    "variations": [
+      "Montad una diana con vasos.",
+      "Comparad distintos proyectiles ligeros.",
+      "Medid alcance máximo frente a precisión."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Ilustración generada",
+        "url": "https://v3b.fal.media/files/b/0a96e72e/AGF89W5vxEtpEHSEuvhxB_ZefrkFOW.png"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://www.sciencebuddies.org/stem-activities/popsicle-stick-catapult"
+      }
+    ],
+    "source": {
+      "publisher": "Science Buddies",
+      "title": "Build a Popsicle Stick Catapult",
+      "url": "https://www.sciencebuddies.org/stem-activities/popsicle-stick-catapult"
+    },
+    "search_tags": [
+      "catapulta",
+      "palitos",
+      "popsicle stick",
+      "puntería",
+      "algodón"
+    ]
+  },
+  {
+    "slug": "telar-de-carton",
+    "title": "Telar de cartón",
+    "summary": "Un telar casero con cartón y lana para tejer piezas pequeñas sin material especial.",
+    "featured": false,
+    "curation_rank": 75,
+    "ages": {
+      "min": 7,
+      "max": 12,
+      "label": "7–12 años"
+    },
+    "duration": {
+      "min": 25,
+      "max": 40,
+      "label": "25–40 min"
+    },
+    "activity_types": [
+      "manualidad",
+      "algo-tranquilo"
+    ],
+    "materials": [
+      "cartón resistente",
+      "lana o cuerda",
+      "tijeras",
+      "aguja plástica opcional"
+    ],
+    "contexts": [
+      "algo-tranquilo",
+      "manualidades",
+      "dia-de-lluvia"
+    ],
+    "prep_level": "media",
+    "mess_level": "baja",
+    "energy_level": "baja",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Es muy calmada, reutilizable y engancha bien a niños que disfrutan de actividades repetitivas y ordenadas.",
+    "what_develops": [
+      "motricidad fina",
+      "concentración",
+      "patrones"
+    ],
+    "steps": [
+      "Recorta un rectángulo de cartón y haz muescas arriba y abajo.",
+      "Monta la urdimbre pasando una cuerda entre las muescas.",
+      "Teje la lana alternando por encima y por debajo.",
+      "Aprieta cada fila con suavidad.",
+      "Saca la pieza y anuda los extremos al terminar."
+    ],
+    "variations": [
+      "Haced marcapáginas o pulseras.",
+      "Cambiad de color cada pocas filas.",
+      "Usad tiras de tela en vez de lana."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://happyhooligans.ca/wp-content/uploads/2019/03/weaving-on-a-cardboard-loom.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://happyhooligans.ca/cardboard-loom-weaving-activity-for-kids/"
+      }
+    ],
+    "source": {
+      "publisher": "Happy Hooligans",
+      "title": "Cardboard Loom Weaving Activity for Kids",
+      "url": "https://happyhooligans.ca/cardboard-loom-weaving-activity-for-kids/"
+    },
+    "search_tags": [
+      "telar",
+      "cartón",
+      "weaving",
+      "lana",
+      "actividad tranquila"
+    ]
+  },
+  {
+    "slug": "clinica-veterinaria-de-peluches",
+    "title": "Clínica veterinaria de peluches",
+    "summary": "Montad una consulta para revisar, curar y cuidar peluches o animales de juguete.",
+    "featured": true,
+    "curation_rank": 86,
+    "ages": {
+      "min": 3,
+      "max": 7,
+      "label": "3–7 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 40,
+      "label": "20–40 min"
+    },
+    "activity_types": [
+      "juego-simbolico",
+      "cuento"
+    ],
+    "materials": [
+      "peluches",
+      "algodón",
+      "tiras de tela",
+      "maletín médico o utensilios caseros",
+      "papel"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "algo-tranquilo",
+      "hermanos"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "baja",
+    "supervision_level": "baja",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Facilita juego largo, empatía y mucho lenguaje sin exigir material especial.",
+    "what_develops": [
+      "empatía",
+      "lenguaje",
+      "juego de roles"
+    ],
+    "steps": [
+      "Preparad una mesa como consulta y reunid varios peluches-pacientes.",
+      "Montad un kit con vendas, algodón y herramientas de médico.",
+      "Explorad qué le pasa a cada paciente.",
+      "Poned tratamiento: limpiar, vendar, escuchar el corazón o recomendar reposo.",
+      "Cerrad con fichas de alta o una sala de recuperación."
+    ],
+    "variations": [
+      "Haced historiales de cada peluche.",
+      "Añadid recepción y sala de espera.",
+      "Convertidlo en hospital de urgencias."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://farm5.static.flickr.com/4094/4941751627_5bbf67acaf.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://nurturestore.co.uk/role-play-vets/"
+      }
+    ],
+    "source": {
+      "publisher": "NurtureStore",
+      "title": "Role play vets",
+      "url": "https://nurturestore.co.uk/role-play-vets/"
+    },
+    "search_tags": [
+      "veterinario",
+      "peluches",
+      "doctor",
+      "cuidar",
+      "role play"
+    ]
+  },
+  {
+    "slug": "oficina-de-correos-en-casa",
+    "title": "Oficina de correos en casa",
+    "summary": "Una oficina postal casera para escribir, sellar y repartir cartas por toda la casa.",
+    "featured": false,
+    "curation_rank": 74,
+    "ages": {
+      "min": 3,
+      "max": 8,
+      "label": "3–8 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 45,
+      "label": "20–45 min"
+    },
+    "activity_types": [
+      "juego-simbolico",
+      "cuento"
+    ],
+    "materials": [
+      "papel",
+      "sobres",
+      "rotuladores",
+      "caja como buzón",
+      "bolsa de cartero"
+    ],
+    "contexts": [
+      "algo-tranquilo",
+      "dia-de-lluvia",
+      "sin-pantallas"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "baja",
+    "supervision_level": "baja",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Da un motivo real para dibujar o escribir y se presta muy bien a juego entre hermanos.",
+    "what_develops": [
+      "preescritura",
+      "turnos",
+      "juego de roles"
+    ],
+    "steps": [
+      "Montad una mesa con papel, sobres y sellos o pegatinas.",
+      "Preparad un buzón casero y una bolsa para repartir el correo.",
+      "Escribid o dibujad mensajes para la familia.",
+      "Pasad las cartas por el proceso de sellado y clasificación.",
+      "Repartidlas y leed o comentad juntos el resultado."
+    ],
+    "variations": [
+      "Haced buzones por habitación.",
+      "Añadid postales temáticas.",
+      "Jugad a correo urgente o secreto."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://buggyandbuddy.com/wp-content/uploads/2013/10/8.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://buggyandbuddy.com/post-office-pretend-play-discover-explore/"
+      }
+    ],
+    "source": {
+      "publisher": "Buggy and Buddy",
+      "title": "Post Office Dramatic Play",
+      "url": "https://buggyandbuddy.com/post-office-pretend-play-discover-explore/"
+    },
+    "search_tags": [
+      "correo",
+      "post office",
+      "cartas",
+      "buzón",
+      "escribir"
+    ]
+  },
+  {
+    "slug": "campamento-en-el-salon",
+    "title": "Campamento en el salón",
+    "summary": "Acampada indoor con tienda improvisada, fogata segura y mucha historia compartida.",
+    "featured": false,
+    "curation_rank": 73,
+    "ages": {
+      "min": 3,
+      "max": 8,
+      "label": "3–8 años"
+    },
+    "duration": {
+      "min": 25,
+      "max": 45,
+      "label": "25–45 min"
+    },
+    "activity_types": [
+      "juego-simbolico",
+      "cuento"
+    ],
+    "materials": [
+      "sillas",
+      "manta o sábana",
+      "rollos de cartón",
+      "papel de colores",
+      "comida de juguete opcional"
+    ],
+    "contexts": [
+      "dia-de-lluvia",
+      "sin-pantallas",
+      "hermanos"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "media",
+    "supervision_level": "baja",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Convierte el salón en otro mundo con muy poca preparación y suele sostener juego largo.",
+    "what_develops": [
+      "narración",
+      "cooperación",
+      "imaginación"
+    ],
+    "steps": [
+      "Montad una tienda sencilla con sillas y una manta.",
+      "Preparad una fogata segura con rollos y papel de colores.",
+      "Repartid roles: campista, cocinero, explorador o guardián del fuego.",
+      "Comed algo de juego o contad qué animales hay alrededor.",
+      "Terminad con una historia o canción dentro de la tienda."
+    ],
+    "variations": [
+      "Añadid mapas o señales de sendero.",
+      "Haced una versión nocturna con linterna.",
+      "Montad desayuno de campistas al día siguiente."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://artscrackers.com/wp-content/uploads/2015/05/Indoor-Camping-Imaginative-Play.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://artscrackers.com/2015/05/29/play-campfire-with-smores-and-hot-dogs-activity/"
+      }
+    ],
+    "source": {
+      "publisher": "Arts Crackers",
+      "title": "Indoor Camping Imaginative Play",
+      "url": "https://artscrackers.com/2015/05/29/play-campfire-with-smores-and-hot-dogs-activity/"
+    },
+    "search_tags": [
+      "campamento",
+      "salón",
+      "tent",
+      "indoor camping",
+      "manta"
+    ]
+  },
+  {
+    "slug": "seis-lineas-de-cinta",
+    "title": "Seis líneas de cinta",
+    "summary": "Con unas pocas líneas de cinta en el suelo salen saltos, equilibrios y mini retos motores.",
+    "featured": false,
+    "curation_rank": 72,
+    "ages": {
+      "min": 2,
+      "max": 6,
+      "label": "2–6 años"
+    },
+    "duration": {
+      "min": 10,
+      "max": 20,
+      "label": "10–20 min"
+    },
+    "activity_types": [
+      "movimiento",
+      "juego-simbolico"
+    ],
+    "materials": [
+      "cinta de pintor",
+      "suelo despejado"
+    ],
+    "contexts": [
+      "antes-de-cenar",
+      "subir-energia",
+      "sin-pantallas"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "alta",
+    "supervision_level": "baja",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Preparación casi cero, dificultad adaptable y mucha variedad saliendo solo de unas líneas en el suelo.",
+    "what_develops": [
+      "coordinación",
+      "equilibrio",
+      "control corporal"
+    ],
+    "steps": [
+      "Pega seis líneas paralelas en el suelo.",
+      "Empieza con saltos simples de una línea a otra.",
+      "Complica con saltos hacia atrás o a la pata coja.",
+      "Probád también a tocar líneas concretas con manos o pies.",
+      "Terminad inventando un reto nuevo entre todos."
+    ],
+    "variations": [
+      "Cruzar como distintos animales.",
+      "Usar un dado para decidir el reto.",
+      "Convertirlo en pequeño circuito de movimiento."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://handsonaswegrow.com/wp-content/uploads/2023/03/6_different_activities_for_6_lines_of_tape_1200x630_fb.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://handsonaswegrow.com/5-different-activities-for-6-lines-of-tape/"
+      }
+    ],
+    "source": {
+      "publisher": "Hands On As We Grow",
+      "title": "6 Different Activities for 6 Lines of Tape",
+      "url": "https://handsonaswegrow.com/5-different-activities-for-6-lines-of-tape/"
+    },
+    "search_tags": [
+      "cinta",
+      "suelo",
+      "saltos",
+      "movimiento",
+      "tape activity"
+    ]
+  },
+  {
+    "slug": "caminatas-de-animales",
+    "title": "Caminatas de animales",
+    "summary": "Recorred la casa imitando distintos animales para descargar energía y trabajar coordinación.",
+    "featured": false,
+    "curation_rank": 71,
+    "ages": {
+      "min": 3,
+      "max": 8,
+      "label": "3–8 años"
+    },
+    "duration": {
+      "min": 10,
+      "max": 15,
+      "label": "10–15 min"
+    },
+    "activity_types": [
+      "movimiento",
+      "juego-simbolico"
+    ],
+    "materials": [
+      "espacio libre",
+      "tarjetas de animales opcionales"
+    ],
+    "contexts": [
+      "antes-de-cenar",
+      "subir-energia",
+      "sin-pantallas"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "alta",
+    "supervision_level": "baja",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Es muy fácil arrancarla, da trabajo corporal útil y además suele generar muchas risas.",
+    "what_develops": [
+      "fuerza",
+      "coordinación",
+      "autorregulación"
+    ],
+    "steps": [
+      "Elegid varios animales con movimientos reconocibles.",
+      "Enseñad juntos cómo camina o salta cada uno.",
+      "Recorred un trayecto corto imitando uno tras otro.",
+      "Cambiad de animal cuando alguien lo diga o enseñe una tarjeta.",
+      "Cerrad inventando vuestro propio animal mezclado."
+    ],
+    "variations": [
+      "Haced versión lenta y versión turbo.",
+      "Convertidlo en carrera por estaciones.",
+      "Jugad a adivinar qué animal está haciendo cada uno."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://thechildrensphysio.com/wp-content/uploads/2020/12/image1.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://thechildrensphysio.com/2020/12/28/animal-walking-exercises/"
+      }
+    ],
+    "source": {
+      "publisher": "The Children's Physio",
+      "title": "Animal Walking Exercises – simple and fun exercises",
+      "url": "https://thechildrensphysio.com/2020/12/28/animal-walking-exercises/"
+    },
+    "search_tags": [
+      "animal walks",
+      "moverse",
+      "coordinación",
+      "descargar energía",
+      "movimiento"
+    ]
+  },
+  {
+    "slug": "frasco-de-la-calma-con-purpurina",
+    "title": "Frasco de la calma con purpurina",
+    "summary": "Haced un frasco brillante para observar cómo todo se posa mientras el cuerpo se regula.",
+    "featured": true,
+    "curation_rank": 85,
+    "ages": {
+      "min": 4,
+      "max": 10,
+      "label": "4–10 años"
+    },
+    "duration": {
+      "min": 10,
+      "max": 15,
+      "label": "10–15 min"
+    },
+    "activity_types": [
+      "manualidad",
+      "algo-tranquilo"
+    ],
+    "materials": [
+      "tarro o botella",
+      "agua tibia",
+      "pegamento con purpurina",
+      "purpurina",
+      "colorante opcional"
+    ],
+    "contexts": [
+      "bajar-revoluciones",
+      "algo-tranquilo",
+      "antes-de-dormir"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "baja",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "La metáfora visual es potente y el propio proceso de observación ya ayuda a bajar el ritmo.",
+    "what_develops": [
+      "autorregulación",
+      "lenguaje emocional",
+      "observación"
+    ],
+    "steps": [
+      "Pon pegamento con purpurina en el fondo del tarro.",
+      "Añade agua tibia y remueve.",
+      "Echa un poco más de purpurina y colorante si quieres.",
+      "Cierra muy bien el bote y agítalo.",
+      "Mirad cómo se asienta mientras respirais más despacio."
+    ],
+    "variations": [
+      "Cread un frasco por color o emoción.",
+      "Usadlo con una respiración guiada corta.",
+      "Comparad cómo se mueve con más o menos pegamento."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://wfl.cdn.ngo/media/images/DSC_0213.2e16d0ba.fill-1200x630.jpg"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://wordsforlife.org.uk/activities/make-calm-down-glitter-jar/"
+      }
+    ],
+    "source": {
+      "publisher": "Words for Life",
+      "title": "How to make a calm down glitter jar",
+      "url": "https://wordsforlife.org.uk/activities/make-calm-down-glitter-jar/"
+    },
+    "search_tags": [
+      "calma",
+      "purpurina",
+      "glitter jar",
+      "emociones",
+      "regulación"
+    ]
+  },
+  {
+    "slug": "piedras-para-inventar-historias",
+    "title": "Piedras para inventar historias",
+    "summary": "Dibujad personajes, lugares y objetos en piedras para contar cuentos sin quedaros en blanco.",
+    "featured": false,
+    "curation_rank": 70,
+    "ages": {
+      "min": 4,
+      "max": 9,
+      "label": "4–9 años"
+    },
+    "duration": {
+      "min": 20,
+      "max": 35,
+      "label": "20–35 min"
+    },
+    "activity_types": [
+      "cuento",
+      "manualidad"
+    ],
+    "materials": [
+      "piedras planas",
+      "rotuladores o pintura",
+      "bolsa o cesta"
+    ],
+    "contexts": [
+      "algo-tranquilo",
+      "sin-pantallas",
+      "dia-de-lluvia"
+    ],
+    "prep_level": "baja",
+    "mess_level": "baja",
+    "energy_level": "baja",
+    "supervision_level": "media",
+    "origin_type": "adapted_from_source",
+    "delivery_mode": "hybrid",
+    "why_it_works": "Las pistas visuales reducen el bloqueo al contar y permiten muchísimas combinaciones.",
+    "what_develops": [
+      "narración",
+      "creatividad",
+      "vocabulario"
+    ],
+    "steps": [
+      "Buscad piedras planas y limpiadlas.",
+      "Dibujad en cada una un personaje, un lugar o un objeto.",
+      "Metedlas en una bolsa o cesta.",
+      "Sacad varias al azar y usadlas como base de una historia.",
+      "Repetid cambiando el orden o añadiendo una piedra sorpresa."
+    ],
+    "variations": [
+      "Haced historias por turnos.",
+      "Reservad una piedra final para un giro sorpresa.",
+      "Usadlas también en arena o bandejas sensoriales."
+    ],
+    "graphics": [
+      {
+        "kind": "image",
+        "label": "Imagen de referencia",
+        "url": "https://i0.wp.com/nurturestore.co.uk/wp-content/uploads/2010/08/story-stones-1.jpg?fit=480%2C320&ssl=1"
+      },
+      {
+        "kind": "reference",
+        "label": "Fuente original",
+        "url": "https://nurturestore.co.uk/story-stones/"
+      }
+    ],
+    "source": {
+      "publisher": "NurtureStore",
+      "title": "How to make story stones",
+      "url": "https://nurturestore.co.uk/story-stones/"
+    },
+    "search_tags": [
+      "story stones",
+      "piedras",
+      "cuento",
+      "narrar",
+      "dibujar"
+    ]
+  }
+]

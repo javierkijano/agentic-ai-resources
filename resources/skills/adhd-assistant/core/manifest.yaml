@@ -1,0 +1,25 @@
+name: adhd-assistant
+version: 2.0.0
+description: |
+  Unified ADHD-native operating system. Data-driven policies, pluggable
+  channels, separated config vs state, mode overlays, hindsight queue.
+entrypoint: engine/tick.py
+launchers:
+  tick: scripts/adhd_assistant_tick.py
+  hindsight_flush: scripts/adhd_assistant_hindsight_flush.py
+cron:
+  schedule: "every 10m"
+  name: adhd-assistant-proactive-loop
+runtime:
+  state_path: "${HERMES_HOME}/adhd_assistant/state.json"
+  config_path: "${HERMES_HOME}/adhd_assistant/config.yaml"
+  hindsight_queue_path: "${HERMES_HOME}/adhd_assistant/hindsight_queue.jsonl"
+  logs_dir: "${HERMES_HOME}/adhd_assistant/logs"
+schemas:
+  state: data/state.schema.json
+  config: data/config.schema.json
+webapp:
+  entrypoint: webapp/app.py
+  default_host: "127.0.0.1"
+  default_port: 8765
+  mode: "read-only-monitoring"

@@ -1,0 +1,9 @@
+id: adhd-assistant
+kind: skill
+status: active
+description: |
+  Unified ADHD-native operating system. Data-driven policies, pluggable
+  channels, separated config vs state, mode overlays, hindsight queue.
+tags: [adhd, productivity, health, life-management]
+platforms: [hermes]
+depends_on: []

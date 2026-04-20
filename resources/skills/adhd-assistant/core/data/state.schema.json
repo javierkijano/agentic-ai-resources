@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ADHD Assistant State (v2)",
+  "type": "object",
+  "required": ["meta"],
+  "properties": {
+    "commitments": {
+      "type": "object",
+      "properties": {
+        "tasks": {"type": "array"},
+        "appointments": {"type": "array"},
+        "events": {"type": "array"},
+        "routines": {"type": "array"},
+        "checklists": {"type": "array"}
+      }
+    },
+    "support": {
+      "type": "object",
+      "properties": {
+        "reminders": {"type": "array"},
+        "notes": {"type": "array"},
+        "ideas": {"type": "array"},
+        "open_loops": {"type": "array"},
+        "recommendations": {"type": "array"}
+      }
+    },
+    "self_observation": {"type": "object"},
+    "execution": {"type": "object"},
+    "history": {"type": "object"},
+    "meta": {
+      "type": "object",
+      "required": ["active_schema_version"],
+      "properties": {
+        "active_schema_version": {"type": "string"}
+      }
+    }
+  },
+  "additionalProperties": true
+}

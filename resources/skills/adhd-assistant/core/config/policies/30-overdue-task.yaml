@@ -1,0 +1,33 @@
+id: overdue_task
+description: Open task past its deadline.
+priority: 30
+enabled: true
+urgency: normal
+
+trigger:
+  predicate: has_overdue_task
+
+message:
+  coaching_context: overdue_task
+  template: |
+    ADHD Assistant: sigue abierta '{{ bindings.task.title }}' y su deadline ya pasó. Haz el primer paso ahora o dime si la posponemos/cerramos conscientemente.
+    {%- if coaching_quote %}
+
+    {{ coaching_quote }}
+    {%- endif %}
+
+channels:
+  - "{{ config.delivery.default_channel }}"
+
+side_effects:
+  - action: bump_nudge_count
+    args:
+      task_id: "{{ bindings.task.id }}"
+  - action: append_history
+    args:
+      kind: overdue_task
+      summary: "{{ bindings.task.title }}"
+  - action: hindsight_log
+    args:
+      context: "adhd-assistant:event:overdue_task"
+      content: "overdue_task: {{ bindings.task.title }}"

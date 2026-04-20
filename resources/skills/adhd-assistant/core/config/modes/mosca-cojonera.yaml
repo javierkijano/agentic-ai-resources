@@ -1,0 +1,6 @@
+name: mosca-cojonera
+description: Persistent follow-up for truly important commitments.
+overrides:
+  automation.min_gap_urgent_minutes: 5
+  automation.min_gap_nonurgent_minutes: 20
+policy_filters: {}

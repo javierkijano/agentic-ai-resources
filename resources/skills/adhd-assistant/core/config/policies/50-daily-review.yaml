@@ -1,0 +1,37 @@
+id: daily_review
+description: Short morning review with top open fronts.
+priority: 50
+enabled: true
+urgency: normal
+
+trigger:
+  predicate: is_daily_review_time
+
+message:
+  coaching_context: daily_review
+  template: |
+    ADHD Assistant: revisión breve. Tienes {{ bindings.open_count }} frentes abiertos.
+    {%- if bindings.top %}
+    Prioriza:
+    {%- for t in bindings.top %}
+      - {{ t.title }}{% if t.deadline %} (vence {{ t.deadline[11:16] if 'T' in t.deadline else t.deadline }}){% endif %}
+    {%- endfor %}
+    {%- endif %}
+    Hoy: un frente principal y uno secundario como mucho.
+    {%- if coaching_quote %}
+
+    {{ coaching_quote }}
+    {%- endif %}
+
+channels:
+  - "{{ config.delivery.default_channel }}"
+
+side_effects:
+  - action: set_last_daily_review
+    args: {}
+  - action: append_history
+    args:
+      kind: daily_review
+      summary: "open={{ bindings.open_count }}"
+  - action: hindsight_snapshot
+    args: {}

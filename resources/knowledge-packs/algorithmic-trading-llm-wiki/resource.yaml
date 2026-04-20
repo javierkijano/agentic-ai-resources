@@ -1,0 +1,7 @@
+id: algorithmic-trading-llm-wiki
+kind: knowledge-pack
+status: active
+description: Wiki about algorithmic trading strategies, systems, and concepts.
+tags: [trading, finance, algorithmic, wiki]
+platforms: [generic]
+depends_on: []

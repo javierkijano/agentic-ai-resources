@@ -1,0 +1,24 @@
+id: onboarding_followup
+description: Surface unresolved onboarding questions gradually.
+priority: 90
+enabled: true
+urgency: normal
+
+trigger:
+  predicate: has_pending_onboarding
+
+message:
+  coaching_context: onboarding
+  template: |
+    ADHD Assistant: he arrancado con modo {{ config.preferences.primary_mode }}, coaching {{ config.preferences.coaching_level }} y mosca-cojonera solo para lo crítico. Si quieres, lo afinamos sobre la marcha.
+
+channels:
+  - "{{ config.delivery.default_channel }}"
+
+side_effects:
+  - action: set_last_onboarding_nudge
+    args: {}
+  - action: append_history
+    args:
+      kind: onboarding
+      summary: "onboarding_nudge"

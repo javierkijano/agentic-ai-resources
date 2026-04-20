@@ -1,0 +1,150 @@
+{
+  "version": "2.1.0",
+  "created_at": "2026-01-01T00:00:00+00:00",
+  "updated_at": "2026-01-01T00:00:00+00:00",
+  "profiles": {
+    "default": {
+      "created_at": "2026-01-01T00:00:00+00:00",
+      "updated_at": "2026-01-01T00:00:00+00:00",
+      "settings": {
+        "preferred_language": "en",
+        "suggested_language": "en",
+        "content_mix": {
+          "shared_content_target_ratio": 0.65,
+          "reflection_required_for_shared": true,
+          "min_hashtags": 3,
+          "max_hashtags": 8
+        },
+        "calendar": {
+          "objective_posts_per_week": 3,
+          "planning_horizon_weeks": 4,
+          "preferred_weekdays": [
+            "monday",
+            "wednesday",
+            "friday"
+          ],
+          "timezone": "UTC"
+        }
+      },
+      "interests": [
+        {
+          "id": "int_example",
+          "domain": "travel-tech",
+          "topic": "dynamic pricing with AI",
+          "weight": 1.0,
+          "mentions": 2,
+          "notes": "High-priority theme",
+          "created_at": "2026-01-01T00:00:00+00:00",
+          "updated_at": "2026-01-01T00:00:00+00:00"
+        }
+      ],
+      "theme_goals": [
+        {
+          "id": "goal_example",
+          "domain": "travel-tech",
+          "theme": "pricing trust and fairness",
+          "posts_per_month": 5,
+          "priority": 5,
+          "preferred_content_types": [
+            "news-share",
+            "video-share",
+            "insight"
+          ],
+          "preferred_weekdays": [
+            "monday",
+            "thursday"
+          ],
+          "notes": "Strong source-backed content + reflection",
+          "created_at": "2026-01-01T00:00:00+00:00",
+          "updated_at": "2026-01-01T00:00:00+00:00"
+        }
+      ],
+      "calendar_entries": [
+        {
+          "id": "cal_example",
+          "goal_id": "goal_example",
+          "scheduled_date": "2026-01-08",
+          "weekday": "thursday",
+          "domain": "travel-tech",
+          "theme": "pricing trust and fairness",
+          "content_type": "news-share",
+          "language": "en",
+          "status": "planned",
+          "source_required": true,
+          "reflection_required": true,
+          "hashtags_hint": [
+            "#dynamicpricing",
+            "#airlineretailing",
+            "#traveltech",
+            "#ai"
+          ],
+          "notes": "Share external news/video + add your reflection",
+          "created_at": "2026-01-01T00:00:00+00:00",
+          "updated_at": "2026-01-01T00:00:00+00:00"
+        }
+      ],
+      "publications": [
+        {
+          "id": "pub_example",
+          "domain": "travel-tech",
+          "topic": "pricing trust and fairness",
+          "language": "en",
+          "content_type": "news-share",
+          "title": "AI pricing without breaking customer trust",
+          "hook": "If pricing feels unfair, long-term conversion suffers.",
+          "angle": "strategy",
+          "draft": "Post draft in English...",
+          "cta": "What guardrail works best in your team?",
+          "reflection": "My reflection: transparency + auditable guardrails matter more than model complexity.",
+          "shared_url": "https://example.com/article",
+          "sources": [
+            "https://example.com/article",
+            "https://example.com/report"
+          ],
+          "tags": [
+            "dynamic-pricing",
+            "ai"
+          ],
+          "hashtags": [
+            "#dynamicpricing",
+            "#ai",
+            "#traveltech",
+            "#airlineretailing"
+          ],
+          "status": "proposed",
+          "calendar_entry_id": "cal_example",
+          "scheduled_for": "2026-01-08",
+          "created_at": "2026-01-01T00:00:00+00:00",
+          "updated_at": "2026-01-01T00:00:00+00:00",
+          "feedback_ids": []
+        }
+      ],
+      "feedback": [
+        {
+          "id": "fb_example",
+          "publication_id": "pub_example",
+          "score": 4,
+          "notes": "Good engagement; keep practical angle",
+          "metrics": {
+            "likes": 42,
+            "comments": 7,
+            "shares": 3,
+            "saves": 9
+          },
+          "published_url": "https://linkedin.com/posts/...",
+          "created_at": "2026-01-01T00:00:00+00:00"
+        }
+      ],
+      "learning": {
+        "notes": [
+          {
+            "note": "News/video share + own reflection + 4-6 hashtags works well",
+            "at": "2026-01-01T00:00:00+00:00"
+          }
+        ],
+        "preferred_tones": [],
+        "preferred_formats": []
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+name: companion
+description: Softer landing for overwhelm / low-energy days.
+overrides:
+  coaching.max_quotes_per_day: 2
+  automation.min_gap_nonurgent_minutes: 90
+policy_filters: {}

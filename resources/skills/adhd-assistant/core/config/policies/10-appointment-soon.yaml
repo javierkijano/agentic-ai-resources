@@ -1,0 +1,31 @@
+id: appointment_soon
+description: Warn when an appointment or event is within the configured window.
+priority: 10
+enabled: true
+urgency: critical
+ignore_quiet_hours: true
+
+trigger:
+  predicate: has_upcoming_appointment
+
+message:
+  coaching_context: appointment
+  template: |
+    ADHD Assistant: en {{ bindings.minutes_until }} min tienes '{{ bindings.appointment.title | default("evento") }}'. Si requiere preparación, haz ahora el primer paso.
+    {%- if coaching_quote %}
+
+    {{ coaching_quote }}
+    {%- endif %}
+
+channels:
+  - "{{ config.delivery.default_channel }}"
+
+side_effects:
+  - action: append_history
+    args:
+      kind: appointment
+      summary: "{{ bindings.appointment.title | default('evento') }}"
+  - action: hindsight_log
+    args:
+      context: "adhd-assistant:event:appointment"
+      content: "appointment_soon: {{ bindings.appointment.title | default('evento') }} in {{ bindings.minutes_until }}m"

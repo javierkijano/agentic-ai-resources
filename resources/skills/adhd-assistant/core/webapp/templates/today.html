@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADHD Assistant · Hoy</title>
+    <link rel="stylesheet" href="{{ app_base_path }}/static/styles.css?v=20260419-redesign1" />
+  </head>
+  <body>
+    {% macro render_task_card(task, focus=false) -%}
+    <article class="task-card {{ 'task-card--focus' if focus else '' }}" data-task-id="{{ task.id }}">
+      <div class="task-card__summary">
+        <div class="task-card__title-row">
+          <label class="task-card__checkbox">
+            <input type="checkbox" />
+          </label>
+          <div class="task-card__title-group">
+            <h3 class="task-card__title">{{ task.short_title }}</h3>
+            <div class="task-card__meta">
+              {% if task.priority %}<span class="chip chip--priority">P{{ task.priority }}</span>{% endif %}
+              {% if task.project %}<span class="chip chip--kind">{{ task.project }}</span>{% endif %}
+              {% if task.deadline_label %}<span class="chip">{{ task.deadline_label }}</span>{% endif %}
+              {% if task.is_overdue %}<span class="chip chip--danger">Vencida</span>{% endif %}
+            </div>
+          </div>
+        </div>
+
+        <div class="task-card__actions">
+          <button
+            type="button"
+            class="task-card__bucket-button"
+            data-bucket-toggle
+            aria-expanded="false"
+          >
+            Cuándo lo haré · {{ task.bucket_label }}
+          </button>
+          <button
+            type="button"
+            class="task-card__expand-button"
+            data-card-toggle
+            aria-controls="{{ task.details_id }}"
+            aria-expanded="false"
+          >
+            Ver detalle
+          </button>
+        </div>
+      </div>
+
+      {% if task.hashtags %}
+      <div class="task-card__hashtags">
+        {% for hashtag in task.hashtags %}
+        <span class="task-card__hashtag">{{ hashtag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="task-card__bucket-menu" data-bucket-menu hidden>
+        {% for choice in task.bucket_choices %}
+        <button type="button" class="task-card__bucket-option" data-bucket-choice="{{ choice.key }}">
+          {{ choice.label }}
+        </button>
+        {% endfor %}
+      </div>
+
+      <div class="task-card__details" id="{{ task.details_id }}" hidden>
+        {% if task.description %}
+        <p class="task-card__description">{{ task.description }}</p>
+        {% else %}
+        <p class="muted small">Sin descripción adicional.</p>
+        {% endif %}
+
+        <dl class="task-card__details-grid">
+          <div>
+            <dt>Bucket</dt>
+            <dd>{{ task.bucket_label }}</dd>
+          </div>
+          <div>
+            <dt>Proyecto</dt>
+            <dd>{{ task.project or 'Sin proyecto' }}</dd>
+          </div>
+          <div>
+            <dt>Estado</dt>
+            <dd>{{ task.status }}</dd>
+          </div>
+          <div>
+            <dt>Deadline</dt>
+            <dd>{{ task.deadline_label or 'Sin fecha exacta' }}</dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+    {%- endmacro %}
+
+    <header class="topbar">
+      <div>
+        <h1>ADHD Assistant · Hoy</h1>
+        <p class="muted">Qué toca hoy, sin abrir el monitor ni perderte en una lista infinita.</p>
+      </div>
+      <div class="top-actions">
+        <nav class="top-nav">
+          <a class="nav-link {{ 'is-active' if active_page == 'today' else '' }}" href="{{ app_base_path }}/">Hoy</a>
+          <a class="nav-link" href="{{ app_base_path }}/monitor">Monitor</a>
+        </nav>
+        <button type="button">+ Añadir</button>
+      </div>
+    </header>
+
+    <section class="hero-grid">
+      <article class="panel hero-panel">
+        <div class="hero-panel__eyebrow">Ahora</div>
+        {% if today.focus_task %}
+        <h2>{{ today.focus_task.title }}</h2>
+        <p class="muted">Primera candidata para arrancar sin pensar demasiado.</p>
+        {{ render_task_card(today.focus_task, true) }}
+        {% else %}
+        <h2>Sin tareas abiertas</h2>
+        <p class="muted">Buena señal. Ya puedes rellenar Inbox o descansar.</p>
+        {% endif %}
+      </article>
+
+      <section class="cards cards--compact">
+        <article class="card">
+          <h3>Abiertas</h3>
+          <p class="big">{{ today.counts.open }}</p>
+          <p class="muted">tareas operativas ahora mismo</p>
+        </article>
+        <article class="card">
+          <h3>Hoy</h3>
+          <p class="big">{{ today.counts.today }}</p>
+          <p class="muted">con ventana de hoy</p>
+        </article>
+        <article class="card">
+          <h3>Vencidas</h3>
+          <p class="big">{{ today.counts.overdue }}</p>
+          <p class="muted">piden rescate</p>
+        </article>
+        <article class="card">
+          <h3>Sin definir</h3>
+          <p class="big">{{ today.counts.unscheduled }}</p>
+          <p class="muted">aún sin bucket</p>
+        </article>
+      </section>
+    </section>
+
+    {% if today.rescue_tasks %}
+    <section class="panel task-section">
+      <div class="section-header">
+        <div>
+          <h2>Necesitan rescate</h2>
+          <p class="muted">Las que ya caducaron o se están comiendo el día.</p>
+        </div>
+      </div>
+      <div class="task-list">
+        {% for task in today.rescue_tasks %}
+        {{ render_task_card(task) }}
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% for section in today.sections %}
+    <section class="panel task-section">
+      <div class="section-header">
+        <div>
+          <h2>{{ section.title }}</h2>
+          <p class="muted">{{ section.description }}</p>
+        </div>
+      </div>
+      {% if section.tasks %}
+      <div class="task-list">
+        {% for task in section.tasks %}
+        {{ render_task_card(task) }}
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="muted">Sin tareas en esta sección.</p>
+      {% endif %}
+    </section>
+    {% endfor %}
+
+    <script>
+      window.__APP_BASE_PATH__ = {{ app_base_path|tojson }};
+    </script>
+    <script src="{{ app_base_path }}/static/today.js?v=20260419-redesign2"></script>
+  </body>
+</html>

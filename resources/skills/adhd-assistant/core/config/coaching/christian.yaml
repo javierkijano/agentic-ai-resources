@@ -1,0 +1,9 @@
+theme: christian
+enabled_in_contexts:
+  - overdue_task
+  - postpone_escalation
+  - daily_review
+  - reminder
+quotes:
+  - "Bástate el siguiente acto fiel; no necesitas resolverlo todo de golpe."
+  - "Hoy toca fidelidad en lo pequeño antes que grandeza imaginaria."

@@ -1,0 +1,1 @@
+This folder stores raw scraped articles and PDFs used to seed the wiki. Each file should be named descriptively and preserved as an immutable source.

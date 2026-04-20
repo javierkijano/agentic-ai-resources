@@ -1,0 +1,4 @@
+name: operator
+description: Default mode — direct, concise, execution-first.
+overrides: {}
+policy_filters: {}

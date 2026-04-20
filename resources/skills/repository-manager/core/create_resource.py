@@ -18,7 +18,8 @@ def create_resource(res_type, res_id):
         "core/logic",
         "core/cli",
         "core/webapp",
-        "core/docs",     # For STORAGE.md and other internal docs
+        "core/docs",
+        "core/schemas", # For data/config validation
         "tests",
         "platforms/hermes"
     ]
@@ -26,7 +27,7 @@ def create_resource(res_type, res_id):
     for d in dirs:
         os.makedirs(os.path.join(base_path, d), exist_ok=True)
     
-    # Create resource.yaml with storage and interfaces
+    # Create resource.yaml with storage, interfaces AND credentials
     resource_data = {
         "id": res_id,
         "kind": res_type.rstrip('s'),
@@ -40,36 +41,44 @@ def create_resource(res_type, res_id):
         },
         "storage": {
             "standard_layout": True,
-            "description": "Defines how this skill handles runtime data",
+            "description": "Standardized runtime storage",
             "contract": "core/docs/STORAGE.md"
         },
+        "credentials": [
+            {
+                "id": "EXAMPLE_API_KEY",
+                "type": "secret",
+                "description": "An example API key required for this skill",
+                "required": False
+            }
+        ],
         "depends_on": []
     }
     
     with open(os.path.join(base_path, "resource.yaml"), "w") as f:
         yaml.dump(resource_data, f, sort_keys=False)
     
-    # Create STORAGE.md Contract
-    storage_md = f"""# Storage Contract: {res_id}
+    # Create CREDENTIALS.md guide
+    credentials_md = f"""# Credentials Guide: {res_id}
 
-This document defines the expected runtime storage structure for this skill.
-Any agent or system executing this skill MUST provide a base directory and adhere to this layout.
+This skill requires the following credentials to function correctly.
 
-## Runtime Structure
+## Required Credentials
 
-The base directory will be provided at runtime (e.g., `runtime/{{context}}/{{resource_id}}/`).
+| ID | Type | Description | Required |
+|----|------|-------------|----------|
+| `EXAMPLE_API_KEY` | secret | An example API key. | No |
 
-| Path | Type | Description |
-|------|------|-------------|
-| `logs/` | Directory | Standard output and error logs. |
-| `config/` | Directory | Instance-specific configuration files. |
-| `state/` | Directory | Persistent state between executions. |
-| `data/` | Directory | Temporary or generated assets. |
-
-## Requirements
-- Files in `config/` should follow the schemas in `core/schemas/` if available.
-- The `state/` directory must be writable by the execution agent.
+## Setup Instructions
+1. Obtain the key from [Service Provider].
+2. Provide it via environment variable: `export EXAMPLE_API_KEY=your_key_here`
+3. Or place it in the runtime config folder: `runtime/{{context}}/{{env}}/{res_id}/config/credentials.json`
 """
+    with open(os.path.join(base_path, "core/docs/CREDENTIALS.md"), "w") as f:
+        f.write(credentials_md)
+
+    # Re-use the STORAGE.md creation logic...
+    storage_md = f"# Storage Contract: {res_id}\n\nStandard runtime layout required.\n"
     with open(os.path.join(base_path, "core/docs/STORAGE.md"), "w") as f:
         f.write(storage_md)
     
@@ -77,8 +86,8 @@ The base directory will be provided at runtime (e.g., `runtime/{{context}}/{{res
     with open(os.path.join(base_path, "README.md"), "w") as f:
         f.write(f"# {res_id.replace('-', ' ').title()}\n\nDescription for {res_id}.\n")
         
-    log_operation("create_resource", "SUCCESS", f"Created {res_type}/{res_id} with Storage Contract")
-    print(f"SUCCESS: Created resource '{res_id}' with standardized Storage Contract.")
+    log_operation("create_resource", "SUCCESS", f"Created {res_type}/{res_id} with Credentials Contract")
+    print(f"SUCCESS: Created resource '{res_id}' with standardized Credentials section.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create a new agentic resource pack.")
@@ -87,4 +96,3 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     create_resource(args.type, args.id)
- Joseph

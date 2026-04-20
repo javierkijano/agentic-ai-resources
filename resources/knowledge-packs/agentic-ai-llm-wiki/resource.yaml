@@ -24,3 +24,4 @@ storage:
   standard_layout: true
   description: Standardized runtime storage
   contract: core/docs/STORAGE.md
+credentials: []

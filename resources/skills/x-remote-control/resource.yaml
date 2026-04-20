@@ -9,18 +9,29 @@ tags:
 - automation
 platforms:
 - hermes
-depends_on: []
 interfaces:
   cli:
     enabled: true
     commands:
       status: Check status
-      exec: Execute
+      follow: Follow handles via search
+      list: List following accounts
   webapp:
     enabled: false
     port: null
     entrypoint: app.py
 storage:
   standard_layout: true
-  description: Standardized runtime storage
+  description: Standardized runtime storage for account lists and browser sessions.
   contract: core/docs/STORAGE.md
+credentials:
+- id: X_CDP_URL
+  type: url
+  description: URL for the Chrome DevTools Protocol (CDP) endpoint
+  required: true
+- id: X_SESSION_COOKIE
+  type: secret
+  description: Authentication cookie (auth_token) for X if browser is not pre-authenticated
+  required: false
+depends_on:
+- chrome-remote-browser-control

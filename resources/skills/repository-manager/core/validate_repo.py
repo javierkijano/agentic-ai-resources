@@ -42,7 +42,7 @@ def validate_resources():
             try:
                 with open(yaml_path, 'r') as f:
                     data = yaml.safe_load(f)
-                    required_fields = ['id', 'kind', 'status', 'interfaces', 'storage']
+                    required_fields = ['id', 'kind', 'status', 'interfaces', 'storage', 'credentials']
                     for field in required_fields:
                         if field not in data:
                             log_operation("validate_repo", "WARNING", f"Resource {resource_id} missing field {field}")

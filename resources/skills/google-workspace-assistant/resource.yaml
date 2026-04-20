@@ -1,8 +1,7 @@
 id: google-workspace-assistant
 kind: skill
 status: active
-description: Assistant to manage Google Workspace (Gmail, Calendar, Drive) via Google
-  API.
+description: Assistant to manage Google Workspace (Gmail, Calendar, Drive) via Google API.
 tags:
 - google
 - workspace
@@ -10,10 +9,9 @@ tags:
 - automation
 platforms:
 - hermes
-depends_on: []
 interfaces:
   cli:
-    enabled: true
+    enabled: True
     commands:
       status: Check status
       exec: Execute
@@ -25,3 +23,13 @@ storage:
   standard_layout: true
   description: Standardized runtime storage
   contract: core/docs/STORAGE.md
+credentials:
+- id: GOOGLE_OAUTH_CREDENTIALS
+  type: path
+  description: Path to the credentials.json file from Google Cloud Console
+  required: true
+- id: GOOGLE_TOKEN_PATH
+  type: path
+  description: Path where the user access token (token.json) will be stored/read
+  required: true
+depends_on: []

@@ -9,18 +9,28 @@ tags:
 - automation
 platforms:
 - hermes
-depends_on: []
 interfaces:
   cli:
     enabled: true
     commands:
       status: Check status
-      exec: Execute
+      init: Initialize memory and profile
+      summary: Show performance summary
   webapp:
     enabled: false
     port: null
     entrypoint: app.py
 storage:
   standard_layout: true
-  description: Standardized runtime storage
+  description: Standardized runtime storage for profile memory and state.
   contract: core/docs/STORAGE.md
+credentials:
+- id: LINKEDIN_SESSION_COOKIE
+  type: secret
+  description: Required if using direct API or automated login (LI_AT cookie)
+  required: false
+- id: LINKEDIN_PROFILE_ID
+  type: string
+  description: The default profile ID to use in the memory system
+  required: false
+depends_on: []

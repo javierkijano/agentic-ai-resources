@@ -9,6 +9,7 @@ Antes de realizar cualquier cambio o análisis, DEBES procesar estos documentos 
 2. **`docs/repo-rules.md`**: Las leyes fundamentales (Vendor es Read-Only, Recursos son la Verdad, Dist es Generado).
 3. **`docs/conventions.md`**: Estándar de carpetas, esquema de `resource.yaml` e **Interfaces** (CLI/Web).
 4. **`docs/lifecycle.md`**: Flujos de trabajo para importar, derivar, crear y buildear recursos.
+5. **Descubrimiento de Capacidades**: Utiliza `./scripts/navigator.py list` para catalogar las habilidades (`skills/`), agentes (`agents/`) y conocimiento (`knowledge-packs/`) ya disponibles. No reinventes lo que ya existe.
 
 ## 🛠 Contratos de Recurso
 Cada capacidad en este repositorio se rige por tres contratos explícitos que encontrarás en la carpeta de cada recurso:

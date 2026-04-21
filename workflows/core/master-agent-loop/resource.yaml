@@ -19,6 +19,12 @@ steps:
       - workflow: task-identification
         strength: 1.0
 
+  - id: strategic_critical_review
+    intent: "Realizar una revisión crítica del plan, buscando omisiones y evaluando mejores alternativas técnicas"
+    associations:
+      - workflow: strategic-review
+        strength: 1.0
+
   - id: present_execution_plan
     intent: "Mostrar al usuario la secuencia de workflows y herramientas que se han planificado para resolver la tarea"
     associations:

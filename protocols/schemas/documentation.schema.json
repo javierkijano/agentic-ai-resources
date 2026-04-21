@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agentic AI Documentation Contract",
+  "description": "Asegura que los archivos Markdown cumplen con las secciones obligatorias del ecosistema.",
+  "type": "object",
+  "properties": {
+    "file_name": { "type": "string", "enum": ["README.md", "AGENTS.md", "SKILL.md", "conventions.md"] },
+    "required_sections": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["file_name", "required_sections"]
+}

@@ -1,0 +1,17 @@
+id: strategic-review
+kind: workflow
+status: core
+description: Obliga a realizar un análisis crítico de la tarea, evaluando alternativas y completitud arquitectónica.
+utility_score: 100
+preconditions: ["Existe una tarea identificada y un plan inicial"]
+postconditions: ["El plan ha sido validado críticamente o modificado para mayor potencia"]
+steps:
+  - id: analyze_completeness
+    intent: "Cuestionar si el plan inicial cubre todos los aspectos (docs, carpetas, seguridad)"
+    associations: [{tool: cortex-evaluator, strength: 1.0}]
+  - id: evaluate_alternatives
+    intent: "Investigar si existen formatos o herramientas más potentes (ej: YAML vs JSON, CUE vs Schema)"
+    associations: [{tool: repo-management, strength: 1.0}]
+  - id: user_consultation
+    intent: "Presentar hallazgos críticos al usuario si hay cambios de dirección importantes"
+    associations: [{tool: general-utilities, strength: 1.0}]

@@ -1,0 +1,22 @@
+id: system-design-documentation
+kind: workflow
+status: core
+description: Gestión de la documentación conceptual y arquitectónica del sistema (Filosofía, Módulos, Arquitectura).
+utility_score: 100
+
+steps:
+  - id: philosophy_alignment
+    intent: "Actualizar o refinar los principios de la 'Regla de Oro' y la filosofía de autonomía"
+    associations: [{tool: repo-management, strength: 1.0}]
+
+  - id: architecture_mapping
+    intent: "Documentar cambios en la relación entre Cortex, Skills y Workflows"
+    associations: [{tool: repo-management, strength: 1.0}]
+
+  - id: functionality_inventory
+    intent: "Actualizar el mapa de funcionalidades globales del ecosistema"
+    associations: [{tool: repo-management, strength: 1.0}]
+
+  - id: module_definition
+    intent: "Documentar la creación o reestructuración de dominios funcionales (módulos)"
+    associations: [{tool: repo-management, strength: 1.0}]

@@ -13,6 +13,14 @@ steps:
     intent: "Comparar los cambios detectados con el estado actual de los README.md, SKILL.md y AGENTS.md"
     associations: [{tool: cortex-evaluator, strength: 1.0}]
 
+  - id: design_impact_analysis
+    intent: "Identificar si los cambios afectan a la arquitectura, filosofía o módulos del sistema"
+    associations: [{tool: cortex-evaluator, strength: 1.0}]
+
+  - id: dispatch_design_docs
+    intent: "Disparar la documentación de diseño si se detectó impacto arquitectónico"
+    associations: [{workflow: system-design-documentation, strength: 1.0}]
+
   - id: dispatch_specific_docs
     intent: "Disparar el workflow de documentación específica para cada entidad que lo requiera"
     associations: [{workflow: ecosystem-documentation-sync, strength: 1.0}]

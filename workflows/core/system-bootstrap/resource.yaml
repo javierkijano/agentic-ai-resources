@@ -1,0 +1,40 @@
+id: system-bootstrap
+kind: workflow
+status: core
+description: Orquestación de la configuración inicial del ecosistema Agentic AI.
+
+preconditions:
+  - "Los repositorios de Resources y Workspace están clonados localmente"
+  - "El Agente tiene permisos de escritura en la carpeta config/ del Workspace"
+
+postconditions:
+  - "Archivo config/paths.yaml generado con las rutas correctas"
+  - "Archivo config/topology.yaml inicializado"
+  - "Conectividad entre Workspace y Canon verificada satisfactoriamente"
+
+steps:
+  - id: detect_environment
+    intent: "Localizar las rutas absolutas de los repositorios en el sistema de archivos actual"
+    associations:
+      - tool: workspace-repo-manager
+        strength: 1.0
+
+  - id: path_configuration
+    intent: "Generar el archivo paths.yaml vinculando el Workspace con el Canon de Recursos"
+    associations:
+      - tool: workspace-repo-manager
+        strength: 1.0
+
+  - id: topology_initialization
+    intent: "Crear una estructura base de proyectos en topology.yaml si no existe"
+    associations:
+      - tool: workspace-repo-manager
+        strength: 1.0
+
+  - id: connectivity_test
+    intent: "Verificar que el Navigator puede leer recursos del Canon desde el Workspace"
+    associations:
+      - tool: workspace-repo-manager
+        strength: 1.0
+      - tool: repo-management
+        strength: 0.5

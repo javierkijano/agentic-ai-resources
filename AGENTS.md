@@ -18,7 +18,7 @@ Este repositorio define **qué** es el sistema. La ejecución física y la topol
 Si eres un agente operando en este sistema, consulta estos documentos para entender tus límites y capacidades:
 
 1. **Protocolos de Operación**: [protocols/workspace-usage.md](protocols/workspace-usage.md) - Cómo usar estos recursos en tu entorno local.
-2. **Guía de Skills**: [resources/skills/README.md](resources/skills/README.md) - Catálogo de capacidades disponibles.
+2. **Guía de Skills**: [resources/skills/](resources/skills/) - Catálogo de capacidades disponibles.
 3. **Gobernanza de Repositorio**: La skill `resources-repo-manager` es tu herramienta para validar y gestionar este canon.
 
 ---

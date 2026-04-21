@@ -15,19 +15,14 @@ interfaces:
   cli:
     enabled: true
     commands:
-      console: Open the interactive command center (menu.py)
-      validate: Check repository integrity and canon compliance
-      create: Create new canonical resources
-      build: Build platform distributions from canon
-      explore: core/logic/explorer.py list --scan-workspace
+      console: core/cli/menu.py
+      validate: core/logic/validate_repo.py
+      create: core/logic/create_resource.py
+      build: core/logic/build_platform.py
+      explore: core/logic/explorer.py
 storage:
   standard_layout: true
   description: Canonical resource storage
-
-    entrypoint: app.py
-storage:
-  standard_layout: true
-  description: Standardized runtime storage
   contract: core/docs/STORAGE.md
 credentials: []
 dependencies:
@@ -36,12 +31,9 @@ dependencies:
   - id: python
     version: '>=3.10'
   packages: []
-dependents:
-- all-agents
 usage_guidelines:
   preferred_scenarios:
-  - General purpose usage
+  - Repository maintenance
+  - Resource promotion to canon
   constraints:
-  - No specific constraints
-  antipatterns:
-  - Do not use without understanding the core logic
+  - Must be run within a valid resources repository

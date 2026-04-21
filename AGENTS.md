@@ -2,6 +2,9 @@
 
 Bienvenido a la fuente de verdad. Este repositorio contiene el ADN del sistema.
 
+## 🧠 Bucle Maestro
+Este canon orquesta el **`master-agent-loop`**, asegurando que cada tarea de gobernanza aprenda de su propia ejecución y se refine iterativamente.
+
 ## 🏛 Responsabilidades del Canon
 - **Definir Skills**: Lógica pura y contratos.
 - **Protocolos**: Las leyes del ecosistema (ver `/protocols`).

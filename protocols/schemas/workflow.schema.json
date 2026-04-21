@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agentic AI Workflow Schema",
+  "type": "object",
+  "required": ["id", "kind", "status", "description", "steps"],
+  "properties": {
+    "id": { "type": "string" },
+    "kind": { "const": "workflow" },
+    "status": { "enum": ["core", "dev", "archive", "deprecated"] },
+    "description": { "type": "string" },
+    "utility_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "preconditions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "postconditions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "intent", "associations"],
+        "properties": {
+          "id": { "type": "string" },
+          "intent": { "type": "string" },
+          "associations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tool": { "type": "string" },
+                "workflow": { "type": "string" },
+                "strength": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+              },
+              "anyOf": [
+                { "required": ["tool", "strength"] },
+                { "required": ["workflow", "strength"] }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

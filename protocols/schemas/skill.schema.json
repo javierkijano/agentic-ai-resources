@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agentic AI Skill Schema",
+  "type": "object",
+  "required": ["id", "kind", "status", "description", "interfaces"],
+  "properties": {
+    "id": { "type": "string" },
+    "kind": { "const": "skill" },
+    "status": { "enum": ["active", "deprecated", "dev"] },
+    "description": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "platforms": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "interfaces": {
+      "type": "object",
+      "properties": {
+        "cli": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "commands": {
+              "type": "object",
+              "additionalProperties": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "storage": {
+      "type": "object",
+      "properties": {
+        "standard_layout": { "type": "boolean" },
+        "description": { "type": "string" },
+        "contract": { "type": "string" }
+      }
+    },
+    "dependencies": {
+      "type": "object",
+      "properties": {
+        "resources": { "type": "array", "items": { "type": "string" } },
+        "system": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "version": { "type": "string" }
+            }
+          }
+        },
+        "packages": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agentic AI Paths Configuration Schema",
+  "type": "object",
+  "properties": {
+    "variables": {
+      "type": "object",
+      "properties": {
+        "AGENTIC_RESOURCES": { "type": "string" }
+      },
+      "required": ["AGENTIC_RESOURCES"]
+    },
+    "paths": {
+      "type": "object",
+      "properties": {
+        "runtime": { "type": "string" },
+        "dist": { "type": "string" },
+        "data": { "type": "string" }
+      }
+    }
+  }
+}

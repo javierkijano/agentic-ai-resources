@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agentic AI Topology Configuration Schema",
+  "type": "object",
+  "required": ["workspace", "links"],
+  "properties": {
+    "workspace": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string" },
+        "owner": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "resources": {
+          "type": "object",
+          "properties": {
+            "path": { "type": "string" },
+            "role": { "type": "string" }
+          }
+        },
+        "worktrees": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path"],
+        "properties": {
+          "id": { "type": "string" },
+          "path": { "type": "string" },
+          "role": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  }
+}

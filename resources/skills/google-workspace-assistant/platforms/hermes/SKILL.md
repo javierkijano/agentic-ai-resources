@@ -61,23 +61,23 @@ Use this when the assistant must:
 Add your source accounts and your assistant workspace accounts:
 
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias personal --role source --description "Cuenta personal principal"
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias metabestec --role source --description "Inbox operativo de Metabestec"
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias assistant --role workspace --description "Sandbox del asistente"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias personal --role source --description "Cuenta personal principal"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias metabestec --role source --description "Inbox operativo de Metabestec"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias assistant --role workspace --description "Sandbox del asistente"
 ```
 
 Perform the OAuth flow for each:
 
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias personal
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias metabestec
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias assistant
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias personal
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias metabestec
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias assistant
 ```
 
 List the configured accounts and verify the status:
 
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py list-accounts
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py list-accounts
 ```
 
 ## Runtime Examples
@@ -85,14 +85,14 @@ python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-works
 Safely read from multiple inboxes (the tool guarantees this is read-only):
 
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py source personal gmail search "label:inbox newer_than:2d"
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py source metabestec gmail search "is:unread"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py source personal gmail search "label:inbox newer_than:2d"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py source metabestec gmail search "is:unread"
 ```
 
 Write notes or output to the assistant account (source accounts are fully shielded from writes):
 
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace docs create --title "Resumen diario" --body "..."
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace docs create --title "Resumen diario" --body "..."
 ```
 
 ## Configuration

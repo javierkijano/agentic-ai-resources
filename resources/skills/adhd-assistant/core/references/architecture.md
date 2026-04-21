@@ -161,7 +161,7 @@ Default URL: `http://127.0.0.1:8765`
 ## Testing
 
 ```
-cd /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/adhd-assistant
+cd {{AGENTIC_RESOURCES}}/hermes/skills/adhd-assistant
 python3 -m tests.test_policies
 ```
 

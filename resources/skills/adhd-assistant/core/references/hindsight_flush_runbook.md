@@ -8,7 +8,7 @@ Goal: keep `~/.hermes/adhd_assistant/hindsight_queue.jsonl` drained with a **loc
 Some runtimes do not expose `hindsight_retain` as a callable tool, so queue flushing must run in Python (`hindsight_client` / `HindsightEmbedded`).
 
 ## Runtime components
-- Canonical skill script: `/home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/adhd-assistant/scripts/adhd_assistant_hindsight_flush.py`
+- Canonical skill script: `{{AGENTIC_RESOURCES}}/hermes/skills/adhd-assistant/scripts/adhd_assistant_hindsight_flush.py`
 - Cron job target: `scripts/adhd_assistant_hindsight_flush.py` (resolved inside the skill tree)
 - Trigger #1: post-write call from `engine/tick.py`
 - Trigger #2 (backup): cron job `adhd-assistant-hindsight-queue-flush`

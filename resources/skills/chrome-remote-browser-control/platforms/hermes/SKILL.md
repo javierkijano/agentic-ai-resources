@@ -42,20 +42,20 @@ curl -s http://127.0.0.1:9222/json/version
 ## Probe de conexión
 
 ```bash
-uv run --with playwright python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/chrome-remote-browser-control/scripts/cdp_probe.py
+uv run --with playwright python {{AGENTIC_RESOURCES}}/hermes/skills/chrome-remote-browser-control/scripts/cdp_probe.py
 ```
 
 Opcional:
 
 ```bash
-uv run --with playwright python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/chrome-remote-browser-control/scripts/cdp_probe.py --goto https://x.com/home
+uv run --with playwright python {{AGENTIC_RESOURCES}}/hermes/skills/chrome-remote-browser-control/scripts/cdp_probe.py --goto https://x.com/home
 ```
 
 ## Implementación reusable
 
 Helpers disponibles en:
 
-`/home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/tools/chrome_remote_control/remote_browser.py`
+`{{AGENTIC_RESOURCES}}/hermes/tools/chrome_remote_control/remote_browser.py`
 
 Funciones clave:
 - `connect_chrome_over_cdp(...)`

@@ -36,7 +36,7 @@ linkedin --help
 ### Script de memoria (incluido en la skill)
 
 ```bash
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py --help
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py --help
 ```
 
 ## Autenticación LinkedIn (cookies)
@@ -62,10 +62,10 @@ La skill incorpora:
 Ambas están restringidas a inglés (`en`).
 
 ```bash
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py init \
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py init \
   --profile "javier-linkedin" --preferred-language en --suggested-language en
 
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py set-config \
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py set-config \
   --profile "javier-linkedin" --preferred-language en --suggested-language en
 ```
 
@@ -155,16 +155,16 @@ Por perfil:
 - `learning.notes`
 
 Template:
-`/home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/data/memory.template.json`
+`{{AGENTIC_RESOURCES}}/hermes/skills/linkedin/data/memory.template.json`
 
 ## Comandos de memoria y configuración
 
 ### Ver/editar configuración
 
 ```bash
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py show-config --profile "javier-linkedin"
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py show-config --profile "javier-linkedin"
 
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py set-config \
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py set-config \
   --profile "javier-linkedin" \
   --shared-content-target-ratio 0.65 \
   --reflection-required-for-shared true \
@@ -177,7 +177,7 @@ python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/sc
 ### Registrar interés
 
 ```bash
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py add-interest \
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py add-interest \
   --profile "javier-linkedin" \
   --domain "travel-tech" \
   --topic "dynamic pricing with AI" \
@@ -187,7 +187,7 @@ python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/sc
 ### Registrar objetivo por tema (calendario)
 
 ```bash
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py add-theme-goal \
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py add-theme-goal \
   --profile "javier-linkedin" \
   --domain "travel-tech" \
   --theme "pricing trust and fairness" \
@@ -199,7 +199,7 @@ python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/sc
 ### Generar calendario objetivo
 
 ```bash
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py generate-calendar \
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py generate-calendar \
   --profile "javier-linkedin" \
   --weeks 4 \
   --objective-posts-per-week 3 \
@@ -209,14 +209,14 @@ python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/sc
 ### Ver calendario
 
 ```bash
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py calendar \
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py calendar \
   --profile "javier-linkedin" --days 45 --limit 30
 ```
 
 ### Guardar publicación
 
 ```bash
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py add-publication \
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py add-publication \
   --profile "javier-linkedin" \
   --domain "travel-tech" \
   --topic "pricing trust and fairness" \
@@ -236,7 +236,7 @@ python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/sc
 ### Guardar feedback
 
 ```bash
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py add-feedback \
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py add-feedback \
   --profile "javier-linkedin" \
   --publication-id "pub_..." \
   --score 4 \
@@ -249,7 +249,7 @@ python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/sc
 ### Resumen operativo
 
 ```bash
-python3 /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/linkedin/scripts/linkedin_memory.py summary \
+python3 {{AGENTIC_RESOURCES}}/hermes/skills/linkedin/scripts/linkedin_memory.py summary \
   --profile "javier-linkedin" --top 5
 ```
 

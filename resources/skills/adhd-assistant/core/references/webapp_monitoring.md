@@ -34,7 +34,7 @@ webapp/
 Desde la carpeta de la skill:
 
 ```bash
-cd /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/adhd-assistant
+cd {{AGENTIC_RESOURCES}}/hermes/skills/adhd-assistant
 python3 -m webapp.app
 ```
 

@@ -55,7 +55,7 @@ Usa esta skill cuando Javier pida:
 ### 1) Buscar primero en catálogo local
 
 ```bash
-cd /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/ideas-con-hijos
+cd {{AGENTIC_RESOURCES}}/hermes/skills/ideas-con-hijos
 python3 scripts/catalog_cli.py search --query "cartón 10 min"
 python3 scripts/catalog_cli.py search --context antes-de-cenar --max-duration 15
 python3 scripts/catalog_cli.py show --slug mision-laser-en-el-pasillo
@@ -85,7 +85,7 @@ La app es la capa gráfica de esta skill, no un producto separado.
 Arranque:
 
 ```bash
-cd /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/ideas-con-hijos
+cd {{AGENTIC_RESOURCES}}/hermes/skills/ideas-con-hijos
 python3 -m webapp.app
 ```
 
@@ -120,7 +120,7 @@ http://127.0.0.1:8766
 ## Validación mínima
 
 ```bash
-cd /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/ideas-con-hijos
+cd {{AGENTIC_RESOURCES}}/hermes/skills/ideas-con-hijos
 python3 scripts/catalog_cli.py stats
 python3 scripts/catalog_cli.py search --query "linterna"
 python3 -m tests.test_catalog

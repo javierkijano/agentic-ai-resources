@@ -27,7 +27,7 @@ This plan implements the product the user actually wants:
 
 The implementation is complete only when all of these are true:
 
-- `google-workspace-assistant` has its own scripts and docs under `/home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/`.
+- `google-workspace-assistant` has its own scripts and docs under `{{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/`.
 - The skill supports at least 3 named source aliases without code changes.
 - Source aliases are limited to readonly scopes for enabled services.
 - The workspace alias is the only writable account.
@@ -111,19 +111,19 @@ This replaces any vague example like `google_accounts/...` with one feature-spec
 Document these commands as the target interface:
 
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias personal --role source
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias metabestec --role source
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias assistant --role workspace
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias personal
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py auth-code --alias personal "http://localhost:1/?code=..."
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py list-accounts
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias personal --role source
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias metabestec --role source
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias assistant --role workspace
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias personal
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py auth-code --alias personal "http://localhost:1/?code=..."
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py list-accounts
 ```
 
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py source personal gmail search "is:unread"
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py source metabestec gmail get MESSAGE_ID
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace docs create --title "Draft response" --body "..."
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace sheets append SHEET_ID "Inbox!A:D" --values '[["ts","source","subject","summary"]]'
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py source personal gmail search "is:unread"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py source metabestec gmail get MESSAGE_ID
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace docs create --title "Draft response" --body "..."
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace sheets append SHEET_ID "Inbox!A:D" --values '[["ts","source","subject","summary"]]'
 ```
 
 **Step 3: Define the registry schema**
@@ -217,7 +217,7 @@ Expected: one new path-helper test passes or, if the file is not implemented yet
 **Step 4: Commit**
 
 ```bash
-git add /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/assistant_common.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_registry.py
+git add {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/assistant_common.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_registry.py
 # git commit -m "feat: add shared helpers for google workspace assistant"
 ```
 
@@ -299,7 +299,7 @@ Expected: registry validation tests pass.
 **Step 5: Commit**
 
 ```bash
-git add /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/account_registry.py         /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/references/accounts-example.yaml         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_registry.py
+git add {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/account_registry.py         {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/references/accounts-example.yaml         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_registry.py
 # git commit -m "feat: add registry and role validation for google workspace assistant"
 ```
 
@@ -391,7 +391,7 @@ Expected: scope-resolution and alias-specific token tests fail first, then pass.
 **Step 5: Commit**
 
 ```bash
-git add /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/assistant_auth.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_setup.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_api.py
+git add {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/assistant_auth.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_setup.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_api.py
 # git commit -m "feat: add role-aware scopes and credential loading"
 ```
 
@@ -470,7 +470,7 @@ Expected: setup tests pass for add/list/check/auth-url/auth-code/revoke behavior
 **Step 6: Commit**
 
 ```bash
-git add /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_setup.py
+git add {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_setup.py
 # git commit -m "feat: add multi-account setup cli for google workspace assistant"
 ```
 
@@ -540,7 +540,7 @@ Expected: source read commands pass and resolve the right alias.
 **Step 5: Commit**
 
 ```bash
-git add /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_api.py
+git add {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_api.py
 # git commit -m "feat: add readonly source-account api commands"
 ```
 
@@ -611,7 +611,7 @@ Expected: workspace write tests pass; no Gmail write command exists.
 **Step 5: Commit**
 
 ```bash
-git add /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py         /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/references/accounts-example.yaml         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_api.py
+git add {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py         {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/references/accounts-example.yaml         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_api.py
 # git commit -m "feat: add workspace write commands without gmail send"
 ```
 
@@ -677,7 +677,7 @@ Expected: tests prove unsafe commands are absent.
 **Step 5: Commit**
 
 ```bash
-git add /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_api.py
+git add {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py         /home/jq-hermes-01/.hermes/hermes-agent/tests/skills/test_google_workspace_assistant_api.py
 # git commit -m "feat: harden parser and forbid source writes"
 ```
 
@@ -698,20 +698,20 @@ git add /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-work
 Add a setup walkthrough with these exact steps:
 
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias personal --role source --description "Cuenta personal principal"
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias metabestec --role source --description "Inbox operativo de Metabestec"
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias assistant --role workspace --description "Sandbox del asistente"
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias personal
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias metabestec
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias assistant
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias personal --role source --description "Cuenta personal principal"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias metabestec --role source --description "Inbox operativo de Metabestec"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py add-account --alias assistant --role workspace --description "Sandbox del asistente"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias personal
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias metabestec
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py auth-url --alias assistant
 ```
 
 **Step 2: Document the safe runtime examples**
 
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py source personal gmail search "label:inbox newer_than:2d"
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py source metabestec gmail search "is:unread"
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace docs create --title "Resumen diario" --body "..."
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py source personal gmail search "label:inbox newer_than:2d"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py source metabestec gmail search "is:unread"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace docs create --title "Resumen diario" --body "..."
 ```
 
 **Step 3: Add a clear warning block**
@@ -731,7 +731,7 @@ Manual doc review only:
 **Step 5: Commit**
 
 ```bash
-git add /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/SKILL.md         /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/references/architecture.md         /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/references/accounts-example.yaml         /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/references/implementation-plan.md
+git add {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/SKILL.md         {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/references/architecture.md         {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/references/accounts-example.yaml         {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/references/implementation-plan.md
 # git commit -m "docs: document google workspace assistant workflows"
 ```
 
@@ -783,7 +783,7 @@ accounts:
 
 Run:
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/setup.py list-accounts
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/setup.py list-accounts
 ```
 Expected: JSON shows `personal`, `metabestec`, and `assistant`, with explicit auth status.
 
@@ -791,8 +791,8 @@ Expected: JSON shows `personal`, `metabestec`, and `assistant`, with explicit au
 
 Run:
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py source personal gmail search "newer_than:7d"
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py source metabestec gmail search "is:unread"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py source personal gmail search "newer_than:7d"
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py source metabestec gmail search "is:unread"
 ```
 Expected: both commands succeed and clearly hit different aliases.
 
@@ -800,7 +800,7 @@ Expected: both commands succeed and clearly hit different aliases.
 
 Run:
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace docs create --title "Prueba workspace" --body "El asistente escribe aquí."
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace docs create --title "Prueba workspace" --body "El asistente escribe aquí."
 ```
 Expected: document is created in the assistant account, not in either source account.
 
@@ -809,8 +809,8 @@ Expected: document is created in the assistant account, not in either source acc
 Run these and expect failure:
 
 ```bash
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py source personal gmail send --to x@example.com --subject nope --body nope
-python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace gmail send --to x@example.com --subject nope --body nope
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py source personal gmail send --to x@example.com --subject nope --body nope
+python {{AGENTIC_RESOURCES}}/hermes/skills/google-workspace-assistant/scripts/google_api.py workspace gmail send --to x@example.com --subject nope --body nope
 ```
 
 Expected: parser error or explicit unsupported-command failure.

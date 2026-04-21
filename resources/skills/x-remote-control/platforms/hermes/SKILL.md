@@ -20,7 +20,7 @@ Automatización de X sobre navegador real autenticado (sin API de follow).
 
 Esta skill usa helpers de:
 
-`/home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/tools/chrome_remote_control/remote_browser.py`
+`{{AGENTIC_RESOURCES}}/hermes/tools/chrome_remote_control/remote_browser.py`
 
 ## Preparación
 
@@ -37,38 +37,38 @@ google-chrome --remote-debugging-port=9222 --user-data-dir="/tmp/chrome_cdp_prof
 ### 1) Seguir cuentas vía búsqueda (modo humano)
 
 ```bash
-uv run --with playwright python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/x-remote-control/scripts/x_follow_via_search.py
+uv run --with playwright python {{AGENTIC_RESOURCES}}/hermes/skills/x-remote-control/scripts/x_follow_via_search.py
 ```
 
 Con lista custom:
 
 ```bash
-uv run --with playwright python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/x-remote-control/scripts/x_follow_via_search.py @POTUS @JMilei
+uv run --with playwright python {{AGENTIC_RESOURCES}}/hermes/skills/x-remote-control/scripts/x_follow_via_search.py @POTUS @JMilei
 ```
 
 Usando archivo propio:
 
 ```bash
-uv run --with playwright python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/x-remote-control/scripts/x_follow_via_search.py --accounts-file /ruta/accounts.txt
+uv run --with playwright python {{AGENTIC_RESOURCES}}/hermes/skills/x-remote-control/scripts/x_follow_via_search.py --accounts-file /ruta/accounts.txt
 ```
 
 Dry-run (sin clicar Follow):
 
 ```bash
-uv run --with playwright python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/x-remote-control/scripts/x_follow_via_search.py --dry-run
+uv run --with playwright python {{AGENTIC_RESOURCES}}/hermes/skills/x-remote-control/scripts/x_follow_via_search.py --dry-run
 ```
 
 ### 2) Listar cuentas seguidas (visibles)
 
 ```bash
-uv run --with playwright python /home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/x-remote-control/scripts/x_list_following.py reivajano
+uv run --with playwright python {{AGENTIC_RESOURCES}}/hermes/skills/x-remote-control/scripts/x_list_following.py reivajano
 ```
 
 ## Datos por defecto
 
 Archivo de handles por defecto:
 
-`/home/jq-hermes-01/hermes-workspace/agentic-ai/hermes/skills/x-remote-control/data/default_accounts.txt`
+`{{AGENTIC_RESOURCES}}/hermes/skills/x-remote-control/data/default_accounts.txt`
 
 ## Notas
 

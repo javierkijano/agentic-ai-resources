@@ -1,0 +1,18 @@
+id: improvement-backlog-review
+kind: workflow
+status: core
+description: Revisa, prioriza y depura la cola de propuestas de mejora del sistema.
+utility_score: 90
+
+steps:
+  - id: analyze_backlog_relevance
+    intent: "Evaluar si las propuestas pendientes siguen siendo válidas o han sido superadas por cambios recientes"
+    associations: [{tool: cortex-evaluator, strength: 1.0}]
+
+  - id: prioritize_improvements
+    intent: "Asignar niveles de prioridad (high, medium, low) basados en el impacto esperado"
+    associations: [{tool: cortex-planner, strength: 1.0}]
+
+  - id: clean_backlog
+    intent: "Eliminar o marcar como descartadas las propuestas obsoletas"
+    associations: [{tool: repo-management, strength: 1.0}]

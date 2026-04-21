@@ -1,0 +1,20 @@
+id: system-improvement-analysis
+kind: workflow
+status: core
+description: Analiza la ejecución reciente para proponer mejoras técnicas y de proceso basadas en evidencias (logs y manifiestos).
+utility_score: 100
+
+steps:
+  - id: scan_compliance_manifests
+    intent: "Revisar los últimos manifiestos de cumplimiento en busca de fallos o cuellos de botella"
+    associations: [{tool: repo-management, strength: 1.0}]
+
+  - id: generate_improvement_proposals
+    intent: "Generar propuestas de mejora vinculando los logs y manifiestos relevantes como contexto"
+    validation:
+      output_schema: "ImprovementProposal"
+    associations: [{tool: cortex-evaluator, strength: 1.0}]
+
+  - id: append_to_improvement_backlog
+    intent: "Persistir las propuestas en la cola de mejoras (backlog.jsonl) para su posterior revisión"
+    associations: [{tool: repo-management, strength: 1.0}]

@@ -45,3 +45,9 @@ steps:
     associations:
       - workflow: recursive-documentation
         strength: 1.0
+
+  - id: continuous_improvement_loop
+    intent: "Analizar el rendimiento y la integridad de la sesión para proponer mejoras evolutivas en el sistema"
+    associations:
+      - workflow: system-improvement-analysis
+        strength: 1.0

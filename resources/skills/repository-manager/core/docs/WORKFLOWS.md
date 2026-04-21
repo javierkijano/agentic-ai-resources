@@ -10,6 +10,7 @@ This document defines the mandatory steps for different types of modifications w
 - [ ] **Contract**: Create `core/docs/STORAGE.md` and `core/docs/TODOs.md`.
 - [ ] **Standard Logic**: Implement core functionality in `core/logic/`.
 - [ ] **Validation**: Run `scripts/validate_repo.py`.
+- [ ] **Delivery**: Propose a structured commit to the user.
 
 ### 2. LOGIC_UPDATE (Modifying existing functionality)
 - [ ] **Research**: Read `resource.yaml` and `STORAGE.md` to understand side effects.

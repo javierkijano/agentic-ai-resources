@@ -4,23 +4,36 @@ from pathlib import Path
 from collections import Counter
 
 class ActivityReporter:
-    def __init__(self, repo_root):
-        self.repo_root = Path(repo_root)
+    def __init__(self, repo_root="."):
+        self.repo_root = Path(repo_root).resolve()
         self.runtime_root = self.repo_root / "runtime"
 
     def scan_events(self):
         all_events = []
-        if not self.runtime_root.exists():
+        # Asegurar resolución absoluta desde la raíz del repo
+        runtime_path = self.runtime_root
+        if not runtime_path.exists():
             return []
             
-        for log_file in self.runtime_root.glob("**/analytics-dashboard/**/events.jsonl"):
-            try:
-                with open(log_file, "r") as f:
-                    for line in f:
-                        if line.strip():
-                            all_events.append(json.loads(line))
-            except Exception:
-                continue
+        log_patterns = ["**/events.jsonl", "**/session_registry.jsonl"]
+        
+        for pattern in log_patterns:
+            files = list(runtime_path.glob(pattern))
+            for log_file in files:
+                try:
+                    with open(log_file, "r") as f:
+                        for line in f:
+                            if line.strip():
+                                data = json.loads(line)
+                                all_events.append({
+                                    "timestamp": data.get("timestamp"),
+                                    "agent_id": data.get("agent_id", "system"),
+                                    "action": data.get("action") or data.get("operation"),
+                                    "status": str(data.get("status", "success")).lower()
+                                })
+                except Exception as e:
+                    print(f"Error reading {log_file}: {e}")
+                    continue
         return all_events
 
     def generate_summary(self):

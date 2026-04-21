@@ -28,6 +28,7 @@ Para mantener la integridad del sistema, sigue siempre este protocolo:
 5. **Evolución Orgánica**: Si durante tu ejecución identificas una posible mejora, bug potencial o funcionalidad faltante, DEBES registrarla en `core/docs/TODOs.md`. No la implementes tú mismo a menos que se te pida; limítate a documentar la sugerencia.
 6. **Seguridad Crítica**: NUNCA commitees API Keys, secretos o información personal (PII). El repositorio cuenta con un escáner automático. Si el script `./scripts/describe_changes.py` bloquea un commit por seguridad, debes limpiar los archivos antes de continuar.
 7. **Commits**: Utiliza `./scripts/describe_changes.py` para generar mensajes de commit estructurados y descriptivos.
+8. **Entrega**: Una vez completada la tarea y validada, DEBES proponer un commit con los cambios realizados al usuario. No esperes a que se te pida; proponer la persistencia es parte de tu responsabilidad.
 
 ---
 **Misión**: Tu objetivo es expandir las capacidades de este hub de forma modular, segura y altamente documentada.

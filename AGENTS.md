@@ -1,25 +1,24 @@
-# Agentic Resources - Gateway
+# Agentic Resources - Canonical Gateway
 
-Bienvenido al repositorio canónico de **Agentic Resources**. Este es el centro de inteligencia, gobernanza y definición estructural de nuestro ecosistema agentic.
+Bienvenido a la fuente de verdad. Este repositorio contiene el ADN del sistema.
 
-## Propósito del repositorio
-Este repositorio es la **fuente de verdad única** para:
-- **Skills**: Habilidades canónicas validadas.
-- **Contratos**: Definiciones de interfaces y esquemas de datos.
-- **Workflows**: Protocolos de ejecución y lógica de negocio.
-- **Gobernanza**: Reglas sobre cómo se organiza y evoluciona el sistema.
+## 🏛 Responsabilidades del Canon
+- **Definir Skills**: Lógica pura y contratos.
+- **Protocolos**: Las leyes del ecosistema (ver `/protocols`).
+- **Validación**: Asegurar que nada rompa la integridad del sistema.
 
-## Relación con el Workspace
-Este repositorio define **qué** es el sistema. La ejecución física y la topología local de tu máquina actual están definidas en el repositorio complementario: `agentic-ai-workspace`.
+## 🛠 Herramientas de Gobernanza
+Para interactuar con el canon, usa la skill `resources-repo-manager`:
+- `validate`: Comprobar integridad del repo.
+- `create`: Generar nuevos recursos siguiendo el estándar.
+- `explore`: Navegar por el mapa de inteligencia.
 
-> **Regla de Oro**: Ningún agente debe modificar la lógica estructural aquí presente sin seguir los protocolos de promoción definidos.
+## 📂 Estructura Crítica
+- `resources/skills/`: El corazón funcional. Cada carpeta es una capacidad aislada.
+- `protocols/`: Lectura obligatoria para entender la disciplina Git y de logging.
+- `docs/architecture.md`: La visión técnica detrás de este diseño.
 
-## Mapa de Navegación para Agentes
-Si eres un agente operando en este sistema, consulta estos documentos para entender tus límites y capacidades:
-
-1. **Protocolos de Operación**: [protocols/workspace-usage.md](protocols/workspace-usage.md) - Cómo usar estos recursos en tu entorno local.
-2. **Guía de Skills**: [resources/skills/](resources/skills/) - Catálogo de capacidades disponibles.
-3. **Gobernanza de Repositorio**: La skill `resources-repo-manager` es tu herramienta para validar y gestionar este canon.
-
----
-*Este documento es la raíz de la inteligencia del sistema. Manténlo actualizado ante cambios arquitectónicos.*
+## 🚨 Reglas de Oro
+1. **No toques el Clone Base**: Usa `task.py` desde el Workspace para crear un worktree.
+2. **Sin Estado Local**: Nunca commitees archivos `runtime/` o logs locales en este repositorio.
+3. **Contratos sobre Código**: Define siempre la interfaz en `resource.yaml` antes de implementar.

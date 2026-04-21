@@ -1,41 +1,31 @@
-# Repository Architecture
+# Arquitectura del Ecosistema Agentic AI
 
-This repository is designed to be a robust, flexible, and simple hub for "agentic resources". It follows a clear separation of concerns to ensure scalability and maintainability.
+Este documento define los principios de funcionamiento y la división de responsabilidades del sistema.
 
-## Core Concepts
+## 1. Filosofía de Dos Capas
 
-The repository is organized into five main pillars:
+### A. El Canon (`agentic-ai-resources`)
+Es el **Cerebro** y la **Memoria a Largo Plazo**.
+- **Inmutable**: No se debe trabajar directamente en sus ramas principales.
+- **Universal**: Contiene skills y protocolos que pueden ser usados por cualquier workspace.
+- **Responsabilidad**: Definir *qué* puede hacer el sistema.
 
-### 1. Vendor (`vendor/`)
-- **Purpose**: Contains resources imported from third-party sources.
-- **Rules**: Treated as read-only. No manual edits should be performed here.
-- **Content**: Skills, agents, prompts, and knowledge packs from external contributors or platforms.
+### B. El Workspace (`agentic-ai-workspace`)
+Es el **Cuerpo** y la **Memoria de Trabajo**.
+- **Mutable**: Contiene logs, estados temporales y configuraciones locales.
+- **Topológico**: Sabe dónde están los proyectos y cómo conectarse a los recursos.
+- **Responsabilidad**: Definir *dónde* y *cómo* se ejecutan las tareas.
 
-### 2. Resources (`resources/`)
-- **Purpose**: The canonical source of truth for own and editable resources.
-- **Rules**: This is where active development happens.
-- **Content**:
-    - **Skills**: Functional capabilities.
-    - **Agents**: Agent definitions and personas.
-    - **Workflows**: Multi-step processes.
-    - **Packs**: Grouped prompts, memory, or knowledge assets.
+## 2. Flujo de Datos y Control
+1. El Agente inicia en el Workspace.
+2. El Workspace consulta el `paths.yaml` para localizar el Canon.
+3. El Workspace "importa" la lógica del Canon (vía `sys.path` o wrappers) para ejecutar tareas de gobernanza o gestión.
+4. Cualquier cambio en el código se realiza mediante **Worktrees** efímeros, que luego se promocionan al Canon tras ser validados.
 
-### 3. Contexts (`contexts/`)
-- **Purpose**: Platform or project-specific operational contexts.
-- **Rules**: These are not "skills" but environment-defining files.
-- **Content**: Project templates, home profiles, and subtree-specific configurations (e.g., `.hermes.md`, `AGENTS.md`, `SOUL.md`).
+## 3. El Ciclo de Vida de una Skill
+- **Desarrollo**: Se crea en el Workspace como recurso experimental.
+- **Promoción**: Se valida y se mueve al repositorio de Recursos.
+- **Canonización**: Se registra en el `resources/skills/` del Canon para ser disponible globalmente.
 
-### 4. Shared (`shared/`)
-- **Purpose**: Cross-cutting reusable pieces.
-- **Content**: Schemas, libraries, snippets, fixtures, and assets used by multiple resources.
-
-### 5. Distribution (`dist/`)
-- **Purpose**: Generated outputs prepared for deployment to specific platforms (Hermes, Albert, OpenClaw).
-- **Rules**: Never edit files in `dist/` manually; they are products of the build process.
-
-## Flow of Information
-
-### 6. Meta-Skills
-- **Purpose**: Skills that allow agents to manage the repository itself.
-- **Example**: `resources/skills/repository-manager/` contains the logic to validate, create, and build resources.
-- **Access**: Available as CLI scripts in `scripts/` or as a skill for agents.
+## 4. Gestión de Estado (`runtime/`)
+El directorio `runtime/` en el Workspace es el único lugar donde se permite la escritura de logs y persistencia de sesión durante la operación normal. El Canon nunca debe contener una carpeta `runtime/` con datos locales.

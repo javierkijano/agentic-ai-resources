@@ -1,0 +1,15 @@
+id: add-skill
+kind: workflow
+status: active
+description: Proceso completo de creación y registro de una nueva skill.
+steps:
+  - id: check_naming_convention
+    skill: resources-repo-manager
+    command: validate --check-naming
+  - id: create_structure
+    skill: resources-repo-manager
+    command: create --type skill
+  - id: finalize_docs
+    workflow: update-docs  # AQUÍ ESTÁ EL ANIDAMIENTO
+  - id: log_session
+    shell: echo "Registrando creación de skill en session_registry.jsonl"

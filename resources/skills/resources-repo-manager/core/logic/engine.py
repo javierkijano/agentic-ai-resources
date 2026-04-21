@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import yaml
 import subprocess
+import sys
+import os
 from pathlib import Path
 
 class WorkflowEngine:
@@ -9,10 +11,6 @@ class WorkflowEngine:
         self.workspace_root = Path(workspace_root) if workspace_root else None
 
     def execute_workflow(self, workflow_id, context=None):
-        """
-        Busca un workflow por ID y ejecuta sus pasos de forma secuencial.
-        Soporta anidamiento de otros workflows.
-        """
         print(f"\n🚀 Iniciando Workflow: {workflow_id}")
         wf_path = self.resources_root / f"resources/workflows/{workflow_id}/resource.yaml"
         
@@ -24,49 +22,30 @@ class WorkflowEngine:
             config = yaml.safe_load(f)
 
         steps = config.get("steps", [])
-        if not steps:
-            print(f"⚠️ El workflow '{workflow_id}' no define pasos ejecutables.")
-            return True
-
         for step in steps:
             step_id = step.get("id", "unnamed-step")
             print(f"\n  [Paso: {step_id}]")
             
-            # Caso 1: El paso es un sub-workflow (ANIDAMIENTO)
             if "workflow" in step:
-                success = self.execute_workflow(step["workflow"], context)
-                if not success: return False
-                
-            # Caso 2: El paso invoca una Skill
+                if not self.execute_workflow(step["workflow"], context): return False
             elif "skill" in step:
-                success = self.invoke_skill(step["skill"], step.get("command"), context)
-                if not success: return False
-                
-            # Caso 3: Comando directo de sistema (emergencia)
+                print(f"    🛠 Invocando Skill: {step['skill']} -> {step.get('command')}")
             elif "shell" in step:
-                success = self.run_shell(step["shell"], context)
-                if not success: return False
-
-        print(f"\n✅ Workflow '{workflow_id}' completado con éxito.")
+                cmd = os.path.expandvars(step["shell"])
+                print(f"    🐚 Ejecutando Shell: {cmd}")
+                try:
+                    subprocess.run(cmd, shell=True, check=True, cwd=self.resources_root)
+                except Exception as e:
+                    print(f"    ❌ Error: {e}")
+                    return False
         return True
-
-    def invoke_skill(self, skill_id, command, context):
-        """Busca y ejecuta un comando de una skill."""
-        print(f"    🛠 Invocando Skill: {skill_id} -> {command}")
-        # Aquí iría la lógica de resolución de paths de la skill y ejecución
-        # Por ahora simulamos la llamada para validar la arquitectura de flujo
-        return True
-
-    def run_shell(self, command, context):
-        """Ejecuta un comando shell directamente."""
-        print(f"    🐚 Ejecutando Shell: {command}")
-        try:
-            subprocess.run(command, shell=True, check=True)
-            return True
-        except Exception as e:
-            print(f"    ❌ Error en shell: {e}")
-            return False
 
 if __name__ == "__main__":
-    engine = WorkflowEngine("/home/jq-hermes-01/git-repositories/own/agentic-ai-resources")
-    engine.execute_workflow("add-skill")
+    import sys
+    wf_id = sys.argv[1] if len(sys.argv) > 1 else "comprehensive-system-research"
+    root = os.environ.get("AGENTIC_RESOURCES", "/home/jq-hermes-01/git-repositories/own/agentic-ai-resources")
+    # Si estamos en un worktree, el root cambia. 
+    # Para el test usaremos la ruta del worktree actual si existe.
+    worktree_root = "/home/jq-hermes-01/hermes-workspace/agentic-ai-resources/task-system-research-workflow"
+    engine = WorkflowEngine(worktree_root if Path(worktree_root).exists() else root)
+    engine.execute_workflow(wf_id)

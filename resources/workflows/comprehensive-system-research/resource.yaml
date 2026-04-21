@@ -1,0 +1,24 @@
+id: comprehensive-system-research
+kind: workflow
+status: active
+description: Orquestación de investigación exhaustiva y recursiva en todo el ecosistema.
+tags:
+  - '#research'
+  - '#audit'
+  - '#discovery'
+steps:
+  - id: discover_top_level_elements
+    skill: resources-repo-manager
+    command: explore --scan-workspace
+    # Paso 1: Lista los elementos principales del sistema.
+
+  - id: recursive_mapping_and_analysis
+    shell: python3 resources/skills/resources-repo-manager/core/logic/researcher.py "${TASK_QUERY}"
+    # Paso 2 y 3: Mapeo recursivo, análisis de relevancia y logueo de hallazgos.
+
+  - id: synthesize_investigation_report
+    shell: echo "Compilando resumen final de la investigación..."
+    # Paso 4: El agente compila el summary basado en los hallazgos del log.
+
+  - id: log_research_session
+    shell: echo "Registrando sesión de investigación en session_registry.jsonl"

@@ -85,6 +85,8 @@ class WorkflowEngine:
         if not is_preview:
             self.manifest["workflow_id"] = workflow_id
             print(f"\n🧠 [CORTEX] Ejecutando: {workflow_id}")
+            # Validar integridad del contexto inicial
+            self.validate_structural_contract(context, "Context", "context-init")
         else:
             print(f"  📂 Workflow Planificado: {workflow_id}")
 

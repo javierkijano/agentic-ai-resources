@@ -7,6 +7,21 @@ class RepoExplorer:
     def __init__(self, repo_root):
         self.repo_root = pathlib.Path(repo_root)
 
+    def get_runtime_footprint(self):
+        """Returns a summary of existing logs and sessions in runtime/."""
+        runtime_path = self.repo_root / "runtime"
+        if not runtime_path.exists():
+            return "No runtime data found."
+        
+        logs = list(runtime_path.glob("**/*.jsonl")) + list(runtime_path.glob("**/*.log"))
+        sessions = [d for d in runtime_path.glob("**/202*") if d.is_dir()]
+        
+        return {
+            "total_log_files": len(logs),
+            "total_recorded_sessions": len(sessions),
+            "storage_used": "N/A" # Podría calcularse con du
+        }
+
     def get_onboarding_summary(self):
         agents_md = self.repo_root / "AGENTS.md"
         if agents_md.exists():

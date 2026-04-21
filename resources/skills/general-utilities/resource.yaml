@@ -1,0 +1,46 @@
+id: general-utilities
+kind: skill
+status: active
+description: Foundational skill providing shared utilities, data converters, and text helpers for other agents.
+tags:
+- '#utilities'
+- '#helpers'
+- '#core'
+usage_guidelines:
+  preferred_scenarios:
+  - Use when you need to convert data formats (JSON/YAML/CSV)
+  - Use when you need common text manipulation or sanitization
+  - Use to check port availability, find free ports, or manage processes on ports
+  constraints:
+  - Process killing requires appropriate permissions
+  - Not intended as a standalone agent
+  antipatterns:
+  - Do not use for domain-specific business logic
+platforms:
+- hermes
+- generic
+interfaces:
+  cli:
+    enabled: true
+    commands:
+      status: Check status
+  webapp:
+    enabled: false
+    port: null
+    entrypoint: app.py
+storage:
+  standard_layout: true
+  description: Standardized runtime storage
+  contract: core/docs/STORAGE.md
+credentials:
+- id: EXAMPLE_API_KEY
+  type: secret
+  description: An example API key required for this skill
+  required: false
+dependencies:
+  resources: []
+  system:
+  - id: python
+    version: '>=3.10'
+  packages: []
+dependents: []

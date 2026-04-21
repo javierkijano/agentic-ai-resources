@@ -101,8 +101,8 @@ An internal `workspace_config.yaml` is deployed under `~/.hermes/google_workspac
 
 ```yaml
 allowed_email_destinations:
-  - javierkijano@gmail.com
-  - javier.gonzalez@metaversetech.es
+  - user1@example.com
+  - user2@example.com
 mandatory_labels:
   - JQASSISTANT
 ```
@@ -110,7 +110,7 @@ mandatory_labels:
 ## Security Guarantees & Warnings
 
 - **Source accounts are ALWAYS read-only**: Even if you attempt to use write scopes or construct API calls that write, the router explicitly forbids sending modifies to `source` accounts.
-- **Strictly Scoped Email Destinies**: The `workspace` (assistant) account is strictly and exclusively authorized to **write/send emails ONLY to the addresses in `allowed_email_destinations`** (default: `javierkijano@gmail.com`, `javier.gonzalez@metaversetech.es`). It cannot send or reply to any other address. Let the user know if an address isn't listed.
+- **Strictly Scoped Email Destinies**: The `workspace` (assistant) account is strictly and exclusively authorized to **write/send emails ONLY to the addresses in `allowed_email_destinations`** (default: `user1@example.com`, `user2@example.com`). It cannot send or reply to any other address. Let the user know if an address isn't listed.
 - **Explicit Consent Required**: The assistant **MUST ALWAYS ask for explicit permission before sending an email or draft**. Do not send any email unprompted. 
 - **Mandatory Labels**: Any email sent or modified via the assistant `workspace` **MUST** include the `mandatory_labels` (default: `JQASSISTANT`). It helps differentiate AI-sent reports/notes from human interactions.
 - **Forwarding is unnecessary**: You do not need to configure email forwarding, as this system securely reads the real inbox in-place using read-only API scopes.

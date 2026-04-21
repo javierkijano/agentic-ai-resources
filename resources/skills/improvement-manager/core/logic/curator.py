@@ -57,4 +57,3 @@ class ImprovementCurator:
         os.makedirs(report_path.parent, exist_ok=True)
         report_path.write_text(report_content)
         return report_path
- Joseph

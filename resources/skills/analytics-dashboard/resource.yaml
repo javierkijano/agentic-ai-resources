@@ -1,0 +1,47 @@
+id: analytics-dashboard
+kind: skill
+status: active
+description: Tracking and visualization system for monitoring agent activity, performance, and resource usage.
+tags:
+- '#analytics'
+- '#monitoring'
+- '#dashboard'
+- '#observability'
+usage_guidelines:
+  preferred_scenarios:
+  - Use to log agent execution steps and outcomes.
+  - Use to generate periodic performance reports.
+  - Use to identify bottlenecks in multi-agent workflows.
+  constraints:
+  - Requires standardized event logging from other skills.
+  antipatterns:
+  - Do not use for real-time streaming analytics (batch-oriented).
+platforms:
+- hermes
+- generic
+interfaces:
+  cli:
+    enabled: true
+    commands:
+      report: Generate an activity report
+      log: Record a new event manually
+  webapp:
+    enabled: true
+    port: 8050
+    entrypoint: app.py
+storage:
+  standard_layout: true
+  description: Standardized runtime storage
+  contract: core/docs/STORAGE.md
+credentials:
+- id: EXAMPLE_API_KEY
+  type: secret
+  description: An example API key required for this skill
+  required: false
+dependencies:
+  resources: []
+  system:
+  - id: python
+    version: '>=3.10'
+  packages: []
+dependents: []

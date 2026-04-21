@@ -21,7 +21,8 @@ Cada capacidad en este repositorio se rige por tres contratos explícitos que en
 Para mantener la integridad del sistema, sigue siempre este protocolo:
 
 1. **Investigación**: Valida tus suposiciones leyendo el `resource.yaml` y el `STORAGE.md` del recurso afectado.
-2. **Validación**: Ejecuta `./scripts/validate_repo.py` antes de considerar una tarea como completada.
+2. **Workflows**: Consulta el checklist obligatorio para tu tipo de cambio ejecutando `./scripts/navigator.py workflow <TYPE>`.
+3. **Validación**: Ejecuta `./scripts/validate_repo.py` antes de considerar una tarea como completada.
 3. **Runtime**: NUNCA escribas logs o estado dentro de las carpetas de recursos. Usa el path normalizado: `runtime/{{agent_id}}/{{env}}/{{resource_id}}/{{session_id}}/`.
 4. **Auditoría Local**: Registra tus acciones en el archivo `history.local.md` dentro de la carpeta del recurso. Este archivo está en el `.gitignore` y es para trazabilidad local.
 5. **Evolución Orgánica**: Si durante tu ejecución identificas una posible mejora, bug potencial o funcionalidad faltante, DEBES registrarla en `core/docs/TODOs.md`. No la implementes tú mismo a menos que se te pida; limítate a documentar la sugerencia.

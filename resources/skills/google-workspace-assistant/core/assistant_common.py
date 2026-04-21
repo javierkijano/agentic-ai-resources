@@ -26,8 +26,8 @@ def ensure_dirs():
         DATA_ROOT.mkdir(parents=True, exist_ok=True)
         default_cfg = {
             "allowed_email_destinations": [
-                "javierkijano@gmail.com",
-                "javier.gonzalez@metaversetech.es"
+                "user1@example.com",
+                "user2@example.com"
             ],
             "mandatory_labels": ["JQASSISTANT"]
         }

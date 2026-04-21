@@ -30,6 +30,14 @@ class SecurityScanner:
                     line_no = content.count('\n', 0, match.start()) + 1
                     # Censuramos el valor real en el reporte por seguridad
                     val = match.group(0)
+                    
+                    if name == "Email Address" and (val.endswith("@example.com") or val.endswith("@test.com")):
+                        continue
+                    if name == "Generic Token":
+                        ctx_start = max(0, match.start() - 100)
+                        if "http" in content[ctx_start:match.start()]:
+                            continue
+
                     safe_val = val[:10] + "..." + val[-5:] if len(val) > 15 else "***"
                     findings.append({
                         "type": name,

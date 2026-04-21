@@ -10,14 +10,18 @@ state_validation:
 steps:
   - id: analyze_user_request
     intent: "Analizar qué tipo de petición está realizando el usuario"
-    validation:
-      output_schema: "Workflow" # El resultado de identificar debe apuntar a un workflow válido
     associations:
       - workflow: task-identification
         strength: 1.0
 
+  - id: select_workflow_candidate
+    intent: "Localizar el workflow más óptimo mediante heurísticas o disparar creación si no existe matcheo"
+    associations:
+      - workflow: workflow-candidate-selection
+        strength: 1.0
+
   - id: strategic_critical_review
-    intent: "Realizar una revisión crítica del plan"
+    intent: "Realizar una revisión crítica del plan y validar el workflow seleccionado"
     associations:
       - workflow: strategic-review
         strength: 1.0

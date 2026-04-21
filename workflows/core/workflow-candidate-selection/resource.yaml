@@ -1,0 +1,24 @@
+id: workflow-candidate-selection
+kind: workflow
+status: core
+description: Busca, evalúa y selecciona el flujo de ejecución más óptimo. Dispara la creación de nuevos workflows si no hay un match de alta fidelidad.
+utility_score: 100
+
+steps:
+  - id: discovery
+    intent: "Escanear workflows/core y workflows/dev buscando coincidencia con las postcondiciones de la tarea"
+    associations:
+      - tool: repo-management
+        strength: 1.0
+
+  - id: evaluation
+    intent: "Calcular el índice de afinidad basado en utility_score y relevancia semántica"
+    associations:
+      - tool: cortex-evaluator
+        strength: 1.0
+
+  - id: decision_gate
+    intent: "Seleccionar el mejor candidato o derivar a 'create-new-workflow' si la afinidad es insuficiente"
+    associations:
+      - tool: cortex-planner
+        strength: 1.0

@@ -1,0 +1,23 @@
+id: create-new-workflow
+kind: workflow
+status: core
+description: Proceso oficial para definir un nuevo mapa de intención cuando el Cortex detecta un gap en el catálogo.
+utility_score: 100
+
+state_validation:
+  post_state_schema: "Workflow"
+
+steps:
+  - id: define_intent_map
+    intent: "Definir precondiciones, postcondiciones y pasos del nuevo proceso"
+    associations: [{tool: workflow-planner, strength: 1.0}]
+
+  - id: structural_draft
+    intent: "Generar el archivo resource.yaml en workflows/dev/"
+    associations: [{tool: repo-management, strength: 1.0}]
+
+  - id: cue_validation
+    intent: "Validar el nuevo workflow contra el esquema CUE de workflows"
+    validation:
+      input_schema: "Workflow"
+    associations: [{tool: step-executor, strength: 1.0}]
